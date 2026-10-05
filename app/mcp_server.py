@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 
 from tools.banten import (
     search_banten as search_banten_data,
@@ -10,7 +10,7 @@ from tools.knowledge import (
     search_knowledge as search_knowledge_data,
 )
 
-mcp = FastMCP("BantenPedia MCP Server")
+mcp = MCPServer("BantenPedia MCP Server")
 
 
 @mcp.tool()

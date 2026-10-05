@@ -20,9 +20,9 @@ from google import genai
 from google.genai import types
 
 from config import GEMINI_API_KEY, GEMINI_MODEL
-from agent.prompts import (
+from .prompts import (
     SYSTEM_PROMPT,
-    NO_RESULT_RESPONSE,
+    NO_DB_CONTEXT_NOTE,
     build_context_block,
     detect_source_conflict,
 )
@@ -88,22 +88,22 @@ async def run_agent(
 
         knowledge_chunks = _parse_mcp_result(knowledge_result)
 
-        # ── 2. Check if we have usable knowledge ──────────────────────────────
+        # ── 2. Log DB result status ───────────────────────────────────────────
         if not knowledge_chunks:
-            logger.info("[Agent] No relevant knowledge found.")
-            return AgentResponse(
-                answer=NO_RESULT_RESPONSE,
-                sources=[],
-                search_performed=True,
-                conflict_detected=False,
+            logger.info(
+                "[Agent] No DB results found — Gemini will answer from general knowledge."
             )
+        else:
+            logger.info(f"[Agent] Found {len(knowledge_chunks)} chunks from database.")
 
-        # ── 3. Detect source conflicts ────────────────────────────────────────
-        conflict = detect_source_conflict(knowledge_chunks)
+        # ── 3. Detect source conflicts (only meaningful when DB has results) ──
+        conflict = detect_source_conflict(knowledge_chunks) if knowledge_chunks else False
         if conflict:
             logger.info("[Agent] Multiple sources detected — surfacing differences.")
 
         # ── 4. Build context block ────────────────────────────────────────────
+        # Returns NO_DB_CONTEXT_NOTE when empty, instructing Gemini to fall back
+        # to its own knowledge rather than refusing to answer.
         context_block = build_context_block(knowledge_chunks)
 
         # ── 5. Generate grounded answer with Gemini ───────────────────────────
