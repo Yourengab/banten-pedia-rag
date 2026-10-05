@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banten Pedia Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <header>
+            <h1>Banten Pedia Analytics</h1>
+            <p>Visualisasi Data Sarana Upakara Banten</p>
+        </header>
+
+        <section class="dashboard">
+            <div class="stats-cards">
+                <div class="card stat-card">
+                    <h3>Total Banten</h3>
+                    <p id="total-banten" class="stat-value">0</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>Rata-rata Komponen</h3>
+                    <p id="avg-components" class="stat-value">0</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>Komponen Terbanyak</h3>
+                    <p id="max-components" class="stat-value">0</p>
+                </div>
+            </div>
+
+            <div class="chart-container card">
+                <h2>10 Banten dengan Komponen Terbanyak</h2>
+                <canvas id="bantenChart"></canvas>
+            </div>
+        </section>
+
+        <section class="data-list card">
+            <div class="list-header">
+                <h2>Daftar Banten</h2>
+                <input type="text" id="searchInput" placeholder="Cari banten...">
+            </div>
+            <div class="list-content" id="bantenList">
+                <!-- Items will be injected here via JS -->
+            </div>
+        </section>
+    </div>
+    <!-- Modal -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content card">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody" class="modal-body"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

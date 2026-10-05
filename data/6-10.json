@@ -1,0 +1,243 @@
+{
+    "banten": [
+        {
+            "nama": "Banten Ayaban",
+            "deskripsi": "Banten Ayaban dirangkai dalam kualitas Nista, Madya maupun Utama sesuai dengan kebutuhan upacaranya pada salah satu pelaksanaan upacara dalam salah satu Yadnya pada Panca Yadnya. Dalam merangkainya perlu memperhatikan sesana (ethika) seorang pembuat upakara, Tri Premananing Yadnya yang terangkum dalam Tri Angganing Yadnya, serta ASTA KARANANING Yadnya sebagai delapan tempat penataan dalam satu rangkuman Banten Ayaban.",
+            "komponen": [
+                {
+                    "nama": "Banten Pejati/Daksina gede sarwa 4",
+                    "peran": "Sebagai komponen Banten Ayaban.",
+                    "deskripsi": "Jumlah dan proporsinya disesuaikan dengan proporsi Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Gebogan",
+                    "peran": "Sebagai komponen Banten Ayaban.",
+                    "deskripsi": "Jumlah dan proporsinya disesuaikan dengan proporsi Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Pengambean",
+                    "peran": "Sebagai komponen Banten Ayaban.",
+                    "deskripsi": "Menjadi salah satu tolok ukur dalam mengatur proporsi Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Soda",
+                    "peran": "Sebagai komponen Banten Ayaban.",
+                    "deskripsi": "Proporsinya menyesuaikan Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Peras",
+                    "peran": "Sebagai komponen Banten Ayaban.",
+                    "deskripsi": "Proporsinya menyesuaikan Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Dapetan",
+                    "peran": "Sebagai komponen Banten Ayaban.",
+                    "deskripsi": "Terdiri atas Banten Dapetan Pokok dan Dapetan Pengiring dan menjadi salah satu tolok ukur dalam mengatur proporsi Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Sesayut",
+                    "peran": "Sebagai komponen Banten Ayaban.",
+                    "deskripsi": "Disebut sebagai simbol perut dalam susunan Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Tebasan",
+                    "peran": "Sebagai komponen Banten Ayaban.",
+                    "deskripsi": "Disebut sebagai simbol perut dalam susunan Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Jerimpen",
+                    "peran": "Sebagai komponen Banten Ayaban pada proporsi tertentu.",
+                    "deskripsi": "Penyertaannya bergantung pada proporsi Banten Ayaban dan memiliki aturan berdasarkan jumlah tumpeng."
+                },
+                {
+                    "nama": "Banten Caru",
+                    "peran": "Sebagai komponen Banten Ayaban pada proporsi tertentu.",
+                    "deskripsi": "Penyertaannya disesuaikan dengan proporsi Banten Ayaban."
+                },
+                {
+                    "nama": "Banten Segehan",
+                    "peran": "Sebagai komponen Banten Ayaban pada proporsi tertentu.",
+                    "deskripsi": "Pada proporsi tumpeng 5, 7, atau 9 bungkul digunakan sebagai pengganti Banten Caru."
+                }
+            ],
+            "others": {
+                "tingkatan": ["Nista", "Madya", "Utama"],
+                "tolok_ukur_proporsi": [
+                    "Banten Pengambean",
+                    "Banten Dapetan Pokok"
+                ],
+                "aturan_jumlah_tumpeng": "Jumlah tumpeng ditekankan bersifat ganjil dan tidak boleh berjumlah genap, karena jumlah ganjil adalah perhitungan angka Tattwa Samkhya."
+            }
+        },
+        {
+            "nama": "Banten Pejati/Daksina gede sarwa 4",
+            "fungsi": "Sebagai salah satu komponen dalam rangkaian Banten Ayaban.",
+            "others": {
+                "proporsi": "Disesuaikan dengan proporsi Banten Ayaban."
+            }
+        },
+        {
+            "nama": "Banten Gebogan",
+            "fungsi": "Sebagai salah satu komponen dalam rangkaian Banten Ayaban.",
+            "others": {
+                "proporsi": "Disesuaikan dengan proporsi Banten Ayaban."
+            }
+        },
+        {
+            "nama": "Banten Pengambean",
+            "deskripsi": "Dalam pembuatannya terdapat sampian pengambean yang memakai sampian metangga dengan singsing 17 buah. Tulung Pengambean berjumlah 2 buah dan masing-masing memiliki 3 buah juring di tengah-tengah tulung.",
+            "makna": "Singsing 17 merupakan angka Tattwa Samkhya yang telah mengandung suatu kebenaran. Tiga juring pada masing-masing tulung merupakan simbol kekuatan Sang Hyang Tri Premana.",
+            "fungsi": "Menjadi salah satu tolok ukur proporsi Banten Ayaban.",
+            "komponen": [
+                {
+                    "nama": "Sampian metangga",
+                    "peran": "Sebagai sampian pengambean.",
+                    "deskripsi": "Memakai singsing sebanyak 17 buah."
+                },
+                {
+                    "nama": "Tulung Pengambean",
+                    "peran": "Sebagai bagian dari Banten Pengambean.",
+                    "deskripsi": "Berjumlah 2 buah dan masing-masing memiliki 3 buah juring tepat di tengah-tengah tulung."
+                }
+            ],
+            "variasi": [
+                {
+                    "nama": "Sampian dengan jejaritan Sriyok",
+                    "deskripsi": "Dipakai pada banten ayaban dan pada banten pengulapan ke Dewa Yadnya, Resi Yadnya dan Pitra Yadnya. Jumlah singsing tetap 17 buah."
+                },
+                {
+                    "nama": "Sampian dengan jejaritan Sesapi",
+                    "deskripsi": "Dipakai pada upakara Manusa Yadnya dan pada banten pengulapan ke Manusa Yadnya, termasuk pengulapan pada orang yang mengalami kecelakaan dan pengulapan banten caru."
+                }
+            ],
+            "others": {
+                "makna_sampian_sesapi": "Mengandung makna sebagai simbol permohonan untuk menetralisir segala bentuk Sesapa atau Sapa atau Pastu, baik kesapa dening manusa maupun kesapa dening Bhuta, Kala dan Durga."
+            }
+        },
+        {
+            "nama": "Banten Soda",
+            "fungsi": "Sebagai salah satu komponen dalam rangkaian Banten Ayaban.",
+            "others": {
+                "proporsi": "Menyesuaikan proporsi Banten Ayaban.",
+                "jumlah_tumpeng_dasar": "Disebutkan bersama Banten Peras berjumlah 2 tumpeng dalam perhitungan dasar."
+            }
+        },
+        {
+            "nama": "Banten Peras",
+            "fungsi": "Sebagai salah satu komponen dalam rangkaian Banten Ayaban.",
+            "others": {
+                "proporsi": "Menyesuaikan proporsi Banten Ayaban.",
+                "jumlah_tumpeng_dasar": "Disebutkan bersama Banten Soda berjumlah 2 tumpeng dalam perhitungan dasar.",
+                "aturan_koreksi_jumlah_tumpeng": "Apabila hasil kelipatan pada Banten Pengambean, Peras, Soda dan Dapetan Pokok menghasilkan jumlah tumpeng lebih dari ketentuan, jumlahnya dapat dikurangi dengan Banten Peras."
+            }
+        },
+        {
+            "nama": "Banten Dapetan",
+            "deskripsi": "Banten Dapetan memiliki dua bagian secara garis besar, yaitu Banten Dapetan Pokok dan Banten Dapetan Pengiring atau kepredanan. Dapetan Pokok terdiri dari dua taledan pada bagian pertama dan satu taledan lagi pada bagian berikutnya, sedangkan Dapetan Pengiring terdiri dari empat taledan.",
+            "makna": "Banten Dapetan Pokok memiliki tumpeng sebagai simbol kekuatan Dewi Uma, Dewi Tapeni dan Siwa Dharma. Banten Dapetan Pengiring menjadi simbol pariwarani Sang Hyang Siwa Dharma yang bernama Dewi Kencak, Dewi Sidhi, Dewi Kédep dan Dewi Pradnyan. Jumlah 7 tumpeng merupakan angka Tattwa Samkhya dan simbol Sapta Sunia sebagai simbol alam Kedewataan.",
+            "fungsi": "Menjadi salah satu tolok ukur dalam menentukan proporsi Banten Ayaban.",
+            "komponen": [
+                {
+                    "nama": "Banten Dapetan Pokok",
+                    "peran": "Bagian pokok dari Banten Dapetan.",
+                    "deskripsi": "Terdiri dari dua taledan pada bagian pertama dan satu taledan lagi pada bagian kedua. Bagian pertama berisi dua tumpeng dengan kojong rangkat 3 buah dan sampian tumpeng. Bagian kedua berisi satu tumpeng, sebuah penyeneng, kojong rangkat yang sama dan sampian tumpeng."
+                },
+                {
+                    "nama": "Banten Dapetan Pengiring",
+                    "peran": "Bagian pengiring atau kepredanan dari Banten Dapetan.",
+                    "deskripsi": "Terdiri dari empat taledan dan masing-masing taledan berisi satu tumpeng dengan kojong rangkat yang sama serta memakai sampian Windha (Sampian Jit Guak)."
+                }
+            ],
+            "others": {
+                "jumlah_tumpeng": 7,
+                "simbol_bhuwana_alit": "Dewi Tapeni bersemayam di dalam Ati, Dewi Uma di dalam Empedu/nyali, dan Siwa Dharma berstana di dalam Jantung (pepusuhan).",
+                "isi_dapetan_pokok": {
+                    "kojong_kanan": "Garam dan sambal sebagai simbol kesedian.",
+                    "kojong_tengah": "Ikan-ikan (telor) sebagai simbol kemandian.",
+                    "kojong_kiri": "Saur sebagai simbol memohon kedamaian, kacang sebagai simbol tapa (satyam), dan terong, mentimun sebagai simbol memohon kesejahtraan (sundharam)."
+                },
+                "aturan_proporsi": "Apabila jumlah tumpeng dari Banten Dapetan telah dipakai semua tetapi masih kekurangan untuk mencapai suatu Banten Ayaban, Banten Pengambean, Peras, Soda dan Dapetan Pokok dapat dibuat kelipatan. Jika masih kurang, dapat ditambahkan dengan Dapetan Pengiring."
+            }
+        },
+        {
+            "nama": "Banten Sesayut",
+            "makna": "Kosa kata sesayut berasal dari kata Se dan Ayu, dalam pengertian untuk memohon Kesucian serta Kerahayuan.",
+            "fungsi": "Sebagai bagian dari rangkaian Banten Ayaban dan sebagai simbol perut dalam susunan tersebut.",
+            "others": {
+                "konteks": "Kualitas persembahan dikaitkan dengan tattwa dan rasa yang keluar dari pikiran; dari pikiran akan melahirkan manah dan dari manah akan melahirkan Cita.",
+                "contoh": "Untuk Dewa Yadnya disebutkan Sesayut pembersihan, Sesayut siwa sampurna dan Sesayut sidapurna. Untuk Manusa Yadnya disebutkan Sesayut pembersihan, Sesayut atma rauh dan Sesayut sidapurna."
+            }
+        },
+        {
+            "nama": "Banten Tebasan",
+            "makna": "Banten Tebasan berasal dari kata tebas atau tebus, yang memiliki pengertian untuk memohon pengeleburuan (penetralisir) dari segala dosa-dosanya.",
+            "fungsi": "Sebagai bagian dari rangkaian Banten Ayaban dan sebagai simbol perut dalam susunan tersebut.",
+            "others": {
+                "ketentuan_manusia": "Banten Tebasan ke manusia hanya dibuatkan bagi anak yang sudah tanggal gigi (Meketus)."
+            }
+        },
+        {
+            "nama": "Banten Jerimpen",
+            "makna": "Banten Jerimpen sebagai simbol kekuatan Sang Hyang Surya Candra sebagai sumber Widya, sedangkan untuk di Bhuwana Alit merupakan simbol kedua lengan/tangan.",
+            "fungsi": "Sebagai komponen Banten Ayaban pada proporsi tertentu.",
+            "variasi": [
+                {
+                    "nama": "Banten Jerimpen Pungul",
+                    "deskripsi": "Pada proporsi Banten Ayaban memakai tumpeng 11 bungkul, patut diisi Banten Jerimpen Pungul 2 buah. Satu diletakkan di sebelah kiri Banten Pengambean dan satu lagi di sebelah kanan Banten Peras."
+                },
+                {
+                    "nama": "Banten Jerimpen Agung",
+                    "deskripsi": "Pada proporsi Banten Ayaban memakai tumpeng 15 bungkul, 17 bungkul, atau lebih sudah bisa disertakan dengan Banten Jerimpen Agung, yaitu jerimpen memakai keranjang, dan sudah bisa juga disertakan dengan Banten Suci."
+                }
+            ],
+            "others": {
+                "aturan_proporsi": [
+                    "Tumpeng 9, 7 atau 5 bungkul: Banten Ayaban tidak boleh diisi Jerimpen karena ukuran tersebut disebut berbentuk Manik Gumawang.",
+                    "Tumpeng 11 bungkul: menggunakan Jerimpen Pungul 2 buah.",
+                    "Tumpeng 15, 17 bungkul atau lebih: dapat disertakan Jerimpen Agung dan Banten Suci.",
+                    "Tumpeng 21 bungkul: sudah bisa disertakan Banten Pulogembal.",
+                    "Tumpeng 27 dan 33 bungkul: sudah bisa disertakan Banten Bebangkit sampai ke atas.",
+                    "Tumpeng 33 bungkul ke atas: sudah bisa disertakan Banten Catur."
+                ],
+                "ketentuan_jumlah": "Banten Jerimpen jangan sekali disertakan hanya satu buah; harus dua buah jerimpen."
+            }
+        },
+        {
+            "nama": "Banten Caru",
+            "makna": "Banten Caru dan Segehan disebut sebagai kekuatan Akasa Pertiwi. Terpadunya kedua kekuatan tersebut akan menimbulkan kekuatan penetralisir serta kekuatan penciptaan baru. Di Bhuwana Alit, disebut sebagai simbol kedua Tungkai Kaki.",
+            "fungsi": "Sebagai komponen Banten Ayaban yang penyertaannya disesuaikan dengan proporsi jumlah tumpeng.",
+            "variasi": [
+                {
+                    "nama": "Banten Caru Eka Sata",
+                    "deskripsi": "Dapat disertakan apabila proporsi Banten Ayaban memakai tumpeng 11, 15 atau 17 bungkul."
+                },
+                {
+                    "nama": "Banten Caru Panca Sata, Panca Musika, Panca Kelud",
+                    "deskripsi": "Dapat disertakan apabila proporsi Banten Ayaban memakai tumpeng 21 bungkul atau mepulegembal, atau memakai tumpeng 27 bungkul mepulegembal membebangkit."
+                },
+                {
+                    "nama": "Banten Caru Resi Gana, Panca Rupa, Balik Sumpah",
+                    "deskripsi": "Dapat disertakan apabila proporsi Banten Ayaban memakai tumpeng 33 bungkul ke atas, berisi Banten Pulogembal, Bebangkit dan Banten Catur."
+                }
+            ],
+            "others": {
+                "aturan_proporsi": [
+                    "Tumpeng 5, 7 atau 9 bungkul: tidak patut memakai Caru, melainkan diganti dengan Segehan Agung.",
+                    "Pada proporsi tumpeng 11, 15 atau 17 bungkul dapat disertakan Caru Eka Sata.",
+                    "Pada proporsi tumpeng 21 bungkul atau mepulegembal, atau 27 bungkul mepulegembal membebangkit, dapat disertakan Caru Panca Sata, Panca Musika, Panca Kelud.",
+                    "Pada proporsi tumpeng 33 bungkul ke atas dengan Pulogembal, Bebangkit dan Catur dapat disertakan Caru Resi Gana, Panca Rupa, Balik Sumpah."
+                ],
+                "keseimbangan": "Penyertaan Caru harus disesuaikan dengan proporsi Banten Ayaban agar tidak terlalu besar pada bagian kaki dan tetap seimbang antara sor dan luhur."
+            }
+        },
+        {
+            "nama": "Banten Segehan",
+            "makna": "Banten Caru dan Segehan disebut sebagai kekuatan Akasa Pertiwi. Terpadunya kedua kekuatan tersebut akan menimbulkan kekuatan penetralisir serta kekuatan penciptaan baru.",
+            "fungsi": "Pada proporsi Banten Ayaban memakai tumpeng 5, 7 atau 9 bungkul, Segehan Agung digunakan sebagai pengganti Banten Caru.",
+            "others": {
+                "aturan_proporsi": "Pada proporsi tumpeng 5, 7 atau 9 bungkul, tidak patut memakai Caru, melainkan diganti dengan Segehan Agung.",
+                "konteks_contoh": "Untuk Manusa Yadnya pada Banten Ayaban tumpeng 5 bungkul disebut Penyeneng teterag + segehan Manca Warna."
+            }
+        }
+    ]
+}

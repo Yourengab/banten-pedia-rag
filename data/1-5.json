@@ -1,0 +1,333 @@
+{
+    "banten": [
+        {
+            "nama": "Canang Sari",
+            "deskripsi": "Canang yang alasnya menggunakan sebuah ceper atau tamas kecil. Sampian urasari membentuk asthadala sehingga terlihat berbentuk bundar.",
+            "makna": "Simbol sarining yadnya.",
+            "fungsi": "Disertakan pada setiap upakara.",
+            "komponen": [
+                {
+                    "nama": "ceper atau tamas kecil",
+                    "peran": "Sebagai alas Banten"
+                },
+                {
+                    "nama": "sampian urasari",
+                    "deskripsi": "Membentuk asthadala sehingga terlihat berbentuk bundar."
+                }
+            ],
+            "variasi": [
+                {
+                    "nama": "Canang Sari Ageng"
+                },
+                {
+                    "nama": "Canang Sari Alit",
+                    "deskripsi": "Hanya mempergunakan empat penjuru pada simbol sampian urasarinya, tetapi memiliki prinsip dan kwalitas yang sama."
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Genten",
+            "deskripsi": "Pada prinsipnya Canang Genten sama dengan Canang Sari, dengan tambahan jajan keping, pisang mas, serta bubur sesuruh merah dan putih. Masing-masing bubur tersebut dibungkus dengan janur digiling menyerupai sebatang rokok dan diletakkan di bawah sampian urasari.",
+            "fungsi": "Sebagai sarana untuk memohon anugrah keremajaan atau kayowanan. Dipergunakan pada pelaksanaan Upacara Ngeraja Sewala / Ngeraja Singa, upacara potong gigi, dan Upacara Perkawinan.",
+            "komponen": [
+                {
+                    "nama": "jajan keping"
+                },
+                {
+                    "nama": "pisang mas"
+                },
+                {
+                    "nama": "bubur sesuruh merah dan putih",
+                    "deskripsi": "Masing-masing bubur dibungkus dengan janur digiling menyerupai sebatang rokok."
+                },
+                {
+                    "nama": "janur",
+                    "peran": "Sebagai pembungkus bubur sesuruh merah dan putih",
+                    "deskripsi": "Digiling menyerupai sebatang rokok."
+                },
+                {
+                    "nama": "sampian urasari",
+                    "deskripsi": "Bubur sesuruh merah dan putih diletakkan di bawah sampian urasari."
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Payasan / Canang Pesucian",
+            "deskripsi": "Canang pesucian dialasi dengan sebuah taledan kecil berbentuk segi empat panjang yang memiliki satu sibeh pada bagian pangkalnya. Di atas taledan dijaritkan 5 buah celemik pada posisi atas, bawah, kanan, kiri, dan tengah.",
+            "fungsi": "Dipergunakan hampir pada setiap Upakara.",
+            "komponen": [
+                {
+                    "nama": "taledan kecil",
+                    "peran": "Sebagai alas Banten",
+                    "deskripsi": "Berbentuk segi empat panjang dan memiliki satu sibeh pada bagian pangkalnya."
+                },
+                {
+                    "nama": "celemik bagian atas",
+                    "peran": "Tempat sarana",
+                    "deskripsi": "Berisi tepung tawar, sebagai kekuatan Sang Hyang Iswara untuk memohon penyucian mengenai sebel kandel, letuhing jagat dan sarira."
+                },
+                {
+                    "nama": "celemik bagian kanan",
+                    "peran": "Tempat sarana",
+                    "deskripsi": "Berisi daun dadap yang telah digilas dicampur dengan kapas berisi minyak wangi, sebagai simbol kekuatan Sang Hyang Brahma untuk memohon penyucian kehadapan Beliau mengenai berbagai macam bentuk yang bersifat Wigna."
+                },
+                {
+                    "nama": "celemik bagian bawah",
+                    "peran": "Tempat sarana",
+                    "deskripsi": "Berisi lenga wangi, sebagai simbol kekuatan Sang Hyang Mahadewa untuk memohon penyucian kehadapan Beliau mengenai segala akibat dari perbuatan Satru (kejahatan)."
+                },
+                {
+                    "nama": "celemik bagian kiri",
+                    "peran": "Tempat sarana",
+                    "deskripsi": "Berisi sisig, sebagai simbol kekuatan Sang Hyang Wisnu untuk memohon penyucian mengenai gering sasab merana."
+                },
+                {
+                    "nama": "celemik bagian tengah",
+                    "peran": "Tempat sarana",
+                    "deskripsi": "Berisi burat wangi, sebagai simbol kekuatan Sang Hyang Siwa untuk memohon penyucian kehadapan Beliau mengenai segala kekotoran bathiniah."
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Gantal",
+            "deskripsi": "Pada prinsipnya Canang Gantal sama dengan Canang Pesucian, hanya pada celemik di tengah diisi base tubungan metungkas. Canang Gantal terdiri dari dua taledan. Taledan pertama berisi seperti yang telah dijelaskan diatas. Di atas taledan pertama disusun taledan kedua. Di atas taledan dijaritkan dua buah celemik dengan posisi kanan dan kiri. Di bagian tengah terdapat pisang mas, jajan kekiping, dan 2 buah bantal kecil. Kemudian paling atas disusunkan sebuah Canang Sari yang diikat dijadikan satu.",
+            "makna": "Kata Gantal berasal dari kata “Gana”, yang mengandung arti “pertemuan” atau pupulan, sedangkan suku kata “Tal” dapat diartikan “bersatu” atau terikat menjadi satu. Dengan demikian Canang Gantal memiliki makna sebagai permohonan umat kehadapan Sang Hyang Widhi agar dianugrahkan kedamaian.",
+            "fungsi": "Dipergunakan pada upakara Panca Yadnya.",
+            "komponen": [
+                {
+                    "nama": "taledan pertama",
+                    "deskripsi": "Berisi seperti yang telah dijelaskan diatas."
+                },
+                {
+                    "nama": "taledan kedua",
+                    "deskripsi": "Berisi raka-raka lengkap, sampian plaus, dan porosan."
+                },
+                {
+                    "nama": "celemik sebelah kanan",
+                    "deskripsi": "Berisi burat wangi."
+                },
+                {
+                    "nama": "celemik sebelah kiri",
+                    "deskripsi": "Berisi lenga wangi."
+                },
+                {
+                    "nama": "base tubungan metungkas",
+                    "peran": "Isi celemik di tengah",
+                    "deskripsi": "Digunakan pada celemik di tengah."
+                },
+                {
+                    "nama": "pisang mas",
+                    "peran": "Bagian tengah Banten"
+                },
+                {
+                    "nama": "jajan kekiping",
+                    "peran": "Bagian tengah Banten"
+                },
+                {
+                    "nama": "bantal kecil",
+                    "peran": "Bagian tengah Banten",
+                    "deskripsi": "Berjumlah 2 buah."
+                },
+                {
+                    "nama": "Canang Sari",
+                    "peran": "Susunan paling atas",
+                    "deskripsi": "Diikat dijadikan satu."
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Pengerawos",
+            "deskripsi": "Pembuatan Canang Pengerawos pada prinsipnya sama seperti Canang Gantal, hanya di tengahnya mempergunakan sebuah takir berisi 5 buah lekesan.",
+            "makna": "Menekankan permohonan kehadapan Sang Hyang Widhi, khususnya dalam hal memohon kebulatan pendapat berdasarkan ketenangan hati untuk mencapai kedamaian. Lekesan sebanyak 5 buah adalah sebagai simbul dari Sabda, Bayu, Idep, Rasa dan Cita.",
+            "fungsi": "Dipergunakan pada Upakara peparuman, Upakara Pamelastian Bethara, Upakara Piodalan, dan Upakara Pengajuman.",
+            "komponen": [
+                {
+                    "nama": "takir",
+                    "peran": "Tempat lekesan di bagian tengah",
+                    "deskripsi": "Berisi 5 buah lekesan."
+                },
+                {
+                    "nama": "lekesan",
+                    "deskripsi": "Berjumlah 5 buah."
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Tubungan",
+            "deskripsi": "Pada prinsipnya Canang Tubungan sama dengan Canang Pengerawos, hanya lekesannya satu buah saja.",
+            "makna": "Sebagai simbol permohonan umat kehadapan Sang Hyang Widhi agar Beliau bermanifestasi sebagai Ista Dewata, dan berstana sesuai dengan fungsinya untuk menganugrahkan suatu kekuatan.",
+            "fungsi": "Dipergunakan pada Upakara penuntunan, pemendakan, dan pada upakara pasupati.",
+            "komponen": [
+                {
+                    "nama": "lekesan",
+                    "deskripsi": "Berjumlah 1 buah."
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Raka",
+            "deskripsi": "Pada prinsipnya sama dengan membuat Canang Sari, hanya berisi buah-buahan sebanyak 5 macam buah dan berisi eteh-eteh pesucian.",
+            "makna": "Sebagai simbol memohon pengeleburaan Panca Mala baik terhadap Bhuwana Agung maupun terhadap Bhuwana Alit, serta dianugrahkan Panca Amertha, yaitu: Amertha Sanjiwani yang disimbulkan dengan pisang kayu (kebiuhdayan) agar umat memiliki sifat bijaksana; Amertha Kamandalu yang disimbulkan dengan buah salak agar selalu dianugrahkan kesehatan phisik, mental, akal dan budhi; Amertha Kundalini yang disimbulkan dengan buah yang berwarna kuning seperti mangga, pepaya, dsb, agar dianugrahkan kemakmuran, kesejahteraan dan nutug tuwuh; Amertha Pawitra yang disimbulkan dengan buah manggis agar senantiasa memiliki hati yang iklas dan jujur, untuk menuju ketingkat kesucian; Amertha Maha Mertha yang disimbulkan dengan buah jeruk dengan macamnya (Samagama), agar senantiasa memiliki bathin yang suci untuk menyatu kehadapan Sang Hyang Widhi melalui sembah Bhaktinya.",
+            "fungsi": "Dipergunakan untuk Upakara Panca Yadnya, khususnya pada upakara peperanian, upakara pesimpen pedagingan, dan upakara penyejer disaat ada piodalan.",
+            "komponen": [
+                {
+                    "nama": "buah-buahan",
+                    "deskripsi": "Sebanyak 5 macam buah."
+                },
+                {
+                    "nama": "eteh-eteh pesucian"
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Tadah Sukla",
+            "deskripsi": "Pada prinsipnya sama dengan membuat Canang Payasan, hanya isi celemiknya yang berbeda. Masing-masing celemik berisi sarana yang berbeda. Kemudian diatas tetandingan ini disusunian pesucian dan Canang Sari diikat dijadikan satu.",
+            "makna": "Sebagai simbol permohonan kehadapan Sang Hyang Widhi agar dianugrahkan kekuatan Iman (Satyam), Kesucian (Siwam), dan kesejahteraan terhadap Bhuwana Agung dan Bhuwana Alit (Sindharam).",
+            "fungsi": "Dipergunakan pada Upakara semua bentuk suci, upakara di Surya, Upakara pebersihan pada pengabenan dan penyekaban.",
+            "komponen": [
+                {
+                    "nama": "celemik bagian kiri atas",
+                    "deskripsi": "Berisi kacang ijo (kacang putih)."
+                },
+                {
+                    "nama": "celemik bagian kanan atas",
+                    "deskripsi": "Berisi kacang komak atau kacang merah."
+                },
+                {
+                    "nama": "celemik bagian kiri bawah",
+                    "deskripsi": "Berisi uji 5 iris (pala bungkah)."
+                },
+                {
+                    "nama": "celemik bagian kanan bawah",
+                    "deskripsi": "Berisi keladi 5 iris (pala Gantung)."
+                },
+                {
+                    "nama": "celemik bagian tengah",
+                    "deskripsi": "Berisi kacang bitor dan pisang kayu yang mentah sebanyak 5 iris."
+                },
+                {
+                    "nama": "pesucian",
+                    "peran": "Disusun di atas tetandingan",
+                    "deskripsi": "Disusun bersama Canang Sari dan diikat dijadikan satu."
+                },
+                {
+                    "nama": "Canang Sari",
+                    "peran": "Disusun di atas tetandingan",
+                    "deskripsi": "Disusun bersama pesucian dan diikat dijadikan satu."
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Pengengklab",
+            "deskripsi": "Pada prinsipnya pembuatan Canang Pengengklab sama dengan pembuatan Canang Payasan, hanya di tengah-tengahnya berisi dua buah takir dengan posisi kanan dan kiri.",
+            "makna": "Sebagai permohonan kehadapan Sang Hyang Widhi agar dianugrahkan kekuatan magis, kawibawaan, (Taksu).",
+            "fungsi": "Dipergunakan pada upakara piodalan Gong, Gambang, Gender, Angklung, Wayang, Barong, Topeng, dan tarian sakral lainnya.",
+            "komponen": [
+                {
+                    "nama": "takir sebelah kanan",
+                    "peran": "Tempat isi",
+                    "deskripsi": "Berisi beras kuning dengan satu buah basé Tubungan."
+                },
+                {
+                    "nama": "beras kuning"
+                },
+                {
+                    "nama": "basé Tubungan",
+                    "deskripsi": "Berjumlah 1 buah dan berada di dalam takir sebelah kanan."
+                },
+                {
+                    "nama": "takir sebelah kiri",
+                    "peran": "Tempat isi",
+                    "deskripsi": "Berisi air cendana."
+                },
+                {
+                    "nama": "air cendana"
+                }
+            ],
+            "others": {}
+        },
+        {
+            "nama": "Canang Saraswati",
+            "deskripsi": "Mempergunakan sebagai alasnya sebuah tamas kecil atau sebuah ceper yang didalamnya berisi jajan, pisang, tebu, porosan sampian plaus yang diletakkan pada bagian hulunya. Kemudian dipasangkan 5 buah celemik pada posisi atas, bawah, kanan, kiri dan tengah. Pada setiap celemik berisi jajan suci berwarna putih kuning yang dialas dengan daun beringin. Di atas tetandingan jajan suci disusunkan lagi sebuah ceper sebagai ceper ke dua yang didalamnya berisi 5 buah celemik dengan posisi atas, bawah, kanan, kiri dan tengah. Masing-masing celemik berisi pala bungkah pala gantung (panca), kemudian di atas panca-panca ini disusunkan sebuah ituk-ituk yang berisi eteh eteh Tetukon. Selanjutnya di atas ituk-ituk diisi jajan Saraswati yang dialas dengan sehelai daun beringin, kemudian di atas jajan Saraswati ditutupkan dengan sebatang ranting beringin sebagai penjor nya, dan di atas jajan Saraswati disusunkan pesucian serta canang diikat dijadikan satu.",
+            "makna": "Sebagai sarana permohonan kehadapan Sang Hyang Widhi agar dianugrahkan kepradyanan dan kesidhian.",
+            "komponen": [
+                {
+                    "nama": "tamas kecil atau ceper",
+                    "peran": "Sebagai alas Banten",
+                    "deskripsi": "Di dalamnya berisi jajan, pisang, tebu, dan porosan sampian plaus yang diletakkan pada bagian hulunya."
+                },
+                {
+                    "nama": "celemik bagian atas",
+                    "peran": "Tempat jajan suci",
+                    "deskripsi": "Berisi jajan suci Bungan temu putih kuning yang dialas dengan daun beringin."
+                },
+                {
+                    "nama": "celemik bagian kanan",
+                    "peran": "Tempat jajan suci",
+                    "deskripsi": "Berisi jajan suci kerang putih kuning yang dialas dengan daun beringin."
+                },
+                {
+                    "nama": "celemik bagian bawah",
+                    "peran": "Tempat jajan suci",
+                    "deskripsi": "Berisi jajan suci Kekuluban putih kuning yang dialas dengan daun beringin."
+                },
+                {
+                    "nama": "celemik bagian kiri",
+                    "peran": "Tempat jajan suci",
+                    "deskripsi": "Berisi jajan suci Karna putih kuning yang dialas dengan daun beringin."
+                },
+                {
+                    "nama": "celemik bagian tengah",
+                    "peran": "Tempat jajan suci",
+                    "deskripsi": "Berisi jajan suci Candigara putih kuning yang dialas dengan daun beringin."
+                },
+                {
+                    "nama": "ceper ke dua",
+                    "peran": "Susunan kedua",
+                    "deskripsi": "Di dalamnya berisi 5 buah celemik dengan posisi atas, bawah, kanan, kiri dan tengah."
+                },
+                {
+                    "nama": "celemik pada ceper ke dua",
+                    "peran": "Tempat pala bungkah pala gantung (panca)",
+                    "deskripsi": "Masing-masing celemik berisi pala bungkah pala gantung (panca)."
+                },
+                {
+                    "nama": "ituk-ituk",
+                    "peran": "Tempat eteh eteh Tetukon",
+                    "deskripsi": "Berisi eteh eteh Tetukon (Beras, benang, porosan, wang kepeng bolong satu kepeng)."
+                },
+                {
+                    "nama": "jajan Saraswati",
+                    "deskripsi": "Dialas dengan sehelai daun beringin."
+                },
+                {
+                    "nama": "daun beringin",
+                    "peran": "Sebagai alas jajan Saraswati"
+                },
+                {
+                    "nama": "sebatang ranting beringin",
+                    "peran": "Sebagai penjor nya",
+                    "deskripsi": "Diletakkan di atas jajan Saraswati."
+                },
+                {
+                    "nama": "pesucian",
+                    "peran": "Susunan di atas jajan Saraswati"
+                },
+                {
+                    "nama": "canang",
+                    "peran": "Susunan di atas jajan Saraswati",
+                    "deskripsi": "Diikat dijadikan satu dengan pesucian."
+                }
+            ],
+            "others": {}
+        }
+    ]
+}
