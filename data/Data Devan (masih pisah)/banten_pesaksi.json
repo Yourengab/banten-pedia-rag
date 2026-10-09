@@ -1,0 +1,25 @@
+{
+  "banten": {
+    "nama": "Banten Pesaksi",
+    "deskripsi": "Banten yang diletakkan (munggah) di Sanggar Pesaksi, yang umumnya disebut Sanggar Surya atau disebut juga Sanggar Tutuan. Pada Upacara Yadnya tingkatan Utama, Sanggar Pesaksi disebut Sanggar Tawang dengan tiga ruang. Jenis Banten Pesaksi yang diletakkan di Sanggar Pesaksi agak berbeda-beda dari satu tempat ke tempat lain.",
+    "makna": "Dalam kehidupan Upacara Yadnya, Tuhan dilambangkan hadir dalam Banten Pesaksi. Tuhan dilambangkan bagaikan wujud manusia yang memiliki kepala, badan, dan kaki: Banten Pesaksi melambangkan kepala Hyang Widhi, Banten Tataban di bawahnya melambangkan badan, dan Banten yang berada paling bawah, yang disebut Banten Caru, melambangkan kaki. Ketiganya sesungguhnya lambang kehadiran Hyang Widhi Wasa dengan segala ciptaan-Nya. Seluruh Banten yang diletakkan di Sanggar Pesaksi atau Sanggar Surya adalah lambang yang menggambarkan Kemahakuasaan Tuhan sebagai Saksi Agung kehidupan alam semesta beserta segala isinya.",
+    "variasi": [
+      {
+        "nama": "Banten Suci",
+        "deskripsi": "Salah satu jenis Banten Pesaksi."
+      },
+      {
+        "nama": "Banten Dewa Dewi",
+        "deskripsi": "Disebut juga Banten Arda Nareswari; Banten mandiri yang selalu ditempatkan di Sanggar Pesaksi."
+      },
+      {
+        "nama": "Banten Catur",
+        "deskripsi": "Jenis Banten Pesaksi lainnya yang diletakkan di Sanggar Surya."
+      }
+    ],
+    "others": {
+      "satu_soroh_suci": "Banten Suci yang sederhana atau satu Soroh Suci terdiri dari Banten Suci, Daksina, Peras, Ajuman, Tipat Kelanan, Banten Duma, Banten Pisang Matah dan Pisang Lebeng, Banten Pebersihan, Canang Lengewangi Buratwangi, dan Canang Sari. Dalam banten yang lebih besar dilengkapi dengan Banten Perayunan. Kelengkapan Banten Suci diuraikan dalam Lontar Kusuma Dewa koleksi Ida Pedanda Made Sidemen Sanur.",
+      "banten_penyerta_catur": "Banten Catur sebagai Banten Pesaksi dilengkapi dengan Banten Panca Saraswati, Banten Guru, dan Banten Gana."
+    }
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamus Komponen Banten - Banten Pedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kamus Komponen Banten</h1>
+            <p>Daftar seluruh komponen upakara dan relasi banten yang menggunakannya</p>
+        </header>
+
+        <nav class="nav-segmented">
+            <div class="nav-pills">
+                <a href="index.html" class="nav-pill">Dashboard Visualisasi</a>
+                <a href="kamus.html" class="nav-pill active">Kamus Komponen</a>
+            </div>
+        </nav>
+
+        <section class="dashboard">
+            <div class="stats-cards">
+                <div class="card stat-card">
+                    <h3>Total Komponen Unik</h3>
+                    <p id="total-components" class="stat-value">0</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>Komponen Terpopuler</h3>
+                    <p id="top-component" class="stat-value" style="font-size: 1.8rem; line-height: 1.2;">-</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>Total Relasi Penggunaan</h3>
+                    <p id="total-relations" class="stat-value">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-list card">
+            <div class="list-header">
+                <h2>Eksplorasi Komponen</h2>
+                <div class="filters">
+                    <input type="text" id="searchInput" class="filter-input" placeholder="Cari nama komponen atau banten terkait...">
+                    <select id="sortFilter" class="filter-input">
+                        <option value="usage_desc">Penggunaan Terbanyak</option>
+                        <option value="usage_asc">Penggunaan Tersedikit</option>
+                        <option value="name_asc">Nama Komponen (A-Z)</option>
+                        <option value="name_desc">Nama Komponen (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="resultsCount" style="margin-bottom: 1.25rem; color: var(--text-muted); font-size: 0.95rem;">
+                Memuat data komponen...
+            </div>
+
+            <div class="dictionary-list" id="dictionaryList">
+                <!-- Component cards will be injected here -->
+            </div>
+
+            <button id="loadMoreBtn" class="load-more-btn" style="display: none;">
+                Muat Lebih Banyak
+            </button>
+        </section>
+    </div>
+
+    <!-- Modal for Banten Details -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="kamus.js"></script>
+</body>
+</html>

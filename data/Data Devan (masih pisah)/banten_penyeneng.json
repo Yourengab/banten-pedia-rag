@@ -1,0 +1,25 @@
+{
+  "banten": {
+    "nama": "Banten Penyeneng",
+    "deskripsi": "Banten dengan bentuk yang indah dan memiliki tiga kojong.",
+    "makna": "Makna Banten Penyeneng tergambar dalam Puja Pengantarnya dan dari sudut arti kata Penyeneng. Nyeneng dalam bahasa Jawa Kuna, yang juga sudah mewarga dalam bahasa Bali, artinya hidup. Orang yang Nyeneng atau hidup secara wajar dan benar harus memenuhi tiga syarat yaitu mencipta, memelihara, dan meniadakan. Hidup yang wajar dan benar adalah hidup yang selalu menciptakan sesuatu yang patut diciptakan; agar mendapatkan tuntunan dalam mengembangkan daya cipta hendaknya memuja Dewa Brahma. Untuk memelihara sesuatu yang patut dipelihara hendaknya memuja Dewa Wisnu, dan untuk menghilangkan sesuatu yang patut dihilangkan hendaknya memuja Dewa Siwa.",
+    "komponen": [
+      {
+        "nama": "Kojong berisi Bija atau Beras",
+        "peran": "Lambang bahwa hidup ini harus kreatif untuk mengembangkan bibit atau biji yang baik."
+      },
+      {
+        "nama": "Kojong berisi Tepung Tawar",
+        "peran": "Lambang usaha untuk memelihara sesuatu yang patut dipelihara; upaya ini patut memohon tuntunan dengan memuja Dewa Wisnu."
+      },
+      {
+        "nama": "Kojong berisi nasi",
+        "peran": "Lambang upaya untuk menghilangkan sesuatu yang patut dihilangkan; untuk itu patut memohon tuntunan Tuhan dengan memuja Dewa Siwa."
+      }
+    ],
+    "others": {
+      "puja_pengantar": "Om Kaki Penyeneng Nini Penyeneng Kajenenganing Brahma, Wisnu Iswara.",
+      "kategori_banten": "Termasuk Banten Tataban Alit bersama Banten Peras, Tulung, dan Sesayut; pada bagian lain teks disebut sebagai salah satu banten Soroan Alit."
+    }
+  }
+}

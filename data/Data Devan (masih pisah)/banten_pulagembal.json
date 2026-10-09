@@ -1,0 +1,17 @@
+{
+  "banten": {
+    "nama": "Banten Pulagembal",
+    "deskripsi": "Disebut juga Banten Soroan Pulagembal. Keberadaan alam digambarkan secara rinci dan lengkap dalam jajan atau cecalcalan yang dipergunakan: ada jajan yang menggambarkan isi taman bunga (seperti bunga kecita dan bunga temu sekar agung), berbagai jenis burung (seperti manuk dewata, dakah, dikih, burung ngos-ngosan, kedis dingkih), air (seperti jajan taman, gumelar, dan gumulung), bangunan (seperti jajan Kemulan, jajan taksu, cakraning pedati), waktu (seperti jajan lemah lemeng), dan senjata Dewata Nawa Sanga.",
+    "makna": "Melukiskan alam sebagai pernyataan kasih Tuhan pada umatnya agar terhindar dari kehidupan yang menderita, serta menggambarkan keadaan alam yang indah dan lestari sebagai sumber kehidupan dan penghidupan umat manusia. Banten Pulagembal melambangkan alam yang positif.",
+    "variasi": [
+      {
+        "nama": "Banten Sarad",
+        "deskripsi": "Bentuk Banten Pulagembal yang lebih lengkap dan lebih besar, disebut sebagai Pula Gembal yang besar. Ceritanya memiliki tema-tema tertentu yang diambil dari cerita Maha Bharata dan Ramayana."
+      }
+    ],
+    "others": {
+      "dewa_yang_dipuja": "Dewa Gana, Dewa yang memberikan kasih sayang yang tulus dalam wujud perlindungan nyata pada umat dari berbagai halangan dalam hidup (Wighna-ghna Dewa). Dewa Gana juga disebut Dewa Winayaka, artinya Dewa kebijaksanaan.",
+      "hubungan_dengan_banten_bebangkit": "Dapat dipergunakan sendiri tanpa disertai Banten Bebangkit. Banten Pulagembal dan Banten Bebangkit melambangkan dimensi positif dan negatif alam; setiap ada Banten Bebangkit juga ada Banten Pula Gembal."
+    }
+  }
+}

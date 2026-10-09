@@ -1,0 +1,32 @@
+{
+  "banten": {
+    "nama": "Banten Guru",
+    "deskripsi": "Banten yang selalu mendampingi Banten Catur sebagai Banten Pesaksi. Banten Guru juga menggunakan jajan Sesamuhan seperti Banten Catur. Jenis jajan Sesamuhan serta perlengkapannya hampir sama dengan Banten Catur, namun warnanya yang berbeda: Banten Catur menggunakan empat warna, sedangkan Banten Guru hanya menggunakan satu warna yaitu putih. Warna jajan Sesamuhan dan pelengkapan lainnya hanya berwarna putih. Menggunakan angka kelipatan 8. Menggunakan Nasi berbentuk Tumpeng yang disebut Tumpeng Guru, dengan sebutir telur itik yang utuh dan direbus dengan matang pada puncaknya, dilengkapi dengan Guling itik putih sebagai lauknya.",
+    "makna": "Lambang memohon persaksian dari Tuhan sebagai Siwa Guru. Angka kelipatan 8 sebagai lambang Asta Dala; artinya Gurulah yang berfungsi untuk menyebarkan ilmu pengetahuan ke seluruh penjuru dunia. Banten Guru sebagai pengejawantahan dari Kemahakuasaan Tuhan yang memiliki Jnyana Sakti. Itik adalah lambang kesucian sifat Sattwam. Warna putih melambangkan sifat ilmu pengetahuan yang murni (pure science) yang Netral: ilmu itu tidak memihak, bisa digunakan untuk kebaikan dan juga bisa digunakan untuk kejahatan. Makna utama dari seluruh Banten Pesaksi yang munggah ke Sanggar Pesaksi adalah kesadaran bahwa setiap perbuatan disaksikan oleh Tuhan sebagai Saksi Agung, yang menimbulkan kesadaran untuk mengontrol perbuatan; salah satunya adalah kesadaran untuk selalu berguru dalam hidup.",
+    "fungsi": "Memohon persaksian dari Tuhan sebagai Siwa Guru. Banten Guru sebagai pemujaan pada Dewa Siwa Guru. Banten Guru dan Banten Catur satu rangkaian Banten yang saling melengkapi untuk menggambarkan Kemahakuasaan Tuhan yang dilambangkan hadir pada setiap Upacara Yadnya yang dilangsungkan oleh umat Hindu. Dengan adanya Banten Pesaksi itu umat Hindu diingatkan agar setiap gerak langkahnya dalam hidup ini jangan sampai tidak merasa adanya persaksian Tuhan.",
+    "komponen": [
+      {
+        "nama": "Tumpeng Guru",
+        "peran": "Nasi Banten Guru",
+        "deskripsi": "Nasi berbentuk Tumpeng. Pada puncaknya digunakan sebutir telur itik yang utuh dan direbus dengan matang."
+      },
+      {
+        "nama": "Guling itik putih",
+        "peran": "Lauk Tumpeng Guru"
+      },
+      {
+        "nama": "Jajan Sesamuhan",
+        "deskripsi": "Seperti Banten Catur namun hanya berwarna putih."
+      }
+    ],
+    "others": {
+      "tata_letak": "Banten Guru sebagai bagian yang tidak terpisahkan dengan Banten Catur menentukan tata letak Banten lainnya. Letaknya di tengah. Dalam upacara yang besar tingkatannya, Sanggar Pesaksi menggunakan Sanggar Tawang yang ruangnya tiga; Banten Guru selalu diletakkan di ruangan yang di tengah bersama-sama Banten Catur yang warnanya putih dan kuning.",
+      "tata_cara_menata": "Tata cara menatanya (Nanding) berbeda-beda sesuai dengan kreasi seni tukang Banten di setiap daerah.",
+      "hubungan_dengan_banten_lain": {
+        "banten_catur": "Banten Catur sebagai Banten Pesaksi selalu dilengkapi dengan Banten Guru. Banten Catur melambangkan empat Kemahakuasaan Tuhan atau Cadu Sakti. Jnyana Sakti yang dilambangkan dalam Banten Catur harus dijabarkan menjadi Banten Guru dan Panca Saraswati.",
+        "banten_panca_saraswati": "Tuhan sebagai sumber ilmu pengetahuan disebut Dewi Saraswati, karena itu Banten Catur juga selalu dilengkapi dengan Banten Panca Saraswati."
+      },
+      "konsep_guru": "Tuhan dipuja sebagai Guru yang Maha Guru karena memiliki Kemahakuasaan yang disebut Jnyana Sakti, yaitu Maha Tahu. Fungsi Guru adalah sebagai tempat memohon ilmu pengetahuan; ilmu pengetahuan yang paling utama adalah Brahma Widya dan Atma Widya. Tuhan sebagai pendidik dan pengajar Ilmu Pengetahuan dipuja sebagai Siwa Maha Guru."
+    }
+  }
+}

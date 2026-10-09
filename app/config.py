@@ -14,7 +14,7 @@ SUPABASE_KEY: str = os.getenv("SUPABASE_KEY", "")
 
 # ── Gemini ────────────────────────────────────────────────────────────────────
 GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL: str   = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+GEMINI_MODEL: str   = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite  ")
 # Newer options (may need allowlist or may be under load):
 # "gemini-3.8-flash" — latest, but high demand / may 503
 # "gemini-2.5-flash" — unavailable to new API keys

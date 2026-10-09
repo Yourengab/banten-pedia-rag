@@ -1,0 +1,53 @@
+{
+  "banten": {
+    "nama": "Banten Byakala",
+    "deskripsi": "Dibuat dengan alas Ayakan (dalam bahasa Bali disebut Sidi). Di atas Ayakan diletakkan Kulit Sesayut. Perlengkapan berikutnya adalah Kulit Peras Pandan berduri (Pandan Wong). Banten Byakala dilengkapi dengan Nasi Metajuh dan Nasi Metimpuh, serta menggunakan Sampian Lis Bebuu dan Sampian Padma.",
+    "makna": "Lambang upacara penyucian lahiriah. Banten Byakala bertujuan menyaring wujud yang kasar menjadi lebih halus, yaitu meningkatkan sifat-sifat Bhuta Kala dari yang kasar menjadi lebih halus untuk membantu manusia menangani berbagai pekerjaan dalam rangka beryadnya, serta merubah keadaan yang kurang baik menjadi lebih baik, dari yang kotor menjadi bersih dan suci tahap demi tahap. Dengan Banten Byakala diwujudkan kesucian secara Sekala dengan menata segala sesuatunya sesuai dengan posisi, proporsi, fungsi, dan profesi masing-masing, yang melahirkan keadaan harmonis; keadaan harmonis itulah yang dianggap bersih untuk ditingkatkan menuju kesucian Niskala.",
+    "fungsi": "Setiap Upacara Yadnya umumnya diawali dengan upacara pembersihan atau penyucian tahap awal. Banten Byakala melambangkan upacara penyucian lahiriah yang dilengkapi dengan upacara penyucian rohaniah menggunakan Banten Prayascita.",
+    "komponen": [
+      {
+        "nama": "Ayakan (Sidi)",
+        "peran": "Alas Banten Byakala.",
+        "deskripsi": "Alat untuk menyaring tepung beras guna mendapatkan tepung yang halus; melambangkan tujuan Banten Byakala menyaring wujud yang kasar menjadi lebih halus."
+      },
+      {
+        "nama": "Kulit Sesayut",
+        "peran": "Diletakkan di atas Ayakan.",
+        "deskripsi": "Dibuat dari daun janur yang masih hijau (Selepan), bundar dengan garis tengah antara dua puluh lima sampai tiga puluh cm, dibuat dengan cara Maiseh berkeliling. Bentuk ini melambangkan bahwa hidup di dunia Sekala diusahakan dengan cara bertahap dengan rencana yang matang menuju tahapan yang semakin baik, sejalan dengan arti Sesayut yaitu menuju kerahayuan."
+      },
+      {
+        "nama": "Kulit Peras Pandan berduri",
+        "peran": "Pandan berduri (Pandan Wong) adalah lambang senjata untuk melindungi kebenaran yang diperjuangkan oleh manusia.",
+        "deskripsi": "Peras dalam Lontar Yadnya Prakerti berarti Prasidha, yaitu sukses dengan mengendalikan Tri Guna."
+      },
+      {
+        "nama": "Nasi Metajuh",
+        "deskripsi": "Nasi dengan garam dan lauk pauk lainnya, dibungkus daun pisang berbentuk segi empat."
+      },
+      {
+        "nama": "Nasi Metimpuh",
+        "deskripsi": "Nasi dengan garam dan lauk pauk lainnya, dibungkus daun pisang berbentuk segi tiga."
+      },
+      {
+        "nama": "Sampian Lis Bebuu",
+        "peran": "Lambang alam dalam keadaan seimbang; menurut mantramnya bertujuan menghilangkan Dasa Mala.",
+        "deskripsi": "Disebut juga Lis Alit atau Lis Pabyakalaan; sangat berbeda dengan Sampian Lis Senjata atau Lis Amu Amu yang dipergunakan dalam Banten Prayascita. Terdapat beberapa jejahitan seperti tangga menek, tangga turun, jan sesapi, ancak bingin, alang-alang, tipat pusuh, tipat tulud, basang wayah basang nguda, tampak, tipat lelasan, tipat lepas, dll., yang dibungkus menjadi satu dengan jejahitan bernama Takep Jit lalu diikat sehingga berbentuk Base tampelan, diisi urung tipat Kukur."
+      },
+      {
+        "nama": "Sampian Padma",
+        "peran": "Lambang senjata Dewa Siwa sebagai pembasmi hal-hal negatif seperti Dasa Mala."
+      },
+      {
+        "nama": "Sampian Nagasari",
+        "peran": "Melambangkan prosesi penyucian inti dari Bhuwana Alit dan Bhuwana Agung (digunakan juga dalam Banten Tebasan Durmenggala dan Prayascita)."
+      }
+    ],
+    "others": {
+      "makna_nasi_dan_daun_pisang": "Nasi dalam dua bentuk melambangkan isi alam yang dibutuhkan manusia sehari-hari, yang patut dilindungi dari pencemaran Bhuta Kala. Daun pisang pembungkusnya adalah lambang perlindungan dari pengaruh Bhuta Kala.",
+      "kisah_daun_pisang_mahabharata": "Dalam perang Bharata Yudha, Duryudana dipanggil ibunya Dewi Gandhari pada malam hari dan atas nasihat Sri Kresna menutup bagian badannya yang terlarang dengan daun pisang saat menghadap ibunya. Dewi Gandhari membuka tutup matanya untuk memancarkan kesaktian pada Duryudana agar teguh tidak tembus segala macam senjata, sehingga bagian yang tidak terlanjang itu tidak teguh dan dipukul oleh Bima. Hal ini menyebabkan daun pisang diyakini memiliki kekuatan untuk menolak kekuatan negatif seperti Bhuta Kala.",
+      "dasa_mala": "Dalam kitab Slokantra 84, Dasa Mala adalah Tandri, Kleda, Leja, Kutila, Kuhaka, Metraya, Megata, Ragastri, Bhaksa Bhuwana dan Kimburu, yaitu sepuluh jenis perbuatan yang dianggap kotor atau Mala yang menghalangi seseorang mencapai karunia Tuhan.",
+      "pengertian_bersih_sekala": "Bersih dalam artian Sekala adalah segala sesuatunya berada dalam keadaan seimbang sesuai dengan posisi, proporsi, dan fungsi masing-masing, bukan berarti sama sekali tidak ada yang kotor dalam lingkungan hidup.",
+      "keseimbangan_hidup": "Kesucian rokhaniah (Citta) dan kebersihan lahiriah merupakan kondisi yang dibutuhkan oleh setiap orang yang mendambakan keseimbangan hidup. Hidup yang seimbang lahir batin merupakan modal untuk menuju tahapan hidup yang sejahtera dan bahagia."
+    }
+  }
+}

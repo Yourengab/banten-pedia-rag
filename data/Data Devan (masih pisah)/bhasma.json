@@ -1,0 +1,49 @@
+{
+  "banten": {
+    "nama": "Bhasma",
+    "deskripsi": "Dalam upacara Agama Hindu Bhasma adalah serbuk cendana yang dicampur air yang digunakan oleh Pandita Hindu dalam melakukan pemujaan. Kata Bhasma bukanlah berasal dari kata 'baas' dalam bahasa Bali yang artinya beras; Bhasma berasal dari bahasa Sansekerta yang artinya abu suci. Serbuk cendana didapatkan dengan menggosok-gosokkan kayu cendana di atas dulang atau Kumba dari tanah liat, dicampur dengan air; bukan dengan cara membakar kayu cendana. Endapan dari gosokan itu menghasilkan serbuk kayu cendana, yang di Bali disebut 'asaban cendana'. Serbuk cendana inilah bahan dasar membuat Bhasma oleh Pandita, ditempatkan di 'Pabhasmaan', salah satu dari seperangkat alat pemujaan Pandita di Bali yang disebut Siwopakarana (masyarakat awam menyebutnya Siwakrana). Dari serbuk cendana itulah Pandita membuat Bhasma yaitu abu suci yang sakral.",
+    "makna": "Bhasma adalah sarana penyucian diri bagi seorang Pandita saat memuja untuk memimpin suatu upacara yadnya. Pemakaian Bhasma bagi seorang Pandita atau Sadhaka sebagai lambang suatu prosesi untuk menjadikan diri beliau bagaikan Dewa Siwa untuk menuntun umat dalam mewujudkan hidup yang suci. Hubungan antara umat Walaka dengan Pandita seperti hubungan Dewa Kumara dengan Dewa Siwa yaitu hubungan antara anak dengan ayah, berdasarkan kasih sayang yang suci dan tulus; sebagai simbolis agar umat Walaka meningkatkan sifat-sifat Ketuhananya sebagai Kumara demikian juga Pandita meningkatkan pula sifat-sifat Ketuhanan bagaikan Dewa Siwa. Pengolesan Bhasma pada sepuluh bagian badan Sang Pandita bertujuan mewujudkan Brahmangga atau Siwangga, artinya dengan menghancurkan segala kekotoran diri beliau Sang Pandita menjadi Dewa Brahma atau Dewa Siwa, yang disebut Siwa Bhasma, yaitu dengan Bhasma itulah Pandita menjadikan diri beliau sebagai Dewa Siwa.",
+    "fungsi": "Hanya dipakai oleh Pandita untuk menghadirkan kesucian Dewa Siwa dalam diri beliau; hanya Panditalah yang boleh memakai Bhasma. Dipakai sebagai sarana penyucian diri bagi seorang Pandita saat memuja untuk memimpin suatu upacara yadnya.",
+    "komponen": [
+      {
+        "nama": "Serbuk cendana",
+        "peran": "Bahan dasar Bhasma",
+        "deskripsi": "Didapatkan dengan menggosok-gosokkan kayu cendana di atas dulang atau Kumba dari tanah liat sambil dicampur air; di Bali disebut 'asaban cendana'."
+      },
+      {
+        "nama": "Air",
+        "peran": "Dicampur dengan serbuk cendana"
+      },
+      {
+        "nama": "Pabhasmaan",
+        "peran": "Tempat serbuk cendana ditempatkan",
+        "deskripsi": "Salah satu dari seperangkat alat pemujaan Pandita di Bali yang disebut Siwopakarana (masyarakat awam menyebutnya Siwakrana)."
+      }
+    ],
+    "others": {
+      "proses_sakralisasi": [
+        "Serbuk cendana diasapi, kemudian diperciki Tirtha Panglukatan.",
+        "Serbuk cendana diletakkan pada Pabhasmaan diikuti dengan Go Mudra ke kiri.",
+        "Serbuk cendana diletakkan pada telapak tangan kiri dengan mengucapkan Mantra: Om Bang Basma dewaya namah.",
+        "Dilanjutkan dengan Mantram Bhasma. Makna Mantram Bhasma memohonkan kepada Tuhan (Om) Bhasma ini adalah rahasia kesucian untuk menghancurkan semua kejahatan, melenyapkan semua penderitaan dan menghilangkan semua kekotoran.",
+        "Bhasma diaduk-aduk dengan jari manis tangan kanan diikuti dengan Mantram: Om Sang Bang Tang Ang Ing. Om Nang Mang Sing Vang Yang. Om hrang ring sah Parama Siwaadityaya namah.",
+        "Dilanjutkan dengan mengucapkan Sthiti Mantra, diteruskan dengan Dewa Pratistha dan ditutup dengan Kuta Mantra.",
+        "Bhasma diaduk tiga kali dengan memutar kekanan atau Pradaksina disertai mengucapkan Mantram: Om Bhur Bhuwah Swah. Dengan Mantram ini selesailah proses sakralisasi pembuatan Bhasma tersebut dan Bhasma sudah dapat digunakan oleh Pandita."
+      ],
+      "tata_cara_pemakaian": "Saat Bhasma akan dipakai untuk menyucikan diri oleh Pandita terlebih dahulu Bhasma diaduk lagi dengan jari manis tangan kanan disertai Mantram yang artinya menyatakan bahwa Bhasma tersebut sudah merupakan perpaduan Om dan Ang, atau Purusa dan Predana telah bersatu dengan Dewa Siwa yang Maha Utama. Setelah itu Bhasma dioleskan pada Brahmangga dan Siwangga dengan Mantram khusus.",
+      "sepuluh_bagian_badan_pengolesan": ["ubun-ubun", "wajah (muka)", "hulu hati", "bahu kanan", "bahu kiri", "kepala", "ujung rambut", "pinggang", "kedua telinga"],
+      "tingkat_penyucian_menurut_lontar_bhuwanakosa": {
+        "utama": "Penyucian dengan Bhasma",
+        "madya": "Penyucian dengan tanah dan air",
+        "nista": "Penyucian dengan daun"
+      },
+      "tiga_prosesi_menghadirkan_dewa_siwa": [
+        "Dagdi Karana: prosesi sakral untuk membakar segala kekotoran beliau sampai menjadi abu rahasia yang suci dan beliau sudah menghadirkan Dewa Siwa.",
+        "Amerthi Karana: karena beliau sudah memasang Bawa atau Ketu, beliau sudah menghadirkan Dewa Sadha siwa.",
+        "Siwi Karana: beliau sudah mengucapkan Mantram memimpin Upacara dan sudah menghadirkan Dewa Parama Siwa. Saat prosesi Siwi Karana inilah Bhasma sudah dipergunakan oleh seorang Pandita."
+      ],
+      "rujukan_lontar": "Makna penggunaan Bhasma disebutkan dalam Lontar Bhuwanakosa dan Weda Parikrama. Lontar Bhuwanakosa menyebutkan bahwa Pandita yang senantiasa menggunakan Bhasma menjadikan diri beliau suci (Hyang Bhasma); beliau disebut sebagai Yogi, Siwa Sayojya yang menunggal dengan Bhatara Siwa bagaikan petir menunggal dengan samudra. Disebutkan pula bahwa Bhasma yang sakral ini akan menuntun Dewa-Dewa, Danawa, Daitya, Manusia, semua binatang, dan burung-burung akan mencapai Moksha oleh Sang Hyang Siwa Bhasma, karena dalam Bhasma terdapat kesucian Sang Hyang Tri Semaya, Bhatara Brahma, Bhatara Wisnu, Bhatara Sangkara, Bhaskara dan Bhatara Siwa sendiri.",
+      "perbedaan_dengan_bija": "Bija dipakai oleh umat Walaka untuk meng-Kumara-kan diri, sedangkan Bhasma hanya dipakai oleh Pandita untuk menghadirkan kesucian Dewa Siwa dalam diri beliau."
+    }
+  }
+}

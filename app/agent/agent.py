@@ -162,7 +162,7 @@ def _generate_answer(
         ),
     )
 
-    return response.text.strip()
+    return (response.text or "").strip()
 
 
 # ══════════════════════════════════════════════════════════════════════════════

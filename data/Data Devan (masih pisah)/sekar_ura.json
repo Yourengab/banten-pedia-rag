@@ -1,0 +1,35 @@
+{
+  "banten": {
+    "nama": "Sekar Ura",
+    "deskripsi": "Campuran bermacam-macam bunga yang sudah diiris-iris, dicampur dengan daun \"Temen\" atau daun \"Dapdap\" yang juga diiris-iris, kemudian dicampuradukkan dengan beras kuning dan uang kepeng.",
+    "makna": "Penaburan Sekar Ura adalah lambang perpisahan antara beliau yang meninggal yang jenazahnya sedang diusung ke Setra dengan yang masih hidup di dunia maya ini. Unsur-unsur Sekar Ura mengandung makna suatu perpisahan antara yang meninggal dengan yang masih hidup. Orang yang masih hidup harus dengan tulus dan ikhlas untuk melepaskan kematian atau kepergian ke alam Niskala beliau yang telah meninggal. Demikian juga beliau yang telah meninggal agar dengan tulus ikhlas berangkat menuju alam Niskala meninggalkan sanak saudaranya di alam Sakala. Sekar Ura juga merupakan lambang dan doa semoga perpisahan itu membawa kebahagiaan dan kemakmuran pada mereka yang ditinggalkan hidup di dunia Sakala, dan agar yang meninggal di dunia Niskala mendapatkan tempat yang layak.",
+    "fungsi": "Ditaburkan dalam upacara kematian saat jenazah diusung menuju Setra (Kuburan).",
+    "komponen": [
+      {
+        "nama": "Bunga",
+        "peran": "Melambangkan bahwa suatu ketulusikhlasan dalam perpisahan.",
+        "deskripsi": "Bermacam-macam bunga yang diiris-iris; salah satu unsur dari Sekar Ura."
+      },
+      {
+        "nama": "Daun Temen atau Daun Dapdap",
+        "peran": "Melambangkan bahwa perpisahan itu bukanlah menghilangkan keakraban hubungan antara yang masih di dunia Sakala dan yang di dunia Niskala.",
+        "deskripsi": "Daun Temen adalah lambang untuk menjaga keharmonisan hubungan antara kehidupan di Sakala dan Niskala; Temen dalam bahasa Bali artinya akrab atau harmonis. Daun Dapdap disebut Taru Sakti dalam Lontar Taru Premana."
+      },
+      {
+        "nama": "Beras kuning",
+        "peran": "Bersama uang kepeng, melambangkan kebahagiaan dan kemakmuran."
+      },
+      {
+        "nama": "Uang kepeng",
+        "peran": "Lambang pengganti segala kekurangan yang mungkin terjadi dan tidak disengaja dalam upacara perpisahan antara yang meninggal dan keluarga yang masih hidup; bersama beras kuning melambangkan kebahagiaan dan kemakmuran.",
+        "deskripsi": "Uang dalam bahasa Sansekerta disebut Artha, yang arti sesungguhnya adalah tujuan, karena uang membantu melancarkan seseorang mencapai tujuannya. Dalam upacara Hindu uang kepeng dipakai sebagai Sesari, lambang pengganti kekurangan yang tidak disengaja. Dengan uang kepeng diharapkan berbagai kekurangan dalam perpisahan itu dapat disempurnakan."
+      }
+    ],
+    "others": {
+      "tata_cara_penaburan": "Ditaburkan sedikit demi sedikit selama dalam perjalanan jenazah yang diusung ke Setra.",
+      "anjuran_saat_upacara": "Saat berlangsungnya upacara pengesahan meninggal setiap orang sangat dianjurkan jangan bersedih, apalagi saat berangkat ke kuburan hendaknya diikhlaskan dengan hati yang suci.",
+      "keyakinan_terkait_kematian": "Meninggal menurut keyakinan Umat Hindu adalah kehendak Hyang Widhi. Siapapun tidak dapat menentukan kapan tepatnya orang akan meninggal; yang paling tahu hanyalah Hyang Widhi. Mati itu merupakan kehendak Tuhan, karena hal itu kehendak Tuhan kita tidak boleh bersedih pada kehendak Tuhan.",
+      "keyakinan_hubungan_sakala_niskala": "Hubungan keluarga yang masih hidup dengan yang telah meninggal dalam konsep Hindu berlangsung terus. Perbuatan baik atau buruk yang masih hidup dapat mempengaruhi keadaan beliau yang sudah meninggal (diuraikan dalam Manawa Dharmasastra), dan karma baik atau buruk yang meninggal juga memengaruhi yang ada di dunia Sakala. Umat Hindu meyakini bahwa jika Atman mencapai tempat yang mulia di alam Niskala, hal itu membawa kemuliaan pula pada keluarga yang masih hidup."
+    }
+  }
+}

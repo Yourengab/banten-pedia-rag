@@ -1,0 +1,61 @@
+{
+  "banten": {
+    "nama": "Jajan Saraswati",
+    "deskripsi": "Salah satu jenis jajan Sesamuhan Banten Suci. Sesamuhan jajan Saraswati dibuat berwarna putih dari tepung beras dicampur ketan. Bentuk alasnya bundar, diisi dengan jajan yang melukiskan dua ekor binatang Cecak lengkap dengan sarang dan telornya, serta jajan yang berbentuk huruf suci Omkara. Warna jajan putih kecuali mata Cecak dan huruf Omkara yang dibuat dari jajan berwarna hitam.",
+    "makna": "Lambang kehadiran Hyang Widhi dalam Upacara Yadnya sebagai Yang Maha Suci dan Maha Tahu. Lambang dari Dewi Saraswati sebagai manifestasi Tuhan dalam fungsinya sebagai Yang Maha Tahu dan juga sebagai pencipta ilmu pengetahuan suci Weda. Simbol dua ekor Cecak jantan dan betina adalah lambang kepekaan spiritual yang berdimensi Purusa dan Predana. Warna putih (kecuali mata Cecak dan huruf Omkara yang hitam) berarti ilmu itu murni dan netral, yang dapat dikembangkan sesuai pandangan masing-masing, dan yang penting ilmu itu harus diarahkan untuk menuju jalan Tuhan yang dilambangkan oleh Omkara.",
+    "fungsi": "Bersama jajan Dodol Madu Parka, jajan Saraswati adalah jajan yang paling menentukan makna dari Banten Suci yang munggah di Sanggar Pesaksi. Menjadi motivasi agar umat Hindu senantiasa mengembangkan kepekaan spiritualnya agar dapat menerima getaran kesucian Tuhan yang disimbolkan hadir dalam upacara Yadnya.",
+    "komponen": [
+      {
+        "nama": "Dua ekor binatang Cecak lengkap dengan sarang dan telornya",
+        "peran": "Lambang kepekaan spiritual yang berdimensi Purusa dan Predana",
+        "deskripsi": "Cecak jantan dan betina. Dalam kebudayaan Melayu Polinesia binatang Cecak salah satu binatang yang memiliki kepekaan spiritual yang alami, sehingga diyakini Cecak dapat menerima firasat Sabda Tuhan."
+      },
+      {
+        "nama": "Huruf suci Omkara",
+        "peran": "Melambangkan jalan Tuhan ke mana ilmu harus diarahkan",
+        "deskripsi": "Dibuat dari jajan berwarna hitam."
+      },
+      {
+        "nama": "Daun Bila dan buahnya",
+        "peran": "Alas jajan Saraswati",
+        "deskripsi": "Daun dan buah Bila itu pahit. Namun banyak orang yang ingin menyuntingnya karena ia memberikan keabadian yang dilambangkan oleh daun bingin dan kenikmatan yang dilambangkan oleh bubur yang enak itu."
+      },
+      {
+        "nama": "Bubur yang enak dibungkus daun endong dan beringin",
+        "peran": "Disertakan bersama daun dan buah Bila sebagai alas jajan Saraswati",
+        "deskripsi": "Melambangkan bahwa mencari ilmu itu memang sangat sulit dan banyak pahitnya."
+      }
+    ],
+    "variasi": [
+      {
+        "nama": "Penggunaan pada Suci Sibakan",
+        "deskripsi": "Jajan Saraswati diisi diletakkan pada Tamas yang kedua dari bawah dari empat Tamas yang dipakai dalam Banten Suci Sibakan."
+      },
+      {
+        "nama": "Penggunaan pada Suci Bungkulan",
+        "deskripsi": "Suci Bungkulan menggunakan enam Tamas; jajan Saraswati diletakkan pada Tamas yang keempat dari bawah."
+      }
+    ],
+    "others": {
+      "banten_pengguna": "Banten yang mengunakan jajan Saraswati adalah Banten Suci Sibakan dan Suci Bungkulan. Suci Nanampan tidak menggunakan Sesamuhan Jajan Saraswati.",
+      "dewi_saraswati": {
+        "wujud": "Aspek Tuhan sebagai Dewi dari Ilmu Pengetahuan; wanita cantik dengan busana lima warna yang disebut Dewi Panca Saraswati, yang diidentikan dengan Panca Dewata. Dalam kitab Pradnya Paramita Study Dewi Saraswati disebut Ibu Alam Semesta, artinya Ibu yang melahirkan alam semesta ini.",
+        "busana_lima_warna": "Putih, merah, kuning, hitam dan viswawrana atau berumbun; artinya ilmu itu berada di mana-mana dan dapat dikembangkan di setiap penjuru alam ini untuk memajukan kehidupan di kolong langit ini.",
+        "atribut": [
+          {
+            "nama": "Cakepan",
+            "makna": "Potongan daun Lontar yang disusun menjadi seperti buku untuk menuliskan ilmu pengetahuan di dalamnya; artinya Tuhanlah sebagai sumber tertinggi dari ilmu pengetahuan."
+          },
+          {
+            "nama": "Genitri atau Japa Mala",
+            "makna": "Alat untuk melakukan Japa sebagai Yadnya tertinggi; artinya ilmu tidak ada batasnya dan dapat dikembangkan terus sepanjang jaman sesuai dengan kebutuhan manusia, namun ada batasnya yaitu jangan mengembangkan ilmu untuk merendahkan martabat manusia dan semua isi alam ini. Lingkaran Japa dibatasi oleh simbol Padma, artinya ilmu dikembangkan menuju jalan Tuhan; Padma adalah lambang alam stana Hyang Widhi. Untaian butir-butir Japa lambang tahapan perjalanan hidup manusia menuju Padma, lambang dunia yang indah dan suci tempat mengamalkan ajaran kesucian."
+          },
+          {
+            "nama": "Wina",
+            "makna": "Alat musik yang menyerupai Gitar; lambang bahwa Ilmu itu sangat indah."
+          }
+        ]
+      }
+    }
+  }
+}

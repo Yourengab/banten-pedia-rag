@@ -1,0 +1,28 @@
+{
+  "banten": {
+    "nama": "Tamiang",
+    "deskripsi": "Sampian Tamiang dibuat dari daun janur muda (busung) sebagai alasnya. Bentuknya menyerupai Tameng sebagai alat perang: janur dipotong-potong dan dirangkai berbentuk Tameng, rangkaiannya menyilang ke semua penjuru, dan ujung-ujung janur yang mengarah ke semua penjuru berbentuk ujung senjata. Salah satu bidang Tamiang dihiasi dengan bunga-bungaan dan daun-daunan beraneka ragam yang ditata agar indah dan berwibawa. Bunga yang penting dipakai adalah bunga Tunjung atau Bunga Padma (lotus) dan Bunga Ratna, di samping bunga-bunga lainnya. Daun-daunan biasanya daun cemara, daun plawa, daun bunga Ratna merah atau yang putih. Bentuk Tamiang menyerupai bentuk Padma Asta Dala.",
+    "makna": "Tamiang adalah lambang pertahanan dan perlindungan. Tamiang sesungguhnya lambang Tameng, alat perang untuk melindungi dan mempertahankan diri dari serangan senjata musuh; sebagai Sampian Tameng, ia lambang permohonan kepada Tuhan agar terhindar dari hidup bermusuhan. Padma Asta Dala adalah lambang Bhuwana Agung dengan delapan penjurunya, stana Tuhan Yang Maha Esa. Di delapan penjuru alam semesta berstana delapan Dewa Asta Dikpalaka, delapan Dewa manifestasi Tuhan yang berfungsi sebagai pengayom alam semesta dengan delapan penjurunya; pelindung yang paling utama adalah berlindung pada kemahakuasaan Tuhan Yang Maha Esa.",
+    "fungsi": "Salah satu sarana Upakara Hari Raya Kuningan yang cukup penting, di samping Kolem, Endongan, dan Ter. Tamiang dipergunakan dalam semua Yadnya, namun penggunaannya paling mutlak pada Hari Raya Kuningan. Pada Yadnya lainnya Tamiang lebih banyak dipergunakan sebagai hiasan upacara saja, tetapi tetap berfungsi penting dan sakral. Kalau Tameng berfungsi melindungi diri dari serangan musuh secara nyata (Sakala), Tamiang dalam bentuk Sampian melindungi diri dari serangan musuh yang berbentuk gaib (Niskala).",
+    "komponen": [
+      {
+        "nama": "Janur muda (busung)",
+        "peran": "Alas Tamiang."
+      },
+      {
+        "nama": "Bunga",
+        "peran": "Lambang kesucian dan keheningan hati nurani. Dalam Lontar Yadnya Prakerti disebutkan \"Sekare pinaka katulusan kasucian kayune mayadnya\", artinya bunga adalah lambang ketulusan dan kesucian hati untuk beryadnya.",
+        "deskripsi": "Bunga Tunjung atau Padma (lotus) dan Bunga Ratna merupakan yang penting dipakai."
+      },
+      {
+        "nama": "Plawa",
+        "peran": "Lambang pengembangan kesucian hati. Dalam Lontar Yadnya Prakerti disebutkan \"Plawa pinaka poh pakayunane suci\", artinya Plawa adalah untuk mengembangkan kesucian hati; hasil perjuangan mendapatkan kesucian hendaknya dikembangkan pada pihak-pihak yang membutuhkan perlindungan kesucian.",
+        "deskripsi": "Daun-daunan yang dipakai biasanya daun cemara, daun plawa, atau daun bunga Ratna merah atau putih."
+      }
+    ],
+    "others": {
+      "nama_lain": "Sampian Tamiang.",
+      "keyakinan_terkait_bunga": "Bunga-bunga yang dipakai (kecuali bunga Tulud Nyuh atau Jempiring Alit dan Sari Konta) disebutkan telah mendapat Panyupatan dari Bhatara Siwa; hal ini diceritakan dalam Lontar Aji Janantaka. Bunga Ratna mendapat Waranugraha dari para dewa sebagai bunga utama untuk menyembah Tuhan."
+    }
+  }
+}

@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import logging
 import re
+from typing import Any, cast
 
 from database.supabase import supabase
 from config import (
@@ -131,7 +132,10 @@ def _embed_query(query: str) -> list[float]:
     )
     if not response.embeddings:
         raise ValueError("Gemini did not return embeddings for the query.")
-    return response.embeddings[0].values
+    values = response.embeddings[0].values
+    if values is None:
+        raise ValueError("Gemini returned an embedding with no values.")
+    return list(values)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -166,7 +170,7 @@ def _vector_search(
             },
         ).execute()
 
-    return response.data or []
+    return cast(list[dict[str, Any]], response.data) if response.data else []
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -203,12 +207,13 @@ def _keyword_search(query: str, top_k: int) -> list[dict]:
 
     results = []
     for row in (response.data or []):
+        row_dict = cast(dict[str, Any], row)
         results.append({
-            "id":          row.get("id"),
-            "document_id": row.get("document_id"),
-            "content":     row.get("content"),
-            "chunk_index": row.get("chunk_index"),
-            "page_number": row.get("page_number"),
+            "id":          row_dict.get("id"),
+            "document_id": row_dict.get("document_id"),
+            "content":     row_dict.get("content"),
+            "chunk_index": row_dict.get("chunk_index"),
+            "page_number": row_dict.get("page_number"),
             "similarity":  0.60,  # nominal score for keyword matches
         })
 
@@ -304,7 +309,7 @@ def _expand_queries(query: str) -> list[str]:
             model="gemini-2.0-flash",
             contents=prompt,
         )
-        text = response.text.strip()
+        text = (response.text or "").strip()
         alternatives = [line.strip() for line in text.splitlines() if line.strip()]
         # Prepend the original query so it's always included.
         return [query] + alternatives[:2]
@@ -325,7 +330,7 @@ def _attach_document_metadata(chunks: list[dict]) -> list[dict]:
         c["document_id"] for c in chunks if c.get("document_id")
     })
 
-    documents_by_id: dict[str, dict] = {}
+    documents_by_id: dict[str, dict[str, Any]] = {}
 
     if document_ids:
         docs_response = (
@@ -335,11 +340,15 @@ def _attach_document_metadata(chunks: list[dict]) -> list[dict]:
             .in_("id", document_ids)
             .execute()
         )
-        documents_by_id = {d["id"]: d for d in (docs_response.data or [])}
+        documents_by_id = {
+            cast(dict[str, Any], d)["id"]: cast(dict[str, Any], d)
+            for d in (docs_response.data or [])
+        }
 
     results = []
     for chunk in chunks:
-        doc = documents_by_id.get(chunk.get("document_id"), {})
+        doc_id = chunk.get("document_id")
+        doc: dict[str, Any] = documents_by_id.get(doc_id, {}) if doc_id is not None else {}  # type: ignore[arg-type]
         results.append({
             "content":     chunk.get("content"),
             "chunk_index": chunk.get("chunk_index"),

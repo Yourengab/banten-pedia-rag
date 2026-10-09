@@ -1,0 +1,369 @@
+[
+  {
+    "banten": {
+      "nama": "Banten Soroan Alit",
+      "deskripsi": "Satu rangkaian Banten Soroan Alit disusun mulai dari Banten Danan; bagian paling atas adalah Penyeneng Tahenan Alit.",
+      "komponen": [
+        {
+          "nama": "Banten Danan",
+          "peran": "Bagian awal rangkaian; susunan dimulai dari Banten Danan.",
+          "deskripsi": "Dialas dengan sebuah ceper. Di dalamnya terdapat raka-raka lengkap dengan porosan, nasi untuk 2 (dua) buah, rerasmen berupa kacang, saur, gerang, timun, dan tuwung yang dialas dengan sebuah celemik, serta sampian plaus kecil."
+        },
+        {
+          "nama": "Banten Peras",
+          "deskripsi": "Dialas dengan sebuah ituk-ituk. Di dalamnya berisi 5 (lima) buah kulit peras kecil, 2 (dua) buah nasi tumpeng kecil, raka-raka lengkap dengan porosan, sampian pusung (sampian peras kecil), dan rerasmen yang dialas dengan sebuah kojong rangkat."
+        },
+        {
+          "nama": "Banten Tulung",
+          "deskripsi": "Dialas dengan sebuah ituk-ituk. Di dalamnya berisi raka-raka lengkap dengan porosan, 3 (tiga) tulung sangkur yang berisi nasi, kacang, dan saur, memakai sampian pusung, serta rerasmen yang memakai kojong rangkat."
+        },
+        {
+          "nama": "Banten Sesayut Alit",
+          "deskripsi": "Dialas dengan sebuah ceper. Di dalamnya berisi raka-raka lengkap dengan porosan, satu buah nasi soda alit, sampian nagasari kecil, dan rerasmen yang memakai 2 (dua) limas."
+        },
+        {
+          "nama": "Banten Pengambeyan Alit",
+          "deskripsi": "Dialas dengan sebuah ceper. Di dalamnya berisi raka-raka lengkap dengan porosan, 2 (dua) buah nasi tumpeng alit, rerasmen yang memakai kojong rangkat, serta sampian pusung."
+        },
+        {
+          "nama": "Penyeneng Tahenan Alit",
+          "peran": "Bagian paling atas rangkaian.",
+          "deskripsi": "Penyeneng lengkap dengan isinya. Dasarnya berisi beras dan porosan. Pada lekukan penyeneng terdapat tepung tawar pada lekukan pertama, sisig pada lekukan kedua, dan pengelelenga berupa daun dapdap yang telah digilas dicampur kapur sirih dengan kapas berisi minyak wangi. Benang putih diletakkan di atasnya pada bagian perengginnya."
+        }
+      ],
+      "others": {
+        "susunan": "Banten ditumpuk mulai dari Banten Danan; bagian paling atas adalah Penyeneng Tahenan Alit. Susunan ini disebut satu rangkaian Banten Soroan Alit."
+      }
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Sesayut Jaga Satru",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Banten suci"
+        },
+        {
+          "nama": "Sanga urip"
+        },
+        {
+          "nama": "Olahan ayam brumbun mesaté",
+          "deskripsi": "33 katih."
+        },
+        {
+          "nama": "Payuk peré",
+          "deskripsi": "Tempat tirta."
+        },
+        {
+          "nama": "Lis amuan-amuan"
+        },
+        {
+          "nama": "Pesucian"
+        },
+        {
+          "nama": "Limas berisi garam dan sambal"
+        },
+        {
+          "nama": "Tegen-tegenan"
+        },
+        {
+          "nama": "Limas berisi kacang, saur, gerang, timun, dan tuwung"
+        },
+        {
+          "nama": "Jajan seserodan",
+          "deskripsi": "11 macam."
+        },
+        {
+          "nama": "Nasi tumpeng putih",
+          "deskripsi": "Dialas dengan daun maja (bila) berbentuk padma, berisi kwangen, dan di ujung tumpeng ditancapkan sebuah tajin ambengan."
+        },
+        {
+          "nama": "Penyeneng"
+        },
+        {
+          "nama": "Banten pejati"
+        }
+      ],
+      "fungsi": "Dipakai pada pelaksanaan upacara Pecaruan, Balik Sumpah, Lebur Sangga, Nawa Gempang, dan sebagai sarana pengerkasa pekarangan.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Penyepuhan",
+      "komponen": [
+        {
+          "nama": "Tempéh",
+          "deskripsi": "Memakai serembeng."
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Banten suci"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Payuk peré",
+          "deskripsi": "Tempat tirta."
+        },
+        {
+          "nama": "Lis amuan-amuan"
+        },
+        {
+          "nama": "Pesucian"
+        },
+        {
+          "nama": "Tempat berisi isuh-isuh dan sapuh awu"
+        },
+        {
+          "nama": "Tetukon",
+          "deskripsi": "Di atasnya berisi sebuah tumpeng putih mepekir berisi kwangen."
+        },
+        {
+          "nama": "Limas berisi garam dan sambal"
+        },
+        {
+          "nama": "Banten tebasan sapuh lara"
+        },
+        {
+          "nama": "Banten soroan alit"
+        },
+        {
+          "nama": "Limas berisi kacang, saur, gerang, timun, dan tuwung"
+        },
+        {
+          "nama": "Bungkah kelapa gading"
+        },
+        {
+          "nama": "Ulam ayam putih betutu"
+        },
+        {
+          "nama": "Sanga urip"
+        },
+        {
+          "nama": "Penyeneng"
+        },
+        {
+          "nama": "Seperangkat banten pejati"
+        }
+      ],
+      "fungsi": "Dipakai pada pelaksanaan upacara penyepuhan Pura dan pemangku, atau untuk penyepuhan terhadap seorang pemangku.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Tetandingan Banten Pengerapuhan",
+      "deskripsi": "Daftar tetandingan Banten Pengerapuhan yang ditampilkan dalam sumber.",
+      "komponen": [
+        {
+          "nama": "Banten suci"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Sanga urip"
+        },
+        {
+          "nama": "Pesucian"
+        },
+        {
+          "nama": "Daging ayam putih betutu"
+        },
+        {
+          "nama": "Nasi perangkat"
+        },
+        {
+          "nama": "Serembeng"
+        },
+        {
+          "nama": "Tetempéh"
+        },
+        {
+          "nama": "Banten tebasan sapuh lara"
+        },
+        {
+          "nama": "Banten isuh-isuh"
+        },
+        {
+          "nama": "Lis amuan-amuan"
+        },
+        {
+          "nama": "Tegen-tegenan"
+        },
+        {
+          "nama": "Banten soroan alit"
+        },
+        {
+          "nama": "Banten pejati"
+        },
+        {
+          "nama": "Tetukon"
+        }
+      ],
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Tetandingan Banten Pewintenan",
+      "deskripsi": "Daftar tetandingan Banten Pewintenan yang ditampilkan dalam sumber.",
+      "komponen": [
+        {
+          "nama": "Banten pejati"
+        },
+        {
+          "nama": "Banten suci"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Tetukon"
+        },
+        {
+          "nama": "Sanga urip"
+        },
+        {
+          "nama": "Rayunan pemijian",
+          "deskripsi": "Maulam itik putih betutu dan ayam putih betutu."
+        },
+        {
+          "nama": "Sesayut pembersihan"
+        },
+        {
+          "nama": "Tipat nasi",
+          "deskripsi": "11 bungkul."
+        },
+        {
+          "nama": "Srembeng"
+        },
+        {
+          "nama": "Tetempéh"
+        },
+        {
+          "nama": "Jajan bantal",
+          "deskripsi": "11 buah."
+        },
+        {
+          "nama": "Tebu",
+          "deskripsi": "11 tebin."
+        },
+        {
+          "nama": "Tegen-tegenan"
+        },
+        {
+          "nama": "Banten soroan alit"
+        },
+        {
+          "nama": "Pesucian"
+        },
+        {
+          "nama": "Lis amuan-amuan"
+        }
+      ],
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Tetandingan Tetukon",
+      "deskripsi": "Daftar unsur tetandingan tetukon yang ditampilkan dalam sumber.",
+      "komponen": [
+        {
+          "nama": "Beras"
+        },
+        {
+          "nama": "Ituk-ituk"
+        },
+        {
+          "nama": "Seuntai benang putih"
+        },
+        {
+          "nama": "Uang kepeng bolong",
+          "deskripsi": "1 (satu) kepeng."
+        },
+        {
+          "nama": "Porosan silih-asih"
+        }
+      ],
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Pesuwugan",
+      "deskripsi": "Banten Pesuwugan dipergunakan pada upacara pekambuhan atau pecolongan dan diletakkan di depan pelinggih Kemulan bersama-sama dengan banten yang ngelekat nepyi di Sanggah.",
+      "komponen": [
+        {
+          "nama": "Tetempéh dan serembeng",
+          "peran": "Alas Banten Pesuwugan."
+        },
+        {
+          "nama": "Taledan/kekebat",
+          "deskripsi": "Diletakkan di tengah tetempéh; di atasnya diisi sebuah banten tetukon."
+        },
+        {
+          "nama": "Banten tetukon"
+        },
+        {
+          "nama": "Raka-raka dan porosan",
+          "deskripsi": "Diletakkan di bagian hulu taledan."
+        },
+        {
+          "nama": "Lima buah ceper berisi nasi gambahan",
+          "deskripsi": "Diletakkan di timur, selatan, barat, utara, dan tengah. Nasi ceper di timur berisi ulam guling itik; di selatan berisi ulam bawang atebih; di barat berisi ulam kacang saur; di utara berisi ulam telor itik bekasem; dan di tengah berisi ulam guling kakul."
+        },
+        {
+          "nama": "Banten pejati",
+          "deskripsi": "Asoroh."
+        },
+        {
+          "nama": "Banten suci alit",
+          "deskripsi": "Asoroh."
+        },
+        {
+          "nama": "Sanga urip dan lis amuan-amuan"
+        },
+        {
+          "nama": "Rayunan perangkatan"
+        },
+        {
+          "nama": "Bungkah kelapa bulan"
+        },
+        {
+          "nama": "Payuk peré",
+          "deskripsi": "Tempat tirta."
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Pesucian"
+        }
+      ],
+      "others": {
+        "tata_cara_tetandingan": [
+          "Memakai sebuah tetempéh, serembeng sebagai alas Banten Pesuwugan.",
+          "Di tengah tetempéh diisi sebuah taledan/kekebat dan di atasnya sebuah banten tetukon.",
+          "Di bagian hulu taledan diisi raka-raka, porosan, dan lima buah ceper yang diletakkan di timur, selatan, barat, utara, dan tengah; isi ulam setiap ceper berbeda sesuai keterangan komponen.",
+          "Berisi banten pejati asoroh.",
+          "Berisi banten suci alit asoroh.",
+          "Berisi sanga urip dan lis amuan-amuan.",
+          "Berisi rayunan perangkatan.",
+          "Berisi sebuah bungkah kelapa bulan dan payuk peré untuk tempat tirta; memakai sampian nagasari dan pesucian."
+        ]
+      }
+    }
+  }
+]

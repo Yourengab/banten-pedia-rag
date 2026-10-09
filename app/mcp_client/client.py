@@ -59,11 +59,13 @@ class BantenPediaMCPClient:
 
     async def list_tools(self):
         """Get tools registered on the MCP Server."""
+        assert self.session is not None, "MCP session not initialised — use async with BantenPediaMCPClient()"
         response = await self.session.list_tools()
         return response.tools
 
     async def call_tool(self, name: str, arguments: dict):
         """Call an MCP tool by name."""
+        assert self.session is not None, "MCP session not initialised — use async with BantenPediaMCPClient()"
         return await self.session.call_tool(
             name,
             arguments=arguments,

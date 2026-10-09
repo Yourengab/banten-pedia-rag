@@ -65,7 +65,7 @@ def embed_texts(
             )
 
         all_embeddings.extend(
-            emb.values for emb in response.embeddings
+            emb.values for emb in response.embeddings if emb.values is not None
         )
 
         # Brief pause between batches to avoid rate limiting.

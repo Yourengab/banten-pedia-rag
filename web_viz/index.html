@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banten Pedia Analytics</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="background"></div>
     <div class="container">
         <header>
             <h1>Banten Pedia Analytics</h1>
             <p>Visualisasi Data Sarana Upakara Banten</p>
         </header>
+
+        <nav class="nav-segmented">
+            <div class="nav-pills">
+                <a href="index.html" class="nav-pill active">Dashboard Visualisasi</a>
+                <a href="kamus.html" class="nav-pill">Kamus Komponen</a>
+            </div>
+        </nav>
 
         <section class="dashboard">
             <div class="stats-cards">
@@ -25,8 +28,8 @@
                     <p id="total-banten" class="stat-value">0</p>
                 </div>
                 <div class="card stat-card">
-                    <h3>Rata-rata Komponen</h3>
-                    <p id="avg-components" class="stat-value">0</p>
+                    <h3>Kategori Terbanyak</h3>
+                    <p id="top-category" class="stat-value">-</p>
                 </div>
                 <div class="card stat-card">
                     <h3>Komponen Terbanyak</h3>
@@ -34,25 +37,48 @@
                 </div>
             </div>
 
-            <div class="chart-container card">
-                <h2>10 Banten dengan Komponen Terbanyak</h2>
-                <canvas id="bantenChart"></canvas>
-            </div>
         </section>
+
+        <div class="charts-row">
+            <div class="chart-container card">
+                <h2>Proporsi Kelompok Penamaan Sama</h2>
+                <div class="chart-wrapper">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container card">
+                <h2>5 Banten dengan Komponen Terbanyak</h2>
+                <div class="chart-wrapper">
+                    <canvas id="topBantenChart"></canvas>
+                </div>
+            </div>
+        </div>
 
         <section class="data-list card">
             <div class="list-header">
-                <h2>Daftar Banten</h2>
-                <input type="text" id="searchInput" placeholder="Cari banten...">
+                <h2>Eksplorasi Data</h2>
+                <div class="filters">
+                    <input type="text" id="searchInput" class="filter-input" placeholder="Cari nama atau deskripsi...">
+                    <select id="categoryFilter" class="filter-input">
+                        <option value="">Semua Kategori</option>
+                    </select>
+                    <select id="sortFilter" class="filter-input">
+                        <option value="name_asc">Nama (A-Z)</option>
+                        <option value="name_desc">Nama (Z-A)</option>
+                        <option value="comp_desc">Komponen Terbanyak</option>
+                        <option value="comp_asc">Komponen Sedikit</option>
+                    </select>
+                </div>
             </div>
             <div class="list-content" id="bantenList">
                 <!-- Items will be injected here via JS -->
             </div>
         </section>
     </div>
+
     <!-- Modal -->
     <div id="detailModal" class="modal">
-        <div class="modal-content card">
+        <div class="modal-content">
             <span class="close-btn">&times;</span>
             <div id="modalBody" class="modal-body"></div>
         </div>

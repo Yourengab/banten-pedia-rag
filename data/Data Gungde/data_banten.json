@@ -1,0 +1,1067 @@
+{
+  "banten": [
+    {
+      "nama": "Segehan Kepel.",
+      "fungsi": "Untuk upacara Bhūta-yajña yang kecil/sederhana, seperti Keliwon, Purnama, Tilem, Piodalan Betara Saraswati, Pagerwesi, Rerahinan alit (ngebulan) di sanggah/di pura, dan sehabis otonan. Segehan Kepel atau Segehan Cacahan dapat dipilih oleh yang bersangkutan.",
+      "komponen": [
+        {
+          "nama": "taledan (tangkih) daun pisang",
+          "peran": "Alas."
+        },
+        {
+          "nama": "nasi putih",
+          "deskripsi": "Dua kepal. Jumlah dan warna dapat dirubah-rubah sesuai kepentingan atau kehendak seseorang, misalnya putih dan kuning, atau merah, hitam dan putih."
+        },
+        {
+          "nama": "bawang"
+        },
+        {
+          "nama": "jae"
+        },
+        {
+          "nama": "garam"
+        },
+        {
+          "nama": "canang genten/canang biasa"
+        }
+      ],
+      "others": {
+        "penempatan_dewa_yajna": [
+          {
+            "tempat": "halaman sanggah",
+            "ditujukan_kepada": "Sang Bhūta Bucari"
+          },
+          {
+            "tempat": "halaman rumah",
+            "ditujukan_kepada": "Sang Kala Bucari"
+          },
+          {
+            "tempat": "jaba (di jalan)",
+            "ditujukan_kepada": "Sang Durga Bucari"
+          }
+        ]
+      }
+    },
+    {
+      "nama": "Segehan Cacahan.",
+      "fungsi": "Untuk upacara Bhūta-yajña yang kecil/sederhana, seperti Keliwon, Purnama, Tilem, Piodalan Betara Saraswati, Pagerwesi, Rerahinan alit (ngebulan) di sanggah/di pura, dan sehabis otonan. Segehan Kepel atau Segehan Cacahan dapat dipilih oleh yang bersangkutan.",
+      "komponen": [
+        {
+          "nama": "taledan (daun), tangkih",
+          "peran": "Alas."
+        },
+        {
+          "nama": "tangkih",
+          "deskripsi": "6 atau 7 buah; lima berisi nasi putih, satu berisi bijaratus, dan satu berisi beras sedikit, base tampel, benang putih dan uang. Jika 6 tangkih digunakan, bijaratus dan lainnya dijadikan satu tangkih."
+        },
+        {
+          "nama": "nasi putih",
+          "deskripsi": "Dapat diwarnai sesuai kepentingannya."
+        },
+        {
+          "nama": "bijaratus",
+          "deskripsi": "5 jenis biji-bijian seperti jagung, jagung-nasi, jawa, godem dan jali."
+        },
+        {
+          "nama": "beras"
+        },
+        {
+          "nama": "base tampel"
+        },
+        {
+          "nama": "benang putih"
+        },
+        {
+          "nama": "uang"
+        },
+        {
+          "nama": "bawang"
+        },
+        {
+          "nama": "jae"
+        },
+        {
+          "nama": "garam"
+        },
+        {
+          "nama": "canang-genten/biasa"
+        }
+      ],
+      "others": {
+        "penempatan_dewa_yajna": [
+          {
+            "tempat": "halaman sanggah",
+            "ditujukan_kepada": "Sang Bhūta Bucari"
+          },
+          {
+            "tempat": "halaman rumah",
+            "ditujukan_kepada": "Sang Kala Bucari"
+          },
+          {
+            "tempat": "jaba (di jalan)",
+            "ditujukan_kepada": "Sang Durga Bucari"
+          }
+        ]
+      }
+    },
+    {
+      "nama": "Segehan agung.",
+      "komponen": [
+        {
+          "nama": "nyiru/tempeh",
+          "peran": "Alas.",
+          "deskripsi": "Tempat yang agak besar; biasanya dipakai di Bali."
+        },
+        {
+          "nama": "tangkih",
+          "deskripsi": "11 atau 33 buah, masing-masing berisi nasi, bawang, jae dan garam."
+        },
+        {
+          "nama": "daksina",
+          "deskripsi": "Sebuah daksina atau perlengkapannya ditaruh langsung tanpa bakul; kelapanya dikupas sampai bersih."
+        },
+        {
+          "nama": "canang payasan"
+        },
+        {
+          "nama": "canang genten/biasa",
+          "deskripsi": "11 atau 33 buah."
+        },
+        {
+          "nama": "jinah sandangan"
+        },
+        {
+          "nama": "penyambleh",
+          "deskripsi": "Ayam kecil/itik/babi yang belum dikebiri (kucit butuan), masih hidup; pilihan disesuaikan dengan kepentingan dan tempat."
+        }
+      ],
+      "others": {
+        "tata_cara_menghaturkan": "Perlengkapan daksina dikeluarkan; telur dan kelapa dipecahkan, diikuti pemotongan penyamblehan dan akhirnya tetabuhan."
+      }
+    },
+    {
+      "nama": "Banten Pemakuhan",
+      "komponen": [
+        {
+          "nama": "peras penyeneng"
+        },
+        {
+          "nama": "ajuman putih kuning",
+          "deskripsi": "Ikannya ayam betutu, meukem-ukem (di sebelah dan punggung)."
+        },
+        {
+          "nama": "daksina",
+          "deskripsi": "Berisi uang 227."
+        },
+        {
+          "nama": "canang lengewangi-buratwangi"
+        },
+        {
+          "nama": "canang satu sati",
+          "deskripsi": "Raka nyahnyah gula kelapa."
+        },
+        {
+          "nama": "tipat kelanan"
+        }
+      ],
+      "others": {
+        "penempatan": "Di sebuah sanggar yang ada di hulu dan bangunan yang akan dibuat (di luanan)."
+      }
+    },
+    {
+      "nama": "Banten untuk dasar bangbang",
+      "komponen": [
+        {
+          "nama": "tumpeng merah",
+          "deskripsi": "Dua buah."
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "lauk-pauk"
+        },
+        {
+          "nama": "ayam biying",
+          "deskripsi": "Dipanggang."
+        },
+        {
+          "nama": "sampian tangga"
+        },
+        {
+          "nama": "kulit peras",
+          "peran": "Alas."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Canang-Pendeman",
+      "komponen": [
+        {
+          "nama": "canang burat-wangi",
+          "deskripsi": "Satu tanding."
+        },
+        {
+          "nama": "pengeraos canang-tubungan",
+          "deskripsi": "Satu tanding."
+        },
+        {
+          "nama": "pesucian",
+          "deskripsi": "Satu tanding."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Banten Pasuwugan",
+      "fungsi": "Sebagai pembersihan terhadap jasmani si bayi.",
+      "komponen": [
+        {
+          "nama": "peras"
+        },
+        {
+          "nama": "ajuman"
+        },
+        {
+          "nama": "daksina"
+        },
+        {
+          "nama": "suci"
+        },
+        {
+          "nama": "soroan alit"
+        },
+        {
+          "nama": "pengelukatan"
+        },
+        {
+          "nama": "pengambyan"
+        },
+        {
+          "nama": "penyeneng"
+        },
+        {
+          "nama": "nasi",
+          "deskripsi": "6 ceper, masing-masing dengan ikan berbeda: ayam, itik, telur, siput, daging babi dan kacang-kacang."
+        },
+        {
+          "nama": "kungkang",
+          "deskripsi": "Dua buah jejahitan berisi nasi, lauk pauk dan sesate."
+        },
+        {
+          "nama": "bokor",
+          "peran": "Alas kedua kungkang.",
+          "deskripsi": "Berisi beras, sirih-tampel, benang, telur ayam mentah dan uang 25 (kepeng)."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Banten pengelukatan di dapur",
+      "komponen": [
+        {
+          "nama": "peras",
+          "deskripsi": "Tumpeng merah, ikannya ayam biying."
+        },
+        {
+          "nama": "ajuman",
+          "deskripsi": "Masing-masing sebuah."
+        },
+        {
+          "nama": "daksina",
+          "deskripsi": "Masing-masing sebuah."
+        },
+        {
+          "nama": "pengulapan",
+          "deskripsi": "Masing-masing sebuah."
+        },
+        {
+          "nama": "pengambyan",
+          "deskripsi": "Masing-masing sebuah."
+        },
+        {
+          "nama": "penyeneng",
+          "deskripsi": "Masing-masing sebuah."
+        },
+        {
+          "nama": "soroan alit",
+          "deskripsi": "Masing-masing sebuah."
+        },
+        {
+          "nama": "periuk",
+          "deskripsi": "Berisi air dan bunga yang harum untuk mohon pengelukatan."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Banten di permandian (sumur)",
+      "deskripsi": "Seperti banten pengelukatan di dapur, hanya tumpengnya hitam dan ikannya ayam hitam.",
+      "komponen": [
+        {
+          "nama": "tumpeng",
+          "deskripsi": "Hitam."
+        },
+        {
+          "nama": "ayam hitam"
+        }
+      ],
+      "others": {
+        "rujukan_susunan": "Seperti di atas, merujuk uraian Banten pengelukatan di dapur."
+      }
+    },
+    {
+      "nama": "Banten di Sanggah Kamulan",
+      "deskripsi": "Seperti susunan yang disebutkan di atas, hanya tumpengnya putih dan ikannya ayam putih dipanggang.",
+      "komponen": [
+        {
+          "nama": "tumpeng",
+          "deskripsi": "Putih."
+        },
+        {
+          "nama": "ayam putih",
+          "deskripsi": "Dipanggang."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Banten Pacolongan",
+      "makna": "Buki, pusuh-biyu dan pelepah kelapa yang diberi kain dan tanda tampak-dara dapat dianggap sebagai perwujudan “Nyama Bajang”.",
+      "komponen": [
+        {
+          "nama": "buki",
+          "deskripsi": "Periyuk tanah dengan bagian bawah pecah; diberi kalung tapis."
+        },
+        {
+          "nama": "pusuh-biyu",
+          "deskripsi": "Jantung pisang, dimasukkan ke buki dan disisipi uang 3 kepeng."
+        },
+        {
+          "nama": "papah nyuh bolong",
+          "deskripsi": "Pelepah kelapa berlubang, dimasukkan ke buki; lubang digantungi tipat, belayag tanpa beras, dan gantung-gantungan busung."
+        },
+        {
+          "nama": "kain dan kapur",
+          "deskripsi": "Buki, pusuh-biyu dan pelepah kelapa diberi secarik kain dan tanda kapur berbentuk tampak-dara."
+        },
+        {
+          "nama": "penjor"
+        },
+        {
+          "nama": "pelepah enau (jaka)",
+          "deskripsi": "Masih berisi daun, lidinya ditusuki bunga merah, kalau dapat bunga sepatu merah."
+        },
+        {
+          "nama": "untek",
+          "deskripsi": "Dua buah penek kecil, dialasi ceper."
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "canang burat wangi"
+        }
+      ],
+      "others": {
+        "penempatan": "Penjor dan pelepah enau di sebelah susunan tersebut.",
+        "kelengkapan_sumber": "Uraian berhenti dengan koma pada akhir halaman buku 101; halaman lanjutan tidak tersedia."
+      }
+    },
+    {
+      "nama": "banten Bajang Colong",
+      "deskripsi": "Banten untuk si Nyama Bajang, sering disebut banten Bajang Colong.",
+      "komponen": [
+        {
+          "nama": "peras"
+        },
+        {
+          "nama": "tulung"
+        },
+        {
+          "nama": "sesayut",
+          "deskripsi": "Disebut sebagai (= soroan alit)."
+        },
+        {
+          "nama": "ceper",
+          "deskripsi": "4 buah, masing-masing berisi 2 tumpeng kecil."
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "canang burat wangi"
+        }
+      ],
+      "others": {
+        "kelengkapan_sumber": "Kalimat berhenti dengan koma pada akhir halaman buku 101; kelanjutannya tidak tersedia."
+      }
+    },
+    {
+      "nama": "Banten petinjo kukus.",
+      "komponen": [
+        {
+          "nama": "taledan",
+          "peran": "Alas."
+        },
+        {
+          "nama": "jit kuskusan (nasi muncuk kuskusan)"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "lauk-pauk",
+          "deskripsi": "Ikannya sesuai tingkatan upakara."
+        },
+        {
+          "nama": "peras"
+        },
+        {
+          "nama": "tulung"
+        },
+        {
+          "nama": "sesayut"
+        },
+        {
+          "nama": "penyeneng"
+        },
+        {
+          "nama": "pasucian"
+        },
+        {
+          "nama": "ajuman"
+        },
+        {
+          "nama": "canang"
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Sesayut sabuh rah",
+      "fungsi": "Melengkapi upakara yang kecil bagi perempuan dalam bagian Susunan Upakara; pada banten pasaksi di dapur kadang-kadang digunakan sebagai pelengkap.",
+      "komponen": [
+        {
+          "nama": "kulit sesayut",
+          "peran": "Alas."
+        },
+        {
+          "nama": "nasi merah",
+          "deskripsi": "Disisipi bunga pucuk bang (kembang sepatu merah)."
+        },
+        {
+          "nama": "darah mentah",
+          "deskripsi": "Dialasi takir."
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "penyeneng"
+        },
+        {
+          "nama": "sampian nagasari"
+        },
+        {
+          "nama": "canang burat-wangi",
+          "deskripsi": "Atau canang yang lain."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Sesayut Ngaraja-singa",
+      "fungsi": "Sesayut “ngeraja-singa” disebut melengkapi upakara yang kecil bagi laki-laki dalam bagian Susunan Upakara.",
+      "komponen": [
+        {
+          "nama": "kulit sesayut",
+          "peran": "Alas."
+        },
+        {
+          "nama": "tumpeng",
+          "deskripsi": "9 buah, dikalungi pekir (busung); setiap tumpeng berisi sebuah kewangen."
+        },
+        {
+          "nama": "tulung urip",
+          "deskripsi": "9 buah."
+        },
+        {
+          "nama": "tipat sidapurna",
+          "deskripsi": "9 buah."
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "sampian nagasari"
+        },
+        {
+          "nama": "penyeneng"
+        },
+        {
+          "nama": "pesucian/pebersihan"
+        },
+        {
+          "nama": "ikan ayam gumerot"
+        }
+      ],
+      "others": {
+        "ejaan_dalam_susunan_upakara": "ngeraja-singa"
+      }
+    },
+    {
+      "nama": "Banten Padedarian yang kecil",
+      "fungsi": "Dihaturkan kehadapan Sang Hyang Semara Ratih.",
+      "komponen": [
+        {
+          "nama": "nasi putih",
+          "deskripsi": "11 ceper."
+        },
+        {
+          "nama": "nasi kuning",
+          "deskripsi": "11 ceper."
+        },
+        {
+          "nama": "lauk-pauk",
+          "deskripsi": "Ikannya telur itik didadar."
+        },
+        {
+          "nama": "canang buratwangi"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "pisang mas"
+        },
+        {
+          "nama": "jajan kekiping"
+        },
+        {
+          "nama": "nyahnyah gula kelapa",
+          "deskripsi": "Campuran beras, ketan injin yang di-nyahnyah, kelapa disisir dan gula tebu/gula pasir."
+        },
+        {
+          "nama": "buyang",
+          "deskripsi": "Harum, berwarna putih dan kuning."
+        },
+        {
+          "nama": "peras"
+        },
+        {
+          "nama": "ajuman"
+        },
+        {
+          "nama": "daksina"
+        },
+        {
+          "nama": "suci"
+        }
+      ],
+      "others": {
+        "penempatan": "Di atas tempat tidur."
+      }
+    },
+    {
+      "nama": "Banten pasaksi di dapur",
+      "komponen": [
+        {
+          "nama": "peras"
+        },
+        {
+          "nama": "ajuman"
+        },
+        {
+          "nama": "daksina"
+        },
+        {
+          "nama": "pebersihan"
+        },
+        {
+          "nama": "lis (bebuu)"
+        },
+        {
+          "nama": "canang lengewangi buratwangi"
+        },
+        {
+          "nama": "canang sari",
+          "deskripsi": "Dengan raka kekiping, pisang mas, nyahnyah gula kelapa dan sesari 225."
+        }
+      ],
+      "others": {
+        "pelengkap_opsional": [
+          "tataban seadanya",
+          "sesayut sabuh rah"
+        ]
+      }
+    },
+    {
+      "nama": "Banten Saraswati",
+      "deskripsi": "Sebuah tamas berisi perlengkapan; pada tamas lain diisi bunga putih. Uraian lain menyebut alas dapat berupa ceper atau tamas.",
+      "komponen": [
+        {
+          "nama": "tamas",
+          "peran": "Alas; uraian lain juga memperbolehkan ceper."
+        },
+        {
+          "nama": "pisang mas"
+        },
+        {
+          "nama": "bubur precet",
+          "deskripsi": "22 takir."
+        },
+        {
+          "nama": "bubur dibungkus dengan daun beringin",
+          "deskripsi": "22 biji; sumber menyambung dengan “(dibungkus dengan daun keraras 22 biji” tanpa kurung tutup yang terlihat."
+        },
+        {
+          "nama": "air cendana"
+        },
+        {
+          "nama": "empelan"
+        },
+        {
+          "nama": "madu nyahnyah gula kelapa"
+        },
+        {
+          "nama": "jajan-jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "canang mererepe"
+        },
+        {
+          "nama": "lengewangi buratwangi"
+        },
+        {
+          "nama": "canang sari"
+        },
+        {
+          "nama": "bunga-bunga putih",
+          "deskripsi": "Di tamas lain; seperti menuh, gambir yang melukiskan dewa Gana, tunjung, sudamala, cecek dan lain-lain."
+        }
+      ],
+      "others": {
+        "kelengkapan_sumber": "Uraian pada halaman buku 169 berhenti sebelum daftar perlengkapan; rincian yang tersedia berasal dari halaman buku 120.",
+        "ambiguitas_sumber": "Hubungan bungkus daun beringin dengan daun keraras tidak diperjelas karena tanda kurung sumber tidak lengkap."
+      }
+    },
+    {
+      "nama": "Banten Pewintenan (yang kecil)",
+      "komponen": [
+        {
+          "nama": "kulit sesayut",
+          "peran": "Alas."
+        },
+        {
+          "nama": "tumpeng",
+          "deskripsi": "Sebuah, puncaknya telur itik direbus."
+        },
+        {
+          "nama": "itik putih",
+          "deskripsi": "Diguling."
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "jaja saraswati",
+          "deskripsi": "11 buah."
+        }
+      ],
+      "others": {
+        "perlengkapan_ngarajah": [
+          {
+            "nama": "lekesan",
+            "deskripsi": "Ujungnya berisi tunjung biru; 25 buah dipakai sebagai labahan."
+          },
+          {
+            "nama": "pinang",
+            "jumlah": 25
+          },
+          {
+            "nama": "lekesan bertulisan tri-aksara",
+            "deskripsi": "3 biji, bertulisan Ang, Ung, Mang; sirih ini akan ditelan."
+          },
+          {
+            "nama": "madu",
+            "deskripsi": "1 takir."
+          },
+          {
+            "nama": "tangkai sirih",
+            "deskripsi": "Sebanyak orang yang akan mawinten; dipakai untuk ngarajah."
+          }
+        ],
+        "ketentuan": "Ngarajah (rerajahan) dan madu diperlukan pada pawintenan Pamangku. Pawintenan Saraswati untuk permulaan belajar tidak memerlukan rajahan, peguntingan dan madu."
+      }
+    },
+    {
+      "nama": "Banten arepan.",
+      "fungsi": "Bekal roh yang akan meninggalkan dunia maya ini.",
+      "komponen": [
+        {
+          "nama": "Bubur pirata"
+        },
+        {
+          "nama": "nasi angkeg"
+        },
+        {
+          "nama": "saji"
+        }
+      ],
+      "others": {
+        "tata_cara": "Setelah menyembah ke hadapan Hyang Surya, mayat dihayap dengan bebanten tersebut."
+      }
+    },
+    {
+      "nama": "Banten panjang ilang rateng.",
+      "komponen": [
+        {
+          "nama": "Nasi makaput"
+        },
+        {
+          "nama": "kacang komak"
+        },
+        {
+          "nama": "sudang taluh"
+        },
+        {
+          "nama": "ebatan bawi"
+        },
+        {
+          "nama": "sesate calon",
+          "deskripsi": "4."
+        },
+        {
+          "nama": "lembat",
+          "deskripsi": "5."
+        },
+        {
+          "nama": "pelas tadah sukla"
+        },
+        {
+          "nama": "tumpeng",
+          "deskripsi": "Metambus mebe siap mepanggang, mesambel cacak, mesampian angkep."
+        },
+        {
+          "nama": "cambeng",
+          "deskripsi": "Misi berem."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Canang-genten",
+      "makna": "Pelawa melambangkan ketenangan/kesucian; reringgitan pada tempat bunga/alas canang melambangkan kelanggengan dan kesungguhan hati. Sirih melambangkan Hyang Wisnu, kapur Hyang Śiwa, pinang Hyang Brahma. Tali porosan mempersatukan Hyang Brahma, Wisnu dan Śiwa/Īśwara, yakni Ida Sang Hyang Widhi Wasa/Tuhan Yang Maha Esa. Bunga menggambarkan hati tulus iklas dan suci-bersih. Pandan arum dan wangi-wangian merangsang pemusatan pikiran ke kesucian/ketenangan.",
+      "fungsi": "Dipergunakan pada Keliwon, Kajeng Keliwon, Purnama, Tilem dan lain-lain, serta selaku jiwa/inti upakara yang lebih besar.",
+      "komponen": [
+        {
+          "nama": "janur atau daun pisang",
+          "peran": "Alas.",
+          "deskripsi": "Bentuk segi empat."
+        },
+        {
+          "nama": "palawa",
+          "deskripsi": "Dari daun bunga-bungan."
+        },
+        {
+          "nama": "porosan",
+          "deskripsi": "Sirih, kapur, pinang diikat tali porosan dari janur."
+        },
+        {
+          "nama": "bunga dari janur",
+          "deskripsi": "Empat, berbentuk kojong/tangkih."
+        },
+        {
+          "nama": "bunga-bunga"
+        },
+        {
+          "nama": "pandan-arum"
+        },
+        {
+          "nama": "wangi-wangian/minyak wangi"
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Canang Burat-Wangi.",
+      "deskripsi": "Alas seperti canang genten, bagian bawah dilengkapi tiga tangkih kecil.",
+      "fungsi": "Dapat dipergunakan seperti canang-genten.",
+      "komponen": [
+        {
+          "nama": "tangkih kecil",
+          "deskripsi": "Tiga buah; satu berisi burat wangi, lainnya berisi dua jenis minyak/lenga wangi."
+        },
+        {
+          "nama": "burat wangi",
+          "deskripsi": "Dari akar-akaran harum, cendana, majegau dan sebagainya."
+        },
+        {
+          "nama": "minyak/lenga wangi hitam",
+          "deskripsi": "Kacang, komak, ubi, keladi, pisang kayu mentab di-nyahnyah sampai hangus, dihaluskan, dicampur minyak dan wangi-wangian. Kadang dicampur areng bunga dibakar."
+        },
+        {
+          "nama": "minyak yang lain",
+          "deskripsi": "Dari menyan, malem, minyak dan wangi-wangian."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Canang - Tubungan.",
+      "deskripsi": "Bentuk dan bahan perlengkapan sama dengan canang-genten, porosan berbeda.",
+      "fungsi": "Penggunaannya hampir sama dengan Canang-genten.",
+      "komponen": [
+        {
+          "nama": "porosan",
+          "deskripsi": "5 lembar sirih, bentuk mendekati X; tengah diikat selembar sirih yang diambil dari lima lembar tersebut."
+        }
+      ],
+      "variasi": [
+        {
+          "nama": "Canang Tubungan merepe",
+          "deskripsi": "Pada upacara penting, terutama kehadapan Sang Pitara/Dewata, sirih dibiarkan “lunggahan”, sehingga porosan berisi beberapa lembar sirih."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Tumpeng penyajan",
+      "komponen": [
+        {
+          "nama": "ceper",
+          "peran": "Alas."
+        },
+        {
+          "nama": "tumpeng kecil",
+          "deskripsi": "2 buah."
+        },
+        {
+          "nama": "lauk-pauk"
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "sampian tangkih"
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Tumpeng wewakulan (Jerimpen Dewa)",
+      "komponen": [
+        {
+          "nama": "wakul kecil"
+        },
+        {
+          "nama": "tumpeng"
+        },
+        {
+          "nama": "lauk-pauk"
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "sampian jaet"
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Banten Pakoleman (Pengadangan)",
+      "fungsi": "Dapat pula dipergunakan pada tempat-tempat yang dianggap penting.",
+      "komponen": [
+        {
+          "nama": "taledan pertama",
+          "deskripsi": "Dua ceper kecil masing-masing berisi nasi dan lauk-pauk; juga berisi dua tumpeng, lauk-pauk dialasi tangkih/ceper, jajan, buah-buahan, tebu, sampian, kepet-kepetan (sampian soda) dan caning buratwangi."
+        },
+        {
+          "nama": "taledan yang lain",
+          "deskripsi": "Dua tumpeng, lauk-pauk, jajan, buah-buahan dan sampian tangga."
+        }
+      ],
+      "others": {}
+    },
+    {
+      "nama": "Sesayut",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut",
+          "peran": "Alas."
+        },
+        {
+          "nama": "nasi/penek"
+        },
+        {
+          "nama": "lauk-pauk"
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "tebu"
+        },
+        {
+          "nama": "sampian nagasari"
+        }
+      ],
+      "others": {
+        "ketentuan_penggunaan": "Jenis sesayut sangat banyak; penggunaannya disesuaikan dengan kemantapan/petunjuk tukang."
+      }
+    },
+    {
+      "nama": "Pengambyan",
+      "komponen": [
+        {
+          "nama": "taledan",
+          "deskripsi": "Berisi dua tumpeng."
+        },
+        {
+          "nama": "tulung pengambyan"
+        },
+        {
+          "nama": "tipat pengambyan"
+        },
+        {
+          "nama": "sampian tangga"
+        }
+      ],
+      "others": {
+        "kelengkapan_sumber": "Teks halaman kanan terpotong; rujukan “perlengkapan lainnya seperti di atas” dan syarat sebelum “cukup diisi tulung saja” tidak lengkap."
+      }
+    },
+    {
+      "nama": "Dapetan",
+      "komponen": [
+        {
+          "nama": "taledan"
+        }
+      ],
+      "others": {
+        "kelengkapan_sumber": "Uraian isi dan nama sampian terpotong; tidak dapat diekstrak lengkap."
+      }
+    },
+    {
+      "nama": "Penyeheng",
+      "deskripsi": "Sebuah jejahitan; uraian pembagian petak-petak terpotong.",
+      "komponen": [
+        {
+          "nama": "wija"
+        }
+      ],
+      "others": {
+        "kelengkapan_sumber": "Nama bahan setelah “tepung ta”, kelengkapan setelah “dileng”, dan uraian tetebusan terpotong; tidak dilengkapi."
+      }
+    },
+    {
+      "nama": "Jerimpen",
+      "komponen": [
+        {
+          "nama": "keranjang"
+        },
+        {
+          "nama": "beras"
+        },
+        {
+          "nama": "sampian Jerimpen"
+        }
+      ],
+      "others": {
+        "kelengkapan_sumber": "Uraian keranjang, jenis isi setelah “ja”, dan istilah setelah “base tampe” terpotong."
+      }
+    },
+    {
+      "nama": "Pajegan",
+      "komponen": [
+        {
+          "nama": "taledan",
+          "deskripsi": "Dua atau tiga buah."
+        },
+        {
+          "nama": "lauk-pauk"
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        }
+      ],
+      "others": {
+        "kelengkapan_sumber": "Definisi “pangkonan yang lebih”, rincian pembagian isi taledan, dan ketentuan sesate terpotong."
+      }
+    },
+    {
+      "nama": "Sesayut Mertha Dewa",
+      "komponen": [
+        {
+          "nama": "kulit sesayut",
+          "peran": "Alas."
+        },
+        {
+          "nama": "penek"
+        },
+        {
+          "nama": "beras kuning",
+          "deskripsi": "Dialasi takir."
+        },
+        {
+          "nama": "lauk-pauk"
+        },
+        {
+          "nama": "jajan"
+        },
+        {
+          "nama": "buah-buahan"
+        },
+        {
+          "nama": "sampian nagasari"
+        },
+        {
+          "nama": "penyeneng"
+        },
+        {
+          "nama": "canang genten/yang lain"
+        }
+      ],
+      "others": {}
+    }
+  ]
+}

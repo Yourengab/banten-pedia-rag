@@ -1,3 +1,5 @@
+from typing import Any, cast
+
 from database.supabase import supabase
 
 
@@ -35,7 +37,7 @@ def search_banten(
         )
 
         wilayah_ids = [
-            item["id_wilayah"]
+            cast(dict[str, Any], item)["id_wilayah"]
             for item in wilayah_response.data
         ]
 
@@ -52,22 +54,23 @@ def search_banten(
     results = []
 
     for item in response.data:
+        item_dict = cast(dict[str, Any], item)
         wilayah_response = (
             supabase
             .table("wilayah")
             .select("kabupaten, kecamatan, desa_adat")
-            .eq("id_wilayah", item["id_wilayah"])
+            .eq("id_wilayah", item_dict["id_wilayah"])
             .limit(1)
             .execute()
         )
 
-        item["wilayah"] = (
+        item_dict["wilayah"] = (
             wilayah_response.data[0]
             if wilayah_response.data
             else None
         )
 
-        results.append(item)
+        results.append(item_dict)
 
     return results
 
@@ -87,7 +90,7 @@ def get_banten(banten_id: str) -> dict | None:
     if not response.data:
         return None
 
-    banten = response.data[0]
+    banten = cast(dict[str, Any], response.data[0])
 
     if banten.get("id_wilayah"):
         wilayah_response = (
@@ -125,7 +128,7 @@ def get_components(banten_id: str) -> list[dict]:
         return []
 
     component_ids = [
-        item["id_komponen"]
+        cast(dict[str, Any], item)["id_komponen"]
         for item in relations
     ]
 
@@ -137,20 +140,21 @@ def get_components(banten_id: str) -> list[dict]:
         .execute()
     )
 
-    components_by_id = {
-        item["id_komponen"]: item
+    components_by_id: dict[str, dict[str, Any]] = {
+        cast(dict[str, Any], item)["id_komponen"]: cast(dict[str, Any], item)
         for item in component_response.data
     }
 
-    results = []
+    results: list[dict[str, Any]] = []
 
     for relation in relations:
+        relation_dict = cast(dict[str, Any], relation)
         component = components_by_id.get(
-            relation["id_komponen"]
+            relation_dict["id_komponen"]
         )
 
         if component:
-            component["jumlah"] = relation["jumlah"]
+            component["jumlah"] = relation_dict["jumlah"]
             results.append(component)
 
     return results

@@ -1,0 +1,561 @@
+[
+  {
+    "banten": {
+      "nama": "Banten Penyambutan",
+      "komponen": [
+        {
+          "nama": "Ngiyu"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Sampan gunting"
+        },
+        {
+          "nama": "Bebuahan",
+          "deskripsi": "Berisi pisang, jaja, dan tebu."
+        },
+        {
+          "nama": "Banten guling",
+          "deskripsi": "Sebuah ceper berisi nasi untuk 5 buah; keterangan sumber juga menyebut raka-raka, rerasmen, dan 2 (dua) buah sampian guling."
+        },
+        {
+          "nama": "Beras yang direka seperti manusia",
+          "deskripsi": "Berisi eteh-eteh daksina. Di atas pengerékan berisi wang kepéng satakan; di atas wang tersebut diletakkan sebuah kelapa, dan di atas kelapa berisi benang tukelan warna putih."
+        },
+        {
+          "nama": "Canang pesucian"
+        },
+        {
+          "nama": "Banten soroan alit"
+        },
+        {
+          "nama": "Jejahitan enjekan kebo",
+          "deskripsi": "Berisi cabé (unsur pedas), lunak (unsur asam), dan isen (unsur sepet)."
+        },
+        {
+          "nama": "Cawu surya",
+          "deskripsi": "Dengan jahitan sesapi 5 (lima) buah; berisi nasi, saur, dan kacang."
+        },
+        {
+          "nama": "Cawu bulan",
+          "deskripsi": "Dengan jahitan yang sama; berisi nasi dan kacang, dengan saur di tengah."
+        },
+        {
+          "nama": "Enjekan kebo",
+          "deskripsi": "Berisi garam (unsur asin), gula (unsur manis), dan paya (pahit)."
+        },
+        {
+          "nama": "Jerimpen penyambutan"
+        },
+        {
+          "nama": "Bebuahan",
+          "deskripsi": "Berisi tepung tawar, sisig, daun dadap, dan kapas minyak."
+        },
+        {
+          "nama": "Penyeneng"
+        },
+        {
+          "nama": "Taledan"
+        }
+      ],
+      "fungsi": "Dipakai pada upacara penyambutan pada anak-anak yang giginya belum tanggal dan pada orang tua yang sudah mekumpi, di mana orang yang sudah mekumpi mempunyai sifat lipia/pikun atau mempunyai sifat yang mirip dengan anak Balita.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Sesayut Sidi Ngucap",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Canang pesucian"
+        },
+        {
+          "nama": "Ulam ayam biying",
+          "deskripsi": "Mepangang."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi sambel dan garam."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi saur, kacang, gerang, timun, dan tuwung."
+        },
+        {
+          "nama": "Tumpeng agung",
+          "deskripsi": "Memakai pekir metanceb kwangen; pada ujung tumpeng metanceb sebutir cabé."
+        },
+        {
+          "nama": "Penyeneng"
+        }
+      ],
+      "fungsi": "Dipakai pada upacara Tumpek Landep dan Hari Saraswati.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Tetandingan Jerimpen Penyambutan",
+      "komponen": [
+        {
+          "nama": "Wakul poleng",
+          "deskripsi": "Memakai serembeng; tingginya satu siku dengan ujung ibu jari."
+        },
+        {
+          "nama": "Tetukon"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Kojong rangkat"
+        },
+        {
+          "nama": "Tumpeng"
+        },
+        {
+          "nama": "Tipat",
+          "deskripsi": "Berisi tipat 6 (enam) macam: tipat gelatik, tipat sidapurna, tipat bojor, tipat lepet, tipat sari, dan tipat panca pandawa."
+        },
+        {
+          "nama": "Sampian jerimpen sriyok / sampian jit guak",
+          "deskripsi": "Mesampian jerimpen sriyok jika anak yang dibuatkan upacara adalah perempuan; jika pria memakai sampian jit guak."
+        }
+      ],
+      "fungsi": "Penyambutan, sesuai nama 'Tetandingan Jerimpen Penyambutan'.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Sesayut Jayeng Prang",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Takir",
+          "deskripsi": "Berisi beras kuning."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi sambal dan garam."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi saur, kacang, gerang, timun, dan tuwung."
+        },
+        {
+          "nama": "Tumpeng agung",
+          "deskripsi": "Memakai pekir metanceb kwangen; pada ujung sisi kanan dan kiri dari tumpeng metanceb dwin ambengan (duri lalang)."
+        },
+        {
+          "nama": "Penyeneng"
+        },
+        {
+          "nama": "Ulam ayam biying",
+          "deskripsi": "Mepangang."
+        }
+      ],
+      "fungsi": "Dipakai pada upacara Tumpek Landep dan Saraswati.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Sesayut Penuntun Tuwuh",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Sanga urip"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Canang payasan",
+          "deskripsi": "Lenge wangi, burat wangi."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi sambal dan garam."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi saur, kacang, gerang, timun, dan tuwung."
+        },
+        {
+          "nama": "Kojong",
+          "deskripsi": "7 (tujuh) buah kojong berisi jaja kukus yang letaknya ngiderin nasi klongkong."
+        },
+        {
+          "nama": "Nasi klongkong",
+          "deskripsi": "Memakai pekir atas bawah; di atas nasi berisi telor itik matang, dan di atas telor tersebut ditancapkan sebuah bunga tunjung putih."
+        },
+        {
+          "nama": "Penyeneng"
+        }
+      ],
+      "fungsi": "Dipakai pada upacara panyejegan anak lungsir, atau pada orang yang mengalami sakit pada saat meoton.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Tebasan Siwa Angga",
+      "komponen": [
+        {
+          "nama": "Taledan besar",
+          "deskripsi": "Memakai srikona."
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Canang pesucian"
+        },
+        {
+          "nama": "Takir",
+          "deskripsi": "7 (tujuh) buah takir berisi rerasmen."
+        },
+        {
+          "nama": "Nasi entip",
+          "deskripsi": "Kerak; apemijian."
+        },
+        {
+          "nama": "Daun bila (maja)",
+          "deskripsi": "Berbentuk padma."
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Penyeneng"
+        }
+      ],
+      "fungsi": "Dipakai pada upacara Siwa Ratri pada panglong ke-14 tilem kepitu.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Pasupati",
+      "komponen": [
+        {
+          "nama": "Taledan dari daun endongan"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Sampian metangga"
+        },
+        {
+          "nama": "Tumpeng",
+          "deskripsi": "2 (dua) buah tumpeng berwarna abang."
+        },
+        {
+          "nama": "Daging ayam biying",
+          "deskripsi": "Mepangang."
+        },
+        {
+          "nama": "Kojong rangkat"
+        },
+        {
+          "nama": "Penyeneng"
+        },
+        {
+          "nama": "Ceper",
+          "deskripsi": "Ceper perangkatan tempat rerasmen pada soda."
+        },
+        {
+          "nama": "Nasi tandon",
+          "deskripsi": "2 (dua) buah berwarna abang."
+        },
+        {
+          "nama": "Sampian plaus"
+        },
+        {
+          "nama": "Taledan dari daun endong"
+        }
+      ],
+      "fungsi": "Dipakai pada upacara pasupati dan pada upacara Tumpek Landep.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Sesayut Semayapati",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Buah pinang bancangan"
+        },
+        {
+          "nama": "Base ambungan"
+        },
+        {
+          "nama": "Nasi dan kacang saur",
+          "deskripsi": "Dialas dengan 2 (dua) buah limas yang mengapit tumpeng."
+        },
+        {
+          "nama": "Canang pesucian"
+        },
+        {
+          "nama": "Daging burung dara",
+          "deskripsi": "Mepangang."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi sambal dan garam."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi saur, kacang, gerang, timun, dan tuwung."
+        },
+        {
+          "nama": "Tumpeng besar"
+        },
+        {
+          "nama": "Penyeneng"
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi kacang ijo yang digoreng."
+        }
+      ],
+      "fungsi": "Dipakai pada upacara naur sesangi bagi orang yang telah meninggal.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Sesayut Panca Medaya",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Nasi punjungan",
+          "deskripsi": "5 (lima) buah."
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Nasi punjungan (sama seperti no. c)",
+          "deskripsi": "Keterangan gambar menyebut 'Sama seperti no. c'."
+        },
+        {
+          "nama": "Nasi punjung berumbun",
+          "deskripsi": "5 (lima) buah, dilingkari dengan wang kepeng bolong 10 kepeng metali benang tridatu."
+        },
+        {
+          "nama": "Canang pesucian"
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi sambal dan garam."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi saur, kacang, gerang, timun, dan tuwung."
+        },
+        {
+          "nama": "Ituk-ituk",
+          "deskripsi": "Berisi bawang, jahe, dan garam."
+        },
+        {
+          "nama": "Penyeneng"
+        }
+      ],
+      "fungsi": "Dipakai pada upacara pengerupukan sasih ke sanga, dihaturkan dihadapan sanggah Kemulan.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Sesayut Purna Jiwa",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Tadah pawitra"
+        },
+        {
+          "nama": "Nasi gabahan",
+          "deskripsi": "Di atasnya disusun daging ayam putih siungan mewangun urip, dengan warna nasinya kuning."
+        },
+        {
+          "nama": "Sate lembat",
+          "deskripsi": "3 (tiga) katih."
+        },
+        {
+          "nama": "Ceper",
+          "deskripsi": "Berisi taluh medadar."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi sambal dan garam."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi saur, kacang, gerang, timun, dan tuwung."
+        },
+        {
+          "nama": "Penyeneng"
+        }
+      ],
+      "fungsi": "Dipakai pada upacara Manusa Yadnya dan pada banten otonan bila umat sedang sakit.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Sesayut Galungan",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Base ambungan"
+        },
+        {
+          "nama": "Nasi penek berumbun",
+          "deskripsi": "5 (lima) buah."
+        },
+        {
+          "nama": "Sate lembat",
+          "deskripsi": "Sejumlah 5 latih."
+        },
+        {
+          "nama": "Canang burat wangi",
+          "deskripsi": "Lenga wangi."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi sambal dan garam."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi saur, gerang, timun, dan tuwung."
+        },
+        {
+          "nama": "Jajan",
+          "deskripsi": "Sebuah jajan gegodoh dan sumpingi."
+        },
+        {
+          "nama": "Sate calon dan uang kepeng bolong",
+          "deskripsi": "3 (tiga) katih sate calon; uang kepeng bolong melingkari nasi penek."
+        },
+        {
+          "nama": "Beras segulak",
+          "deskripsi": "8 gembel."
+        },
+        {
+          "nama": "Penyeneng"
+        }
+      ],
+      "fungsi": "Digunakan pada ayaban banten hari raya Galungan.",
+      "others": {}
+    }
+  },
+  {
+    "banten": {
+      "nama": "Banten Sesayut Ngeliwar",
+      "komponen": [
+        {
+          "nama": "Kulit sesayut"
+        },
+        {
+          "nama": "Raka-raka"
+        },
+        {
+          "nama": "Wang kepeng bolong",
+          "deskripsi": "Satu kepeng dimasukkan benang tridatu sepanjang apengadeg."
+        },
+        {
+          "nama": "Canang pesucian"
+        },
+        {
+          "nama": "Sampian nagasari"
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi sambal dan garam."
+        },
+        {
+          "nama": "Limas",
+          "deskripsi": "Berisi saur, kacang, gerang, timun, dan tuwung."
+        },
+        {
+          "nama": "Ikan yuyu",
+          "deskripsi": "Digoreng."
+        },
+        {
+          "nama": "Penyeneng"
+        },
+        {
+          "nama": "Gelas berisi air",
+          "deskripsi": "Dan pekelem cincin emas permata mirah."
+        },
+        {
+          "nama": "Nasi tumpeng putih",
+          "deskripsi": "Memakai pekir metanceb kwangen; pada ujung tumpeng berisi permata mirah atau pusuh bunga meraka."
+        },
+        {
+          "nama": "Beras",
+          "deskripsi": "4 gemel."
+        }
+      ],
+      "fungsi": "Dipakai pada upacara perkawinan atau untuk memohon seorang putra bagi umat yang mandul.",
+      "others": {}
+    }
+  }
+]

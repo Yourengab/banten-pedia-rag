@@ -10,6 +10,7 @@ Handles:
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Any, cast
 
 from database.supabase import supabase
 from ingestion.chunker import Chunk
@@ -68,8 +69,8 @@ def upload_document(
 
     current_version = 1
     if existing.data:
-        prev = existing.data[0]
-        current_version = prev["version"] + 1
+        prev = cast(dict[str, Any], existing.data[0])
+        current_version = int(prev["version"]) + 1
 
         # Deactivate the previous active version.
         supabase.table("documents").update(
@@ -91,7 +92,7 @@ def upload_document(
         .execute()
     )
 
-    document_id: str = doc_response.data[0]["id"]
+    document_id: str = cast(dict[str, Any], doc_response.data[0])["id"]
 
     # ── 3. Batch insert chunks + embeddings ───────────────────────────────────
     rows = []

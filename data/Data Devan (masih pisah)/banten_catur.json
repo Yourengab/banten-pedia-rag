@@ -1,0 +1,29 @@
+  {
+  "banten": {
+    "nama": "Banten Catur",
+    "deskripsi": "Disebut Soroan Banten Catur karena dibuat dari yang serba empat warna: putih, merah, kuning, dan hitam. Sarana yang berwarna empat itu ditata sedemikian rupa sehingga menjadi bentuk banten yang indah dan sakral. Sarana pokoknya adalah nasi, rerasmen atau lauk pauk, pisang, tebu, jajan bantal, jajan Sesamuhan, buah-buahan, tigasan, dan canang dengan bunganya. Penempatan warna sesuai konsep pengider-ider: putih di Timur, merah di Selatan, kuning di Barat, dan hitam di Utara. Alas Banten Catur diberi lukisan Padma.",
+    "makna": "Banten Catur adalah lambang kesaksian Tuhan yang memiliki empat Kemahakuasaan yang disebut Cadu Sakti, dan melukiskan Kemahakuasaan Tuhan Yang Esa. Keempat warna melambangkan kemahakuasaan Tuhan di empat penjuru angin, artinya tidak ada arah yang tanpa kehadiran dan kemahakuasaan Tuhan: di Timur Tuhan sebagai Dewa Iswara, di Selatan sebagai Dewa Brahma, di Barat sebagai Dewa Maha Dewa, dan di Utara sebagai Dewa Wisnu. Semua Dewa itu adalah manifestasi Tuhan Yang Maha Esa.",
+    "fungsi": "Jenis Banten Pesaksi yang diletakkan (munggah) di Sanggar Surya, sebagai Banten Pesaksi yang dilengkapi dengan Banten Panca Saraswati, Banten Guru, dan Banten Gana.",
+    "variasi": [
+      {
+        "nama": "Banten Catur Rebah",
+        "deskripsi": "Disebut juga Banten Catur Pasangan. Memerlukan tiga tempat: satu untuk nasi berbentuk Penek, satu untuk rerasmen, dan satu untuk pisang, bantal, tape, tebu, buah-buahan, dan jajan Sesamuhan. Di atasnya disusuni kain serta empat canang tubungan, masing-masing hanya menggunakan satu warna bunga (putih, merah, kuning, atau hitam). Setiap jenis jajan Sesamuhan dua buah, diletakkan berpasangan."
+      },
+      {
+        "nama": "Banten Catur Niri",
+        "deskripsi": "Lebih utama tingkatannya dari Catur Rebah. Membutuhkan 12 tempat karena setiap warna membutuhkan sebuah tempat; dapat dikatakan Catur Rebah yang dilipatkan empat kali. Jajan Sesamuhan diletakkan dengan jumlah menurut urip pengider-ider: di Timur setiap jenis lima buah, di Selatan sembilan buah, di Barat tujuh buah, dan di Utara empat buah."
+      }
+    ],
+    "others": {
+      "cadu_sakti": {
+        "Wibhu Sakti": "Tuhan itu Maha ada.",
+        "Prabhu Sakti": "Tuhan itu Maha kuasa.",
+        "Jnyana Sakti": "Tuhan itu Maha Tahu.",
+        "Kriya Sakti": "Tuhan itu Maha Karya, artinya tidak ada pekerjaan yang tidak mampu dikerjakan oleh Tuhan."
+      },
+      "minyak_wangi_per_warna": "Minyak wangi menggunakan minyak kelapa bulan (lambang warna putih), kelapa udang (merah), kelapa gading (kuning), dan kelapa hijau atau Nyuh Mulung (hitam).",
+      "jajan_sesamuhan": "Jajan Sesamuhan Banten Catur hampir sama dengan jajan Sesamuhan Banten Suci, hanya jenisnya dapat diperbanyak.",
+      "perlengkapan_lain": "Dilengkapi juga dengan Banten Pisang seperti pada Banten Suci, Banten Wedia yang menggunakan Dodol Madu Parka, empehan, baem warak, dll."
+    }
+  }
+}

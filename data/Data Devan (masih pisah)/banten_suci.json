@@ -1,0 +1,22 @@
+{
+  "banten": {
+    "nama": "Banten Suci",
+    "deskripsi": "Jajan yang dipergunakan sebagai sarana utama dalam membuat Banten Suci selalu berwarna putih dan kuning. Yang terpenting dalam Banten Suci adalah jajan Sesamuhannya, yang dibuat dengan tata cara yang suci; misalnya orang yang dalam keadaan Cuntaka tidak boleh ikut membuat jajan Sesamuhan Suci. Jenis jajan Sesamuhan Suci banyak sekali, tetapi warnanya hanya dua yaitu putih dan kuning, dan jumlah jajan putih selalu lebih banyak daripada yang kuning. Pada Banten Suci yang lebih lengkap, jajan Sesamuhan dilengkapi dengan Jajan Saraswati dan Dodol Madu Parka. Jenis Banten Suci menurut tingkatan upacara (Nista, Madya, Utama) disebutkan dalam Lontar Kusuma Dewa.",
+    "makna": "Banten Suci melambangkan Tuhan menyaksikan Yadnya, yaitu wujud kesucian Tuhan yang menganugerahkan kemakmuran dan kebahagiaan pada umat yang taat mengikuti jalan yang ditunjukkan. Semua banten dalam satu Soroh Suci adalah lambang kesucian Hyang Widhi yang tiada cela. Kesucian Tuhan yang melimpahkan kebahagiaan rohani dilambangkan dengan warna putih, dan kemakmuran ekonomi dilambangkan dengan warna kuning. Jumlah jajan putih yang lebih banyak melambangkan bahwa untuk mendapatkan kehidupan berbahagia harus lebih mengutamakan kesucian batin terlebih dahulu, dari kesucian rohani menuju kemakmuran ekonomi. Mewujudkan kesucian Tuhan dalam hidup adalah dengan membangun sifat-sifat mulia, bermoral tinggi, tangguh menghadapi godaan, dan membangun kemakmuran ekonomi secara nyata dan adil. Suci adalah lambang peningkatan diri dari yang kurang baik menjadi semakin baik sampai mencapai kesempurnaan hidup, yang dilambangkan dalam jumlah penggunaan jajan Sesamuhannya.",
+    "fungsi": "Diletakkan (munggah) di Sanggar Surya atau Sanggar Pesaksi sebagai perlengkapan dari suatu banten, sebagai persaksian Tuhan dalam Upacara Yadnya.",
+    "variasi": [
+      {
+        "nama": "Suci Nanampan",
+        "deskripsi": "Suci yang paling sederhana, hanya menggunakan satu Tamas. Tidak menggunakan daging itik (cukup diganti telor itik) dan tidak menggunakan Jajan Saraswati (diganti beras basah yang disebut baas mes). Dipergunakan dalam upacara yang sederhana, misalnya upacara Pekala-kalaan dalam Upacara Pawiwahan."
+      },
+      {
+        "nama": "Suci Sibakan",
+        "deskripsi": "Tingkat Madya. Menggunakan empat buah Tamas: dua untuk jajan Sesamuhan dan dua untuk rerasmen (lauk pauk) dan nasi. Tamas paling bawah berisi jajan Sesamuhan satu biji setiap jenis, Tamas di atasnya dua biji, dan Tamas di atasnya lagi tiga biji setiap jenis, demikian seterusnya."
+      },
+      {
+        "nama": "Suci Bungkulan atau Suci Laksana",
+        "deskripsi": "Tingkat Utama. Menggunakan enam buah Tamas: empat untuk jajan Sesamuhan dan dua untuk nasi dan rerasmen atau lauk pauk."
+      }
+    ]
+  }
+}
