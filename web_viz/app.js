@@ -35,11 +35,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateCharts(allData);
         initList(allData);
         initModal();
+        initScrollAnimations();
         
     } catch (error) {
         console.error("Error loading data:", error);
     }
 });
+
+// Smooth scroll for anchor links
+function initScrollAnimations() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
 
 function initCategories(data) {
     categoriesMap = {};
@@ -252,9 +269,10 @@ function initList(data) {
             const desc = item.deskripsi || item.fungsi || 'Tidak ada keterangan singkat.';
             html += `
                 <div class="banten-item" data-id="${item.id}">
+                    <div class="card-badge">${item._compCount} Komponen</div>
                     <h4>${escapeHtml(item.nama)}</h4>
                     <p>${escapeHtml(desc)}</p>
-                    <div class="meta">${item._compCount} Komponen</div>
+                    <button class="detail-btn">Selengkapnya</button>
                 </div>
             `;
         }
@@ -263,13 +281,13 @@ function initList(data) {
 
     // Single delegated event listener for click on items
     listContainer.addEventListener('click', (e) => {
-        const itemCard = e.target.closest('.banten-item');
-        if (!itemCard) return;
+        const btn = e.target.closest('.detail-btn');
+        if (!btn) return;
+        
+        const itemCard = btn.closest('.banten-item');
         const id = parseInt(itemCard.dataset.id, 10);
         const selected = allData.find(item => item.id === id);
-        if (selected) {
-            openModal(selected);
-        }
+        if (selected) openModal(selected);
     });
 
     const applyFilters = () => {
@@ -332,72 +350,101 @@ function initModal() {
     
     closeBtn.onclick = function() {
         modal.style.display = "none";
+        document.body.style.overflow = '';
     };
     
     window.onclick = function(event) {
         if (event.target === modal) {
             modal.style.display = "none";
+            document.body.style.overflow = '';
         }
     };
 
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.style.display === 'block') {
             modal.style.display = 'none';
+            document.body.style.overflow = '';
         }
     });
 }
 
 function openModal(item) {
     const modal = document.getElementById('detailModal');
+    const modalHeader = document.getElementById('modalHeader');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMeta = document.getElementById('modalMeta');
     const modalBody = document.getElementById('modalBody');
     
-    let html = `<h2>${escapeHtml(item.nama)}</h2>`;
+    modalTitle.textContent = item.nama;
+    modalMeta.innerHTML = `
+        <span><i class="fas fa-cubes"></i> ${item._compCount || (item.komponen ? item.komponen.length : 0)} Komponen</span>
+        <span><i class="fas fa-tag"></i> ${item.kategori || 'Umum'}</span>
+    `;
     
-    if (item.deskripsi) {
-        html += `<div class="modal-section">
-            <h3>Deskripsi</h3>
-            <p>${escapeHtml(item.deskripsi)}</p>
-        </div>`;
-    }
+    let html = '<div class="modal-grid">';
     
-    if (item.makna) {
-        html += `<div class="modal-section">
-            <h3>Makna</h3>
-            <p>${escapeHtml(item.makna)}</p>
-        </div>`;
-    }
+    // Main Content
+    html += '<div class="main-column">';
     
-    if (item.fungsi) {
-        html += `<div class="modal-section">
-            <h3>Fungsi</h3>
-            <p>${escapeHtml(item.fungsi)}</p>
-        </div>`;
-    }
+    const sections = [
+        { id: 'deskripsi', title: 'Deskripsi', icon: 'fa-info-circle', content: item.deskripsi },
+        { id: 'makna', title: 'Makna', icon: 'fa-book-open', content: item.makna },
+        { id: 'fungsi', title: 'Fungsi', icon: 'fa-cog', content: item.fungsi }
+    ];
+
+    sections.forEach((section, index) => {
+        if (section.content) {
+            const isOpen = index === 0 ? 'active' : '';
+            html += `
+                <div class="modal-accordion ${isOpen}" data-section="${section.id}">
+                    <div class="accordion-header" onclick="toggleAccordion('${section.id}')">
+                        <h3><i class="fas ${section.icon}"></i> ${section.title}</h3>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>${escapeHtml(section.content)}</p>
+                    </div>
+                </div>`;
+        }
+    });
     
+    html += '</div>';
+
+    // Components
+    html += '<div class="side-column">';
     if (item.komponen && item.komponen.length > 0) {
-        html += `<div class="modal-section">
-            <h3>Komponen (${item.komponen.length})</h3>
+        html += `<div class="modal-section no-border">
+            <h3><i class="fas fa-list-ul"></i> Daftar Komponen</h3>
             <div class="komponen-list">`;
         
         item.komponen.forEach(comp => {
             const compName = comp.nama || 'Tanpa Nama';
-            const compPeran = comp.peran ? `<strong>Peran:</strong> ${escapeHtml(comp.peran)}<br>` : '';
-            const compDesc = comp.deskripsi ? `<strong>Info:</strong> ${escapeHtml(comp.deskripsi)}` : '';
+            const hasDetail = comp.peran || comp.deskripsi;
+            const compDetail = hasDetail ? `<p>${comp.peran ? `<strong>Peran:</strong> ${escapeHtml(comp.peran)}<br>` : ''}${comp.deskripsi ? `<strong>Info:</strong> ${escapeHtml(comp.deskripsi)}` : ''}</p>` : '';
             
             html += `<div class="komponen-item">
                 <h4>${escapeHtml(compName)}</h4>
-                <p>${compPeran}${compDesc}</p>
+                ${compDetail}
             </div>`;
         });
         
         html += `</div></div>`;
-    } else {
-        html += `<div class="modal-section">
-            <h3>Komponen (0)</h3>
-            <p>Tidak ada data komponen untuk banten ini.</p>
-        </div>`;
     }
+    html += '</div></div>';
     
     modalBody.innerHTML = html;
     modal.style.display = "block";
+    document.body.style.overflow = 'hidden';
+}
+
+function toggleAccordion(sectionId) {
+    const parent = document.querySelector(`.modal-accordion[data-section="${sectionId}"]`);
+    const all = document.querySelectorAll('.modal-accordion');
+    
+    if (parent.classList.contains('active')) {
+        parent.classList.remove('active');
+    } else {
+        all.forEach(a => a.classList.remove('active'));
+        parent.classList.add('active');
+    }
 }

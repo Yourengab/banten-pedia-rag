@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamus Komponen Banten - Banten Pedia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="has-fixed-header">
+    <header class="site-header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i> Banten Pedia
+            </a>
+            <nav class="header-nav">
+                <a href="index.html">
+                    <i class="fas fa-chart-bar"></i> Dashboard
+                </a>
+                <a href="kamus.html" class="active">
+                    <i class="fas fa-book"></i> Kamus
+                </a>
+                <a href="#">
+                    <i class="fas fa-info-circle"></i> Tentang
+                </a>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
         <header>
             <h1>Kamus Komponen Banten</h1>
@@ -74,5 +94,25 @@
     </div>
 
     <script src="kamus.js"></script>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i> Banten Pedia
+                </div>
+                <div class="footer-links">
+                    <a href="#">Tentang</a>
+                    <a href="#">API</a>
+                    <a href="#">Kontribusi</a>
+                    <a href="#">Privasi</a>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 Banten Pedia Analytics. All rights reserved.</p>
+                    <p class="footer-tagline">Designed with <i class="fas fa-heart"></i> in Bali</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
