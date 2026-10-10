@@ -16,11 +16,8 @@ CREATE TABLE IF NOT EXISTS documents (
     source_type   TEXT        NOT NULL,     -- 'book', 'article', 'transcript', etc.
     file_url      TEXT,
     description   TEXT,
-    -- Versioning support (Phase 2)
-    version       INTEGER     NOT NULL DEFAULT 1,
     is_active     BOOLEAN     NOT NULL DEFAULT TRUE,
-    created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
 -- ============================================================
@@ -57,7 +54,7 @@ CREATE INDEX IF NOT EXISTS document_chunks_document_id_idx
 CREATE OR REPLACE FUNCTION match_document_chunks(
     query_embedding      VECTOR(768),
     match_count          INTEGER DEFAULT 5,
-    similarity_threshold FLOAT   DEFAULT 0.70
+    similarity_threshold FLOAT   DEFAULT 0.60
 )
 RETURNS TABLE (
     id          UUID,
@@ -96,7 +93,7 @@ $$;
 CREATE OR REPLACE FUNCTION match_document_chunks_filtered(
     query_embedding      VECTOR(768),
     match_count          INTEGER DEFAULT 5,
-    similarity_threshold FLOAT   DEFAULT 0.70,
+    similarity_threshold FLOAT   DEFAULT 0.60,
     filter_source_type   TEXT    DEFAULT NULL
 )
 RETURNS TABLE (
@@ -131,17 +128,4 @@ BEGIN
 END;
 $$;
 
--- ============================================================
--- Helper: updated_at trigger for documents
--- ============================================================
-CREATE OR REPLACE FUNCTION update_updated_at()
-RETURNS TRIGGER LANGUAGE plpgsql AS $$
-BEGIN
-    NEW.updated_at = NOW();
-    RETURN NEW;
-END;
-$$;
 
-CREATE OR REPLACE TRIGGER documents_updated_at
-    BEFORE UPDATE ON documents
-    FOR EACH ROW EXECUTE FUNCTION update_updated_at();

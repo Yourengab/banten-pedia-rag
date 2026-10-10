@@ -8,7 +8,7 @@ def search_banten(
     wilayah: str | None = None,
     limit: int = 5
 ) -> list[dict]:
-    """Search banten by name and optional region."""
+    """Search banten by name and optional region (N+1 fixed via JOIN)."""
 
     limit = max(1, min(limit, 20))
 
@@ -17,7 +17,8 @@ def search_banten(
         .table("banten")
         .select(
             "id_banten, nama_banten, nama_lokal, "
-            "id_wilayah, deskripsi_umum"
+            "id_wilayah, deskripsi_umum, "
+            "wilayah:id_wilayah(kabupaten, kecamatan, desa_adat)"
         )
     )
 
@@ -52,36 +53,22 @@ def search_banten(
     response = banten_query.limit(limit).execute()
 
     results = []
-
     for item in response.data:
         item_dict = cast(dict[str, Any], item)
-        wilayah_response = (
-            supabase
-            .table("wilayah")
-            .select("kabupaten, kecamatan, desa_adat")
-            .eq("id_wilayah", item_dict["id_wilayah"])
-            .limit(1)
-            .execute()
-        )
-
-        item_dict["wilayah"] = (
-            wilayah_response.data[0]
-            if wilayah_response.data
-            else None
-        )
-
+        # wilayah already fetched via foreign key join above
+        item_dict["wilayah"] = item_dict.get("wilayah")
         results.append(item_dict)
 
     return results
 
 
 def get_banten(banten_id: str) -> dict | None:
-    """Get one banten with its region details."""
+    """Get one banten with its region details (N+1 fixed via JOIN)."""
 
     response = (
         supabase
         .table("banten")
-        .select("*")
+        .select("*, wilayah:id_wilayah(*)")
         .eq("id_banten", banten_id)
         .limit(1)
         .execute()
@@ -91,23 +78,7 @@ def get_banten(banten_id: str) -> dict | None:
         return None
 
     banten = cast(dict[str, Any], response.data[0])
-
-    if banten.get("id_wilayah"):
-        wilayah_response = (
-            supabase
-            .table("wilayah")
-            .select("*")
-            .eq("id_wilayah", banten["id_wilayah"])
-            .limit(1)
-            .execute()
-        )
-
-        banten["wilayah"] = (
-            wilayah_response.data[0]
-            if wilayah_response.data
-            else None
-        )
-
+    # wilayah already joined
     return banten
 
 

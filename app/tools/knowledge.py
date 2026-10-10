@@ -185,7 +185,13 @@ def _keyword_search(query: str, top_k: int) -> list[dict]:
     Results are given a nominal similarity of 0.60 so they can be merged
     with vector results and ranked by score.
     """
-    terms = [t for t in re.split(r"\s+", query.strip()) if len(t) > 2]
+    # Split and clean terms (strip punctuation)
+    terms = []
+    for t in re.split(r"\s+", query.strip()):
+        # Remove leading/trailing punctuation
+        t = t.strip(".,;:?!()[]{}\"'")
+        if len(t) > 2:
+            terms.append(t)
     if not terms:
         return []
 
@@ -306,7 +312,7 @@ def _expand_queries(query: str) -> list[str]:
     try:
         client = _genai.Client(api_key=GEMINI_API_KEY)
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-3.8-flash",
             contents=prompt,
         )
         text = (response.text or "").strip()
@@ -336,7 +342,7 @@ def _attach_document_metadata(chunks: list[dict]) -> list[dict]:
         docs_response = (
             supabase
             .table("documents")
-            .select("id, title, source_type, file_url, description, version")
+            .select("id, title, source_type, file_url, description")
             .in_("id", document_ids)
             .execute()
         )
@@ -360,7 +366,6 @@ def _attach_document_metadata(chunks: list[dict]) -> list[dict]:
                 "source_type": doc.get("source_type"),
                 "file_url":    doc.get("file_url"),
                 "description": doc.get("description"),
-                "version":     doc.get("version"),     # Document versioning
             },
         })
 

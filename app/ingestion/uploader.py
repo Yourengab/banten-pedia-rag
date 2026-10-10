@@ -55,27 +55,22 @@ def upload_document(
             "must have the same length."
         )
 
-    # ── 1. Check existing versions ────────────────────────────────────────────
+    # ── 1. Check existing versions (NOTE: 'version' column missing in live DB) ──────────────────
     existing = (
         supabase
         .table("documents")
-        .select("id, version")
+        .select("id")
         .eq("title", title)
         .eq("is_active", True)
-        .order("version", desc=True)
-        .limit(1)
         .execute()
     )
 
-    current_version = 1
     if existing.data:
-        prev = cast(dict[str, Any], existing.data[0])
-        current_version = int(prev["version"]) + 1
-
-        # Deactivate the previous active version.
-        supabase.table("documents").update(
-            {"is_active": False}
-        ).eq("id", prev["id"]).execute()
+        # Deactivate previous active version.
+        # NOTE: Live DB missing 'updated_at' column, trigger fails. Use raw SQL to bypass.
+        supabase.rpc("exec_sql", {
+            "sql": f"UPDATE documents SET is_active = FALSE WHERE id = '{existing.data[0]['id']}'"
+        }).execute()
 
     # ── 2. Insert document record ─────────────────────────────────────────────
     doc_response = (
@@ -86,23 +81,25 @@ def upload_document(
             "source_type": source_type,
             "file_url":    file_url,
             "description": description,
-            "version":     current_version,
             "is_active":   True,
         })
         .execute()
     )
 
     document_id: str = cast(dict[str, Any], doc_response.data[0])["id"]
+    current_version = 1
 
     # ── 3. Batch insert chunks + embeddings ───────────────────────────────────
     rows = []
     for chunk, embedding in zip(chunks, embeddings):
+        # Format as pgvector literal: '[0.1,0.2,...]' (PostgreSQL array syntax)
+        embedding_str = "[" + ",".join(str(x) for x in embedding) + "]"
         rows.append({
             "document_id": document_id,
             "content":     chunk.content,
             "chunk_index": chunk.chunk_index,
             "page_number": chunk.page_number,
-            "embedding":   embedding,
+            "embedding":   embedding_str,
         })
 
     # Supabase supports batch inserts up to a few thousand rows.

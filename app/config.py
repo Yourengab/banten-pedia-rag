@@ -25,7 +25,7 @@ EMBEDDING_DIMENSION: int = int(os.getenv("EMBEDDING_DIMENSION", "768"))
 
 # ── Retrieval defaults ────────────────────────────────────────────────────────
 DEFAULT_TOP_K: int              = int(os.getenv("DEFAULT_TOP_K", "5"))
-SIMILARITY_THRESHOLD: float     = float(os.getenv("SIMILARITY_THRESHOLD", "0.70"))
+SIMILARITY_THRESHOLD: float     = float(os.getenv("SIMILARITY_THRESHOLD", "0.60"))
 
 # ── Chunking ──────────────────────────────────────────────────────────────────
 CHUNK_SIZE_TOKENS: int  = int(os.getenv("CHUNK_SIZE_TOKENS", "750"))

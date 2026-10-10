@@ -68,6 +68,8 @@ def evaluate_single(
         query=query,
         top_k=top_k,
         similarity_threshold=similarity_threshold,
+        use_hybrid=True,
+        expand_query=False,
     )
 
     if not results:

@@ -29,8 +29,8 @@ def embed_texts(
     """
     Generate embeddings for a list of text strings.
 
-    Processes in batches of EMBEDDING_BATCH_SIZE to respect API limits.
-    Adds a small delay between batches to avoid rate limiting.
+    Calls API once per text (Gemini embed_content processes one at a time).
+    Adds delay between calls to respect rate limits.
 
     Args:
         texts:     List of text strings to embed.
@@ -46,31 +46,26 @@ def embed_texts(
 
     all_embeddings: list[list[float]] = []
 
-    for batch_start in range(0, len(texts), EMBEDDING_BATCH_SIZE):
-        batch = texts[batch_start : batch_start + EMBEDDING_BATCH_SIZE]
-
+    for i, text in enumerate(texts):
         response = _client.models.embed_content(
             model=EMBEDDING_MODEL,
-            contents=batch,
+            contents=[text],
             config=types.EmbedContentConfig(
                 task_type=task_type,
                 output_dimensionality=EMBEDDING_DIMENSION,
             ),
         )
 
-        if not response.embeddings:
+        if not response.embeddings or response.embeddings[0].values is None:
             raise ValueError(
-                f"Gemini returned no embeddings for batch "
-                f"[{batch_start}:{batch_start + len(batch)}]"
+                f"Gemini returned no embedding for text index {i}"
             )
 
-        all_embeddings.extend(
-            emb.values for emb in response.embeddings if emb.values is not None
-        )
+        all_embeddings.append(response.embeddings[0].values)
 
-        # Brief pause between batches to avoid rate limiting.
-        if batch_start + EMBEDDING_BATCH_SIZE < len(texts):
-            time.sleep(0.5)
+        # Brief pause to avoid rate limiting.
+        if i + 1 < len(texts):
+            time.sleep(0.1)
 
     return all_embeddings
 
