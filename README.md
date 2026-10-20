@@ -45,6 +45,13 @@ app/
 
 sql/
 └── schema.sql             # Supabase tables + pgvector RPC functions
+
+scripts/
+├── ingest_documents.py    # Batch ingestion script
+├── merge_script.py        # Dataset merger for web_viz
+└── test_one.py            # Single-file test runner
+
+web_viz/                   # Web visualization UI & data
 ```
 
 ## Setup
@@ -65,11 +72,23 @@ pip install -r requirements.txt
 pip install pypdf python-docx   # for PDF/DOCX ingestion
 ```
 
+## Ingestion
+
+```bash
+# Test with first PDF
+python scripts/ingest_documents.py --test
+
+# Process all PDFs
+python scripts/ingest_documents.py
+
+# Merge datasets into web_viz/data.json
+python scripts/merge_script.py
+```
+
 ## Running
 
 ```bash
-cd app
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
 API docs: http://localhost:8000/docs
@@ -98,8 +117,7 @@ API docs: http://localhost:8000/docs
 ## Evaluation
 
 ```bash
-cd app
-python -m evaluation.evaluator              # Full suite
-python -m evaluation.evaluator --json       # JSON output
-python -m evaluation.evaluator --query "Apa itu Canang Sari?"
+python -m app.evaluation.evaluator              # Full suite
+python -m app.evaluation.evaluator --json       # JSON output
+python -m app.evaluation.evaluator --query "Apa itu Canang Sari?"
 ```
