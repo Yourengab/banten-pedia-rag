@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Optional
 
 # Add app directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent / "app"))
+sys.path.insert(0, str(Path(__file__).parent.parent / "app"))
 
 from config import validate_config
 from ingestion.pipeline import ingest_file
@@ -44,7 +44,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Directory containing PDF documents
-DOCUMENTS_DIR = Path(__file__).parent / "data" / "documents"
+DOCUMENTS_DIR = Path(__file__).parent.parent / "data" / "documents"
 
 
 def extract_title_from_filename(filename: str) -> str:
