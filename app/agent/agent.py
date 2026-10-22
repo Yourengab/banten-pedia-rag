@@ -14,6 +14,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import re
 from dataclasses import dataclass, field
 
 from google import genai
@@ -29,6 +30,42 @@ from .prompts import (
 from mcp_client.client import BantenPediaMCPClient
 
 logger = logging.getLogger(__name__)
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# INTENT DETECTION
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _detect_intent(query: str) -> str:
+    """
+    Detect query intent to route to appropriate agent.
+    Returns one of: 'casual', 'banten', 'general', 'fallback'.
+    """
+    lowered = query.lower().strip()
+    
+    # Casual greetings
+    casual_keywords = [
+        "halo", "hai", "selamat", "apa kabar", "pagi", "siang", "sore", "malam",
+        "selamat pagi", "selamat siang", "selamat sore", "selamat malam",
+    ]
+    if any(k in lowered for k in casual_keywords):
+        return "casual"
+    
+    # Banten cultural keywords
+    banten_keywords = [
+        "penjor", "banten", "galungan", "kuningan", "ngaben", "odalan", "upacara",
+        "taksu", "bali", "hindu", "offering", "bantenpedia",
+    ]
+    if any(k in lowered for k in banten_keywords):
+        return "banten"
+    
+    # General knowledge – common question patterns
+    general_keywords = ["where", "what", "who", "when", "how", "population", "capital", "country", "city"]
+    if any(k in lowered for k in general_keywords):
+        return "general"
+    
+    return "fallback"
+
 
 
 @dataclass
@@ -56,10 +93,11 @@ async def run_agent(
     Run the BantenPedia AI agent for a user query.
 
     The agent:
-    1. Retrieves chat history if session_id provided.
-    2. Calls search_knowledge() for document-based answers.
-    3. Calls search_banten() + get_components() for structured data.
-    4. Constructs grounded context and generates a final answer via Gemini.
+    1. Detects query intent (casual, banten, general, fallback).
+    2. Retrieves chat history if session_id provided.
+    3. Calls search_knowledge() for document-based answers.
+    4. Calls search_banten() + get_components() for structured data.
+    5. Constructs grounded context and generates a final answer via Gemini.
 
     Args:
         user_query:          The user's question.
@@ -73,8 +111,55 @@ async def run_agent(
     Returns:
         AgentResponse with answer, sources, and metadata flags.
     """
+    # ── 0. Detect intent ──────────────────────────────────────────────────────
+    intent = _detect_intent(user_query)
+    logger.info(f"[Agent] Detected intent: {intent}")
+    
+    # For casual/fallback intents, handle directly without RAG search
+    if intent == "casual":
+        from agent.agent_prompts import CASUAL_AGENT_PROMPT
+        answer = _generate_answer(
+            user_query=user_query,
+            context_block="",
+            system_prompt=CASUAL_AGENT_PROMPT,
+            chat_history="",
+            conflict=False,
+        )
+        return AgentResponse(
+            answer=answer,
+            sources=[],
+            search_performed=False,
+            conflict_detected=False,
+        )
+    
+    # For fallback intent, explain limitation
+    if intent == "fallback":
+        from agent.agent_prompts import FALLBACK_AGENT_PROMPT
+        answer = _generate_answer(
+            user_query=user_query,
+            context_block="",
+            system_prompt=FALLBACK_AGENT_PROMPT,
+            chat_history="",
+            conflict=False,
+        )
+        return AgentResponse(
+            answer=answer,
+            sources=[],
+            search_performed=False,
+            conflict_detected=False,
+        )
+    
+    # For banten/general: perform RAG search
     async with BantenPediaMCPClient() as mcp:
         # ── 0. Retrieve chat history if session exists ────────────────────────
+        chat_history_context = ""
+        if session_id:
+            from chat.manager import get_session_context
+            chat_history_context = get_session_context(session_id, limit=10)
+            if chat_history_context:
+                logger.info(f"[Agent] Loaded chat history for session: {session_id}")
+
+        # ── 1. Retrieve knowledge via MCP ─────────────────────────────────────
         chat_history_context = ""
         if session_id:
             from chat.manager import get_session_context
@@ -138,9 +223,14 @@ async def run_agent(
         context_block = build_context_block(knowledge_chunks, banten_data)
 
         # ── 6. Generate grounded answer with Gemini ───────────────────────────
+        # Select appropriate system prompt based on intent
+        from agent.agent_prompts import BANTEN_AGENT_PROMPT, GENERAL_AGENT_PROMPT
+        system_prompt = BANTEN_AGENT_PROMPT if intent == "banten" else GENERAL_AGENT_PROMPT
+        
         answer = _generate_answer(
             user_query=user_query,
             context_block=context_block,
+            system_prompt=system_prompt,
             chat_history=chat_history_context,
             conflict=conflict,
         )
@@ -168,6 +258,7 @@ def run_agent_sync(user_query: str, **kwargs) -> AgentResponse:
 def _generate_answer(
     user_query: str,
     context_block: str,
+    system_prompt: str,
     chat_history: str = "",
     conflict: bool = False,
 ) -> str:
@@ -198,7 +289,7 @@ def _generate_answer(
                 model=GEMINI_MODEL,
                 contents=user_message,
                 config=types.GenerateContentConfig(
-                    system_instruction=SYSTEM_PROMPT,
+                    system_instruction=system_prompt,
                     temperature=0.2,  # Low temperature for factual grounding
                 ),
             )
