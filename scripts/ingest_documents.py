@@ -25,6 +25,7 @@ import argparse
 import logging
 import re
 import sys
+import time
 from pathlib import Path
 from typing import Optional
 
@@ -229,23 +230,23 @@ def main():
         logger.error("Please copy .env.example to .env and fill in credentials")
         sys.exit(1)
     
-    # Collect PDF files to process
+    # Collect PDF and TXT files to process
     if args.files:
-        pdf_files = [DOCUMENTS_DIR / f for f in args.files]
+        doc_files = [DOCUMENTS_DIR / f for f in args.files]
     elif args.test:
-        # Get first PDF for testing
-        pdf_files = list(DOCUMENTS_DIR.glob("*.pdf"))[:1]
-        if not pdf_files:
-            logger.error("No PDF files found in data/documents/")
+        # Get first document for testing
+        doc_files = sorted(DOCUMENTS_DIR.glob("*.pdf") + list(DOCUMENTS_DIR.glob("*.txt")))[:1]
+        if not doc_files:
+            logger.error("No PDF/TXT files found in data/documents/")
             sys.exit(1)
     else:
-        pdf_files = sorted(DOCUMENTS_DIR.glob("*.pdf"))
+        doc_files = sorted(list(DOCUMENTS_DIR.glob("*.pdf")) + list(DOCUMENTS_DIR.glob("*.txt")))
     
-    if not pdf_files:
-        logger.error("No PDF files to process")
+    if not doc_files:
+        logger.error("No PDF/TXT files to process")
         sys.exit(1)
     
-    logger.info(f"Found {len(pdf_files)} PDF file(s) to process")
+    logger.info(f"Found {len(doc_files)} PDF/TXT file(s) to process")
     logger.info("=" * 60)
     
     # Process each file
@@ -258,14 +259,14 @@ def main():
     
     test_document_id = None
     
-    for pdf_path in pdf_files:
-        if not pdf_path.exists():
-            logger.error(f"File not found: {pdf_path}")
+    for doc_path in doc_files:
+        if not doc_path.exists():
+            logger.error(f"File not found: {doc_path}")
             results["failed"] += 1
             continue
         
         success, message = process_pdf(
-            pdf_path,
+            doc_path,
             skip_existing=not args.force,
         )
         
@@ -288,6 +289,8 @@ def main():
                         test_document_id = match.group(1)
                 
                 logger.info(f"  ✓ {message}")
+                # Delay after successful upload to avoid rate limit
+                time.sleep(2)
         else:
             results["failed"] += 1
             logger.error(f"  ✗ {message}")

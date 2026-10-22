@@ -66,11 +66,12 @@ def upload_document(
     )
 
     if existing.data:
-        # Deactivate previous active version.
-        # NOTE: Live DB missing 'updated_at' column, trigger fails. Use raw SQL to bypass.
-        supabase.rpc("exec_sql", {
-            "sql": f"UPDATE documents SET is_active = FALSE WHERE id = '{existing.data[0]['id']}'"
-        }).execute()
+        # Deactivate previous active version using direct update
+        first_doc = cast(dict[str, Any], existing.data[0])
+        old_doc_id = first_doc["id"]
+        supabase.table("documents").update({
+            "is_active": False
+        }).eq("id", old_doc_id).execute()
 
     # ── 2. Insert document record ─────────────────────────────────────────────
     doc_response = (
