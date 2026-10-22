@@ -305,7 +305,42 @@ def get_document(document_id: str):
 
 @app.delete("/documents/{document_id}", tags=["Documents"])
 def deactivate_document(document_id: str):
-...
+    """
+    Soft-delete a document by marking it as inactive.
+
+    This is a versioning-aware operation: the document and its chunks
+    remain in the database but will no longer appear in search results.
+    Re-ingesting with the same title will create a new active version.
+    """
+    try:
+        doc_response = (
+            supabase
+            .table("documents")
+            .select("id, title, is_active")
+            .eq("id", document_id)
+            .limit(1)
+            .execute()
+        )
+
+        if not doc_response.data:
+            raise HTTPException(status_code=404, detail="Document not found.")
+
+        doc_dict = cast(dict[str, Any], doc_response.data[0])
+
+        if not doc_dict["is_active"]:
+            return {"message": "Document is already inactive.", "document_id": document_id}
+
+        supabase.table("documents").update(
+            {"is_active": False}
+        ).eq("id", document_id).execute()
+
+        return {
+            "message": f"Document '{doc_dict['title']}' deactivated successfully.",
+            "document_id": document_id,
+        }
+
+    except HTTPException:
+        raise
     except Exception as exc:
         logger.error(f"[Documents] Deactivate error: {exc}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(exc))
