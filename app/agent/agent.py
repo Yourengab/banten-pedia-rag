@@ -202,14 +202,7 @@ def _generate_answer(
                     temperature=0.2,  # Low temperature for factual grounding
                 ),
             )
-            raw = (response.text or "").strip()
-            # Simple markdown cleanup: remove bold, italics, headings, code fences
-            cleaned = raw.replace("**", "").replace("*", "").replace("#", "")
-            cleaned = cleaned.replace("`", "")
-            # Collapse multiple spaces/newlines
-            import re
-            cleaned = re.sub(r"\s+", " ", cleaned).strip()
-            return cleaned
+            return (response.text or "").strip()
         except Exception as exc:
             if attempt < max_retries - 1:
                 logger.warning(f"[Agent] Gemini API error (attempt {attempt + 1}/{max_retries}): {exc}")
