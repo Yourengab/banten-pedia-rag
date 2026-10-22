@@ -51,6 +51,7 @@ CREATE INDEX IF NOT EXISTS document_chunks_document_id_idx
 -- Stores chat session metadata.
 -- ============================================================
 CREATE TABLE IF NOT EXISTS chat_sessions (
+    name            TEXT        NOT NULL DEFAULT ''
     id            UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
     created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

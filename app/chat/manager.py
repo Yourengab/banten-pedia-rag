@@ -14,11 +14,33 @@ from typing import Any, cast
 from database.supabase import supabase
 
 
-def create_session() -> str:
+def create_session(name: str = "") -> str:
     """Create a new chat session. Returns session_id."""
-    response = supabase.table("chat_sessions").insert({}).execute()
+    response = supabase.table("chat_sessions").insert({"name": name}).execute()
     session_id: str = cast(dict[str, Any], response.data[0])["id"]
     return session_id
+
+
+def list_sessions() -> list[dict[str, Any]]:
+    """List all chat sessions, ordered by creation time descending."""
+    response = (
+        supabase
+        .table("chat_sessions")
+        .select("id, name, created_at")
+        .order("created_at", desc=True)
+        .execute()
+    )
+    return response.data or []
+
+
+def update_session_name(session_id: str, name: str) -> None:
+    """Update session title/name."""
+    supabase.table("chat_sessions").update({"name": name}).eq("id", session_id).execute()
+
+
+def delete_session(session_id: str) -> None:
+    """Delete a chat session (messages cascade delete)."""
+    supabase.table("chat_sessions").delete().eq("id", session_id).execute()
 
 
 def add_message(session_id: str, role: str, content: str) -> str:

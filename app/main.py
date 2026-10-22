@@ -60,11 +60,16 @@ app.add_middleware(
 class ChatRequest(BaseModel):
     query: str = Field(..., min_length=1, description="The user's question.")
     session_id: str | None = Field(None, description="Optional chat session ID for context continuity.")
+    session_name: str | None = Field(None, description="Optional name for new session if creating.")
     top_k: int = Field(DEFAULT_TOP_K, ge=1, le=20)
     similarity_threshold: float = Field(SIMILARITY_THRESHOLD, ge=0.0, le=1.0)
     source_type: str | None = Field(None, description="Filter by document type.")
     use_hybrid: bool = Field(False, description="Enable hybrid search.")
     expand_query: bool = Field(False, description="Enable multi-query expansion.")
+
+
+class UpdateSessionRequest(BaseModel):
+    name: str = Field(..., min_length=1, description="New session title/name.")
 
 
 class ChatResponse(BaseModel):
@@ -121,7 +126,12 @@ async def chat(request: ChatRequest):
         from chat.manager import create_session, add_message
 
         # Use provided session_id or create new one
-        session_id = request.session_id or create_session()
+        session_id = request.session_id
+        if not session_id:
+            from chat.manager import create_session
+            # Auto-name from first query if not specified
+            name = request.session_name or (request.query[:30] + "..." if len(request.query) > 30 else request.query)
+            session_id = create_session(name=name)
 
         # Store user message before processing
         add_message(session_id, "user", request.query)
@@ -360,3 +370,40 @@ def get_chat_history(session_id: str):
     except Exception as exc:
         logger.error(f"[Chat] History error: {exc}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(exc))
+
+
+@app.get("/chat/sessions", tags=["Chat"])
+def list_chat_sessions():
+    """List all chat sessions."""
+    try:
+        from chat.manager import list_sessions
+        sessions = list_sessions()
+        return {"sessions": sessions}
+    except Exception as exc:
+        logger.error(f"[Chat] List sessions error: {exc}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@app.patch("/chat/{session_id}", tags=["Chat"])
+def update_chat_session(session_id: str, request: UpdateSessionRequest):
+    """Update chat session name/title."""
+    try:
+        from chat.manager import update_session_name
+        update_session_name(session_id, request.name)
+        return {"message": "Session updated successfully.", "session_id": session_id, "name": request.name}
+    except Exception as exc:
+        logger.error(f"[Chat] Update session error: {exc}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@app.delete("/chat/{session_id}", tags=["Chat"])
+def delete_chat_session(session_id: str):
+    """Delete a chat session and all its messages."""
+    try:
+        from chat.manager import delete_session
+        delete_session(session_id)
+        return {"message": "Session deleted successfully.", "session_id": session_id}
+    except Exception as exc:
+        logger.error(f"[Chat] Delete session error: {exc}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(exc))
+
