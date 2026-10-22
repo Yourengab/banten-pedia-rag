@@ -211,6 +211,7 @@ def _generate_answer(
             else:
                 logger.error(f"[Agent] Gemini API failed after {max_retries} attempts: {exc}")
                 raise
+    return ""
 
 
 # ══════════════════════════════════════════════════════════════════════════════
