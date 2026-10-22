@@ -47,6 +47,32 @@ CREATE INDEX IF NOT EXISTS document_chunks_document_id_idx
     ON document_chunks (document_id);
 
 -- ============================================================
+-- Table: chat_sessions
+-- Stores chat session metadata.
+-- ============================================================
+CREATE TABLE IF NOT EXISTS chat_sessions (
+    id            UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+    created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+-- ============================================================
+-- Table: chat_messages
+-- Stores individual messages per session.
+-- role: 'user' or 'assistant'.
+-- ============================================================
+CREATE TABLE IF NOT EXISTS chat_messages (
+    id            UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+    session_id    UUID        NOT NULL REFERENCES chat_sessions(id) ON DELETE CASCADE,
+    role          TEXT        NOT NULL CHECK (role IN ('user','assistant')),
+    content       TEXT        NOT NULL,
+    created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+-- Index for fast session lookup
+CREATE INDEX IF NOT EXISTS chat_messages_session_id_idx
+    ON chat_messages (session_id);
+
+-- ============================================================
 -- RPC: match_document_chunks
 -- Basic vector similarity search (cosine distance).
 -- Called by search_knowledge().

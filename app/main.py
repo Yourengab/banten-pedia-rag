@@ -59,6 +59,7 @@ app.add_middleware(
 
 class ChatRequest(BaseModel):
     query: str = Field(..., min_length=1, description="The user's question.")
+    session_id: str | None = Field(None, description="Optional chat session ID for context continuity.")
     top_k: int = Field(DEFAULT_TOP_K, ge=1, le=20)
     similarity_threshold: float = Field(SIMILARITY_THRESHOLD, ge=0.0, le=1.0)
     source_type: str | None = Field(None, description="Filter by document type.")
@@ -71,6 +72,7 @@ class ChatResponse(BaseModel):
     sources: list[dict]
     search_performed: bool
     conflict_detected: bool
+    session_id: str
 
 
 class SearchRequest(BaseModel):
@@ -109,22 +111,40 @@ async def chat(request: ChatRequest):
     Send a question to the BantenPedia AI agent.
 
     The agent retrieves relevant knowledge from the repository and
-    generates a grounded answer using Gemini.
+    generates a grounded answer using Gemini. Supports chat sessions
+    for context continuity.
+
+    - If session_id is provided, chat history is used for context.
+    - If session_id is not provided, a new session is created.
     """
     try:
+        from chat.manager import create_session, add_message
+
+        # Use provided session_id or create new one
+        session_id = request.session_id or create_session()
+
+        # Store user message before processing
+        add_message(session_id, "user", request.query)
+
         result = await run_agent(
             user_query=request.query,
+            session_id=session_id,
             top_k=request.top_k,
             similarity_threshold=request.similarity_threshold,
             source_type=request.source_type,
             use_hybrid=request.use_hybrid,
             expand_query=request.expand_query,
         )
+
+        # Store assistant response
+        add_message(session_id, "assistant", result.answer)
+
         return ChatResponse(
             answer=result.answer,
             sources=result.sources,
             search_performed=result.search_performed,
             conflict_detected=result.conflict_detected,
+            session_id=session_id,
         )
     except Exception as exc:
         logger.error(f"[Chat] Error: {exc}", exc_info=True)
@@ -285,42 +305,23 @@ def get_document(document_id: str):
 
 @app.delete("/documents/{document_id}", tags=["Documents"])
 def deactivate_document(document_id: str):
-    """
-    Soft-delete a document by marking it as inactive.
-
-    This is a versioning-aware operation: the document and its chunks
-    remain in the database but will no longer appear in search results.
-    Re-ingesting with the same title will create a new active version.
-    """
-    try:
-        doc_response = (
-            supabase
-            .table("documents")
-            .select("id, title, is_active")
-            .eq("id", document_id)
-            .limit(1)
-            .execute()
-        )
-
-        if not doc_response.data:
-            raise HTTPException(status_code=404, detail="Document not found.")
-
-        doc_dict = cast(dict[str, Any], doc_response.data[0])
-
-        if not doc_dict["is_active"]:
-            return {"message": "Document is already inactive.", "document_id": document_id}
-
-        supabase.table("documents").update(
-            {"is_active": False}
-        ).eq("id", document_id).execute()
-
-        return {
-            "message": f"Document '{doc_dict['title']}' deactivated successfully.",
-            "document_id": document_id,
-        }
-
-    except HTTPException:
-        raise
+...
     except Exception as exc:
         logger.error(f"[Documents] Deactivate error: {exc}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHAT SESSIONS
+# ══════════════════════════════════════════════════════════════════════════════
+
+@app.get("/chat/{session_id}/history", tags=["Chat"])
+def get_chat_history(session_id: str):
+    """Retrieve chat history for a given session."""
+    try:
+        from chat.manager import get_session_history
+        history = get_session_history(session_id)
+        return {"session_id": session_id, "messages": history}
+    except Exception as exc:
+        logger.error(f"[Chat] History error: {exc}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(exc))

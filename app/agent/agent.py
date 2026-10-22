@@ -45,6 +45,7 @@ class AgentResponse:
 
 async def run_agent(
     user_query: str,
+    session_id: str | None = None,
     top_k: int = 5,
     similarity_threshold: float = 0.70,
     source_type: str | None = None,
@@ -55,12 +56,14 @@ async def run_agent(
     Run the BantenPedia AI agent for a user query.
 
     The agent:
-    1. Calls search_knowledge() for document-based answers.
-    2. Calls search_banten() + get_components() for structured data.
-    3. Constructs grounded context and generates a final answer via Gemini.
+    1. Retrieves chat history if session_id provided.
+    2. Calls search_knowledge() for document-based answers.
+    3. Calls search_banten() + get_components() for structured data.
+    4. Constructs grounded context and generates a final answer via Gemini.
 
     Args:
         user_query:          The user's question.
+        session_id:          Optional chat session ID for context continuity.
         top_k:               Max retrieval results.
         similarity_threshold: Minimum similarity for inclusion.
         source_type:         Filter knowledge by document type.
@@ -71,6 +74,14 @@ async def run_agent(
         AgentResponse with answer, sources, and metadata flags.
     """
     async with BantenPediaMCPClient() as mcp:
+        # ── 0. Retrieve chat history if session exists ────────────────────────
+        chat_history_context = ""
+        if session_id:
+            from chat.manager import get_session_context
+            chat_history_context = get_session_context(session_id, limit=10)
+            if chat_history_context:
+                logger.info(f"[Agent] Loaded chat history for session: {session_id}")
+
         # ── 1. Retrieve knowledge via MCP ─────────────────────────────────────
         logger.info(f"[Agent] Calling search_knowledge for: {user_query!r}")
 
@@ -130,6 +141,7 @@ async def run_agent(
         answer = _generate_answer(
             user_query=user_query,
             context_block=context_block,
+            chat_history=chat_history_context,
             conflict=conflict,
         )
 
@@ -156,7 +168,8 @@ def run_agent_sync(user_query: str, **kwargs) -> AgentResponse:
 def _generate_answer(
     user_query: str,
     context_block: str,
-    conflict: bool,
+    chat_history: str = "",
+    conflict: bool = False,
 ) -> str:
     """Generate a grounded answer using Gemini with retrieved context."""
     client = genai.Client(api_key=GEMINI_API_KEY)
@@ -167,7 +180,11 @@ def _generate_answer(
         if conflict else ""
     )
 
+    # Prepend chat history if available
+    history_prefix = f"{chat_history}\n\n" if chat_history else ""
+
     user_message = (
+        f"{history_prefix}"
         f"{context_block}"
         f"{conflict_note}\n\n"
         f"Pertanyaan pengguna: {user_query}"
