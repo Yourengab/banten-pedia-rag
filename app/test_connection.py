@@ -2,8 +2,8 @@ from database.supabase import supabase
 
 response = (
     supabase
-    .table("banten")
-    .select("id_banten")
+    .table("banten_entities")
+    .select("id")
     .limit(1)
     .execute()
 )

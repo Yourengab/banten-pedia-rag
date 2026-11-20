@@ -16,7 +16,9 @@ from __future__ import annotations
 import logging
 from typing import Annotated, Any, cast
 
-from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
+from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile, Request
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from postgrest import CountMethod
 from pydantic import BaseModel, Field
@@ -53,6 +55,26 @@ app.add_middleware(
 )
 
 
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    error_messages = []
+    for error in exc.errors():
+        # Field path (e.g., ['body', 'query'])
+        loc = error.get("loc", [])
+        field_name = loc[-1] if len(loc) > 1 else "root"
+        msg = error.get("msg", "invalid input")
+        error_messages.append(f"Field '{field_name}': {msg}")
+
+    return JSONResponse(
+        status_code=422,
+        content={
+            "status": "error",
+            "message": " | ".join(error_messages),
+            "details": exc.errors(),
+        },
+    )
+
+
 # ══════════════════════════════════════════════════════════════════════════════
 # SCHEMAS
 # ══════════════════════════════════════════════════════════════════════════════
@@ -78,6 +100,7 @@ class ChatResponse(BaseModel):
     search_performed: bool
     conflict_detected: bool
     session_id: str
+    options: list[dict] = []  # For disambiguation UI
 
 
 class SearchRequest(BaseModel):
@@ -104,6 +127,26 @@ class IngestResponse(BaseModel):
 def health_check():
     """Liveness probe."""
     return {"status": "ok", "service": "BantenPedia RAG API"}
+
+
+@app.get("/v1/models", tags=["Compat"])
+def list_models():
+    """OpenAI-compatible model discovery endpoint.
+    
+    Prevents 404s from OpenAI SDK wrappers (OpenWebUI, LiteLLM, Continue, etc.)
+    that poll this endpoint to list available models.
+    """
+    from config import GEMINI_MODEL
+    return {
+        "object": "list",
+        "data": [
+            {
+                "id": GEMINI_MODEL.strip(),
+                "object": "model",
+                "owned_by": "google",
+            }
+        ],
+    }
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -155,6 +198,7 @@ async def chat(request: ChatRequest):
             search_performed=result.search_performed,
             conflict_detected=result.conflict_detected,
             session_id=session_id,
+            options=result.options,
         )
     except Exception as exc:
         logger.error(f"[Chat] Error: {exc}", exc_info=True)
@@ -353,6 +397,45 @@ def deactivate_document(document_id: str):
         raise
     except Exception as exc:
         logger.error(f"[Documents] Deactivate error: {exc}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# ENTITIES (Banten, Komponen, Bahan)
+# ══════════════════════════════════════════════════════════════════════════════
+
+@app.get("/banten/{banten_id}", tags=["Entities"])
+def get_banten_detail(banten_id: str):
+    """Get full detail of a banten entity, with its components."""
+    try:
+        from tools.banten import get_banten, get_components
+        banten = get_banten(banten_id)
+        if not banten: raise HTTPException(status_code=404, detail="Banten not found.")
+        banten["components"] = get_components(banten_id)
+        return {**banten, "type": "banten"}
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+@app.get("/komponen/{komponen_id}", tags=["Entities"])
+def get_komponen_detail(komponen_id: str):
+    """Get full detail of a component."""
+    try:
+        from tools.banten import get_komponen_detail
+        data = get_komponen_detail(komponen_id)
+        if not data: raise HTTPException(status_code=404, detail="Komponen not found.")
+        return {**data, "type": "komponen"}
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+@app.get("/bahan/{bahan_id}", tags=["Entities"])
+def get_bahan_detail(bahan_id: str):
+    """Get full detail of a bahan."""
+    try:
+        from tools.banten import get_bahan_detail
+        data = get_bahan_detail(bahan_id)
+        if not data: raise HTTPException(status_code=404, detail="Bahan not found.")
+        return {**data, "type": "bahan"}
+    except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
 
 

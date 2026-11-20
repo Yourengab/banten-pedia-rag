@@ -2,6 +2,7 @@ from mcp.server.mcpserver import MCPServer
 
 from tools.banten import (
     search_banten as search_banten_data,
+    search_entities as search_entities_data,
     get_banten as get_banten_data,
     get_components as get_components_data,
 )
@@ -14,12 +15,24 @@ mcp = MCPServer("BantenPedia MCP Server")
 
 
 @mcp.tool()
+def search_entities(
+    query_data: dict,
+    limit: int = 5
+) -> dict:
+    """
+    Search banten, komponen, and bahan with fuzzy matching and disambiguation.
+    query_data should be: {"core": str, "variants": list, "is_bali_topic": bool}
+    """
+    return search_entities_data(query_data, limit)
+
+
+@mcp.tool()
 def search_banten(
     query: str,
     wilayah: str | None = None,
     limit: int = 5
-) -> list[dict]:
-    """Search banten by name and optionally by regency."""
+) -> dict:
+    """Search banten by name and optionally by regency (legacy)."""
     return search_banten_data(query, wilayah, limit)
 
 
@@ -46,20 +59,6 @@ def search_knowledge(
 ) -> list[dict]:
     """
     Search relevant knowledge from documents using RAG.
-
-    Args:
-        query:                User's natural language question.
-        top_k:                Maximum number of results to return (1–20).
-        similarity_threshold: Minimum cosine similarity score (0.0–1.0).
-        source_type:          Optional filter — only from this source type
-                              (e.g. 'book', 'article', 'transcript').
-        use_hybrid:           If True, merges vector search with keyword search
-                              using Reciprocal Rank Fusion.
-        expand_query:         If True, generates alternative query phrasings
-                              to improve recall (multi-query expansion).
-
-    Returns:
-        List of matching chunks with content, similarity, page_number, and source.
     """
     return search_knowledge_data(
         query=query,

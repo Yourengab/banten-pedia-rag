@@ -130,14 +130,13 @@ def build_context_block(results: list[dict], banten_data: list[dict] | None = No
         blocks.append("\n### Data Banten Terstruktur")
         for i, banten in enumerate(banten_data, start=1):
             blocks.append("---")
-            blocks.append(f"Banten {i}: {banten.get('nama_banten', 'Unknown')}")
-            if banten.get('nama_lokal'):
-                blocks.append(f"Nama Lokal: {banten['nama_lokal']}")
-            if banten.get('deskripsi_umum'):
-                blocks.append(f"Deskripsi: {banten['deskripsi_umum']}")
-            wilayah = banten.get('wilayah', {})
-            if wilayah:
-                blocks.append(f"Wilayah: {wilayah.get('kabupaten', 'Unknown')}")
+            blocks.append(f"Banten {i}: {banten.get('name', 'Unknown')}")
+            # Include ID and Type for frontend linking
+            banten_id = banten.get('id')
+            if banten_id:
+                blocks.append(f"ID: {banten_id} | Type: 'banten'")
+            if banten.get('description'):
+                blocks.append(f"Deskripsi: {banten['description']}")
 
     blocks.append("\n[AKHIR KONTEKS]\n")
     return "\n".join(blocks)
@@ -148,5 +147,7 @@ def detect_source_conflict(results: list[dict]) -> bool:
     Check if multiple distinct documents are represented in the results.
     If yes, the agent should surface differences between sources (PRD §22).
     """
-    doc_ids = {r.get("document_id") for r in results if r.get("document_id")}
+    if not isinstance(results, list):
+        return False
+    doc_ids = {r.get("document_id") for r in results if isinstance(r, dict) and r.get("document_id")}
     return len(doc_ids) > 1
