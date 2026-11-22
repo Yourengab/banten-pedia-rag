@@ -16,11 +16,13 @@ import json
 import logging
 import re
 from dataclasses import dataclass, field
+from typing import Any
 
 from google import genai
 from google.genai import types
-
+from database.supabase import supabase
 from config import GEMINI_API_KEY, GEMINI_MODEL
+from tools.internet import google_search as _google_search
 from .prompts import (
     SYSTEM_PROMPT,
     NO_DB_CONTEXT_NOTE,
@@ -35,6 +37,24 @@ logger = logging.getLogger(__name__)
 # ══════════════════════════════════════════════════════════════════════════════
 # INTENT DETECTION
 # ══════════════════════════════════════════════════════════════════════════════
+
+def _is_relation_query(query: str, chat_history: str = "") -> bool:
+    """Detect if the user is asking about components/materials/relations."""
+    keywords = ["bahan", "komponen", "isi", "campuran", "isian", "buat", "resep", "susunan", "tata cara"]
+    query_lower = query.lower()
+    
+    # Check current query
+    if any(k in query_lower for k in keywords):
+        return True
+        
+    # Check history (simple check)
+    if chat_history and any(k in chat_history.lower() for k in keywords):
+        # Only consider history if it's a recent clarification (short query)
+        if len(query_lower.split()) < 5:
+            return True
+            
+    return False
+
 
 def _detect_intent(query: str) -> str:
     """
@@ -280,29 +300,56 @@ async def run_agent(
             top_score = 0.0
             options = []
 
-        knowledge_chunks = []
-        # Logic: If high score match, we can still complement with RAG
-        # If low/no match, we do RAG.
-        # If both fail, we refuse.
+        # Step 2: ALWAYS search knowledge to complement DB (hybrid approach)
+        # This ensures we have narrative context even when DB has entities
+        logger.info(f"[Agent] Calling search_knowledge to complement DB results.")
+        knowledge_result = await mcp.call_tool(
+            "search_knowledge",
+            {
+                "query":                query_data['core'],
+                "top_k":                top_k,
+                "similarity_threshold": similarity_threshold,
+                "source_type":          source_type,
+                "use_hybrid":           use_hybrid,
+                "expand_query":         expand_query,
+            },
+        )
+        knowledge_chunks = _parse_mcp_to_list(knowledge_result)
+
+        # Step 3: Fetch relations (components/materials) if applicable
+        relation_data = []
+        if not is_ambiguous and banten_data:
+            top_entity = banten_data[0]
+            entity_id = top_entity.get("id")
+            entity_type = top_entity.get("entity_type") or top_entity.get("type")
+            
+            # If user asks for relations OR it's a banten/component (always good to have context)
+            if _is_relation_query(user_query, chat_history_context) or entity_type in ["banten", "komponen"]:
+                logger.info(f"[Agent] Fetching components for entity: {entity_id}")
+                rel_result = await mcp.call_tool(
+                    "get_components",
+                    {"banten_id": entity_id}
+                )
+                relation_data = _parse_mcp_to_list(rel_result)
+
+        # Step 4: Check if we have "thin context" - DB entities exist but no narrative content
+        # If so, we'll augment with Google Search
+        has_db_narrative = any(b.get('description') and len(b.get('description', '')) > 50 for b in banten_data)
+        has_rag_narrative = any(chunk.get('content') and len(chunk.get('content', '')) > 100 for chunk in knowledge_chunks)
+        has_relation_data = len(relation_data) > 0
         
-        if top_score < 0.8: # If not a perfect DB match, look into documents
-            logger.info(f"[Agent] Calling search_knowledge to complement or find data.")
-            knowledge_result = await mcp.call_tool(
-                "search_knowledge",
-                {
-                    "query":                query_data['core'],
-                    "top_k":                top_k,
-                    "similarity_threshold": similarity_threshold,
-                    "source_type":          source_type,
-                    "use_hybrid":           use_hybrid,
-                    "expand_query":         expand_query,
-                },
-            )
-            knowledge_chunks = _parse_mcp_to_list(knowledge_result)
+        needs_external_search = not has_db_narrative and not has_rag_narrative and not has_relation_data and banten_data
+        
+        google_results = []
+        if needs_external_search:
+            logger.info(f"[Agent] Thin context detected, calling Google Search for: {query_data['core']!r}")
+            google_results = await _google_search(query_data['core'])
 
         # ── 3. Log result status & Logging ───────────────────────────────────
         path_taken = "db_high"
         if is_ambiguous: path_taken = "db_ambiguous"
+        elif has_relation_data: path_taken = "db_with_relations"
+        elif needs_external_search: path_taken = "google_search"
         elif knowledge_chunks: path_taken = "rag"
         elif not banten_data and not knowledge_chunks: path_taken = "refused"
         
@@ -326,21 +373,31 @@ async def run_agent(
                 conflict_detected=False,
             )
         
-        # ── 4. Detect source conflicts (only meaningful when DB has results) ──
+        # ── 4. Detect source conflicts ────────────────────────────────────────
         conflict = detect_source_conflict(knowledge_chunks) if knowledge_chunks else False
         if conflict:
             logger.info("[Agent] Multiple document sources detected — surfacing differences.")
 
         # ── 5. Build context block ────────────────────────────────────────────
-        context_block = build_context_block(knowledge_chunks, banten_data)
+        context_block = build_context_block(knowledge_chunks, banten_data, relation_data)
+        
+        # Add Google Search results to context if available
+        if google_results:
+            context_block += "\n\n[HASIL PENCARIAN INTERNET UNTUK MELENGKAPI KONTEKS]\n"
+            for i, g in enumerate(google_results[:3], 1):
+                context_block += f"---\nSumber Internet {i}: {g.get('title', 'Tanpa Judul')}\n"
+                context_block += f"URL: {g.get('link', '')}\n"
+                context_block += f"Snippet: {g.get('snippet', '')}\n"
 
         # ── 6. Generate grounded answer with Gemini ───────────────────────────
         from agent.agent_prompts import BANTEN_AGENT_PROMPT, GENERAL_AGENT_PROMPT
         system_prompt = BANTEN_AGENT_PROMPT if intent == "banten" else GENERAL_AGENT_PROMPT
         
-        # Add ambiguity hint to prompt if needed
+        # Add ambiguity hint to prompt if needed (but NOT the ugly system message)
         if is_ambiguous:
-            system_prompt += "\n\n⚠️ PENTING: Hasil pencarian ambigu. Berikan daftar opsi yang tersedia kepada pengguna agar mereka memilih."
+            system_prompt += "\n\n[CATATAN INTERNAL: Ada beberapa entitas dengan nama serupa. Jelaskan pengertian umum dulu, lalu tanya santai mana yang mau diperdalam. JANGAN tampilkan daftar pilihan mentah.]"
+        elif _is_relation_query(user_query, chat_history_context):
+             system_prompt += "\n\n[CATATAN INTERNAL: User bertanya tentang bahan/komponen. Fokuskan jawaban pada daftar bahan yang ditemukan di context, dan jelaskan kegunaannya jika ada.]"
 
         answer = _generate_answer(
             user_query=user_query,
@@ -352,6 +409,17 @@ async def run_agent(
 
         # ── 7. Collect unique sources for response ────────────────────────────
         sources = _collect_sources(knowledge_chunks)
+        
+        # Add Google sources to response
+        if google_results:
+            for g in google_results:
+                sources.append({
+                    "title": g.get("title", "Google Search"),
+                    "url": g.get("link", ""),
+                    "source_type": "web"
+                })
+
+        # Add relations to sources if they aren't already there (optional, but keep it clean)
 
         return AgentResponse(
             answer=answer,

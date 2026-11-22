@@ -34,6 +34,9 @@ CHUNK_OVERLAP_TOKENS: int = int(os.getenv("CHUNK_OVERLAP_TOKENS", "100"))
 # ── Ingestion ─────────────────────────────────────────────────────────────────
 EMBEDDING_BATCH_SIZE: int = int(os.getenv("EMBEDDING_BATCH_SIZE", "20"))
 
+# ── Google Search (Serper) ─────────────────────────────────────────────────────
+SERPER_API_KEY: str = os.getenv("SERPER_API_KEY", "")
+
 # ── Validation ────────────────────────────────────────────────────────────────
 _required = {
     "SUPABASE_URL": SUPABASE_URL,
