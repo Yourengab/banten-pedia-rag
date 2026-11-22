@@ -5,6 +5,7 @@ from tools.banten import (
     search_entities as search_entities_data,
     get_banten as get_banten_data,
     get_components as get_components_data,
+    get_full_relation_tree as get_full_relation_tree_data,
 )
 
 from tools.knowledge import (
@@ -46,6 +47,22 @@ def get_banten(banten_id: str) -> dict | None:
 def get_components(banten_id: str) -> list[dict]:
     """Get the components and quantities of a banten."""
     return get_components_data(banten_id)
+
+
+@mcp.tool()
+def get_full_relation_tree(banten_id: str, max_depth: int = 3) -> list[dict]:
+    """
+    Recursively fetch all components and their materials down the hierarchy.
+    Returns a flat list of all related entities with hierarchy info.
+    
+    Args:
+        banten_id: Root entity ID (banten or komponen)
+        max_depth: Maximum recursion depth (default 3: banten -> komponen -> bahan)
+    
+    Returns:
+        List of dicts with id, name, type, description, level, parent_name, notes
+    """
+    return get_full_relation_tree_data(banten_id, max_depth)
 
 
 @mcp.tool()

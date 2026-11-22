@@ -95,6 +95,7 @@ class AgentResponse:
     search_performed: bool = False
     conflict_detected: bool = False
     options: list[dict] = field(default_factory=list)  # For disambiguation UI
+    relations: list[dict] = field(default_factory=list)  # Structured relation data for frontend
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -323,12 +324,12 @@ async def run_agent(
             entity_id = top_entity.get("id")
             entity_type = top_entity.get("entity_type") or top_entity.get("type")
             
-            # If user asks for relations OR it's a banten/component (always good to have context)
-            if _is_relation_query(user_query, chat_history_context) or entity_type in ["banten", "komponen"]:
-                logger.info(f"[Agent] Fetching components for entity: {entity_id}")
+            # Always fetch full relation tree for banten/komponen (non-ambiguous)
+            if entity_type in ["banten", "komponen"]:
+                logger.info(f"[Agent] Fetching full relation tree for entity: {entity_id}")
                 rel_result = await mcp.call_tool(
-                    "get_components",
-                    {"banten_id": entity_id}
+                    "get_full_relation_tree",
+                    {"banten_id": entity_id, "max_depth": 3}
                 )
                 relation_data = _parse_mcp_to_list(rel_result)
 
@@ -427,6 +428,7 @@ async def run_agent(
             search_performed=True,
             conflict_detected=conflict,
             options=options,
+            relations=relation_data,
         )
 
 

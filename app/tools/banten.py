@@ -159,6 +159,50 @@ def get_components(banten_id: str) -> list[dict]:
     return results
 
 
+def get_full_relation_tree(banten_id: str, max_depth: int = 3) -> list[dict]:
+    """
+    Recursively fetch all components and their materials.
+    Returns a flat list of all related entities with hierarchy info.
+    
+    Args:
+        banten_id: Root entity ID
+        max_depth: Maximum recursion depth (default 3: banten -> komponen -> bahan)
+    
+    Returns:
+        List of dicts with keys: id, name, type, description, level, parent_name, notes
+    """
+    all_relations = []
+    visited = set()
+    
+    def _fetch_children(parent_id: str, level: int, parent_name: str = ""):
+        if level >= max_depth or parent_id in visited:
+            return
+        visited.add(parent_id)
+        
+        children = get_components(parent_id)
+        for child in children:
+            child_id = child.get("id")
+            child_type = child.get("type", "komponen")
+            
+            # Add to flat list with hierarchy info
+            all_relations.append({
+                "id": child_id,
+                "name": child.get("name"),
+                "type": child_type,
+                "description": child.get("description"),
+                "level": level,
+                "parent_name": parent_name,
+                "notes": child.get("notes", "")
+            })
+            
+            # If it's a komponen, fetch its materials (bahan)
+            if child_type == "komponen" and level < max_depth:
+                _fetch_children(child_id, level + 1, child.get("name", ""))
+    
+    _fetch_children(banten_id, 1)
+    return all_relations
+
+
 def get_komponen_detail(komponen_id: str) -> dict | None:
     return get_banten(komponen_id)
 

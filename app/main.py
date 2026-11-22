@@ -101,6 +101,7 @@ class ChatResponse(BaseModel):
     conflict_detected: bool
     session_id: str
     options: list[dict] = []  # For disambiguation UI
+    relations: list[dict] = []  # Structured relation data (komponen/bahan) for frontend
 
 
 class SearchRequest(BaseModel):
@@ -199,6 +200,7 @@ async def chat(request: ChatRequest):
             conflict_detected=result.conflict_detected,
             session_id=session_id,
             options=result.options,
+            relations=result.relations,
         )
     except Exception as exc:
         logger.error(f"[Chat] Error: {exc}", exc_info=True)

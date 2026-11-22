@@ -198,19 +198,53 @@ def build_context_block(
 
     # ── 2. Relation Data (Components/Materials) ──────────────────────────────
     if relation_data:
-        blocks.append("\n### Komponen / Bahan Penyusun")
-        blocks.append("Daftar di bawah ini adalah bahan atau komponen yang membentuk entitas utama di atas:")
-        for i, rel in enumerate(relation_data, start=1):
-            name = rel.get('name', 'Unknown')
-            etype = rel.get('type') or rel.get('entity_type', 'komponen')
-            eid = rel.get('id')
-            notes = rel.get('notes', '')
-            
-            blocks.append(f"{i}. {name}")
-            if eid:
-                blocks.append(f"   Link: ID: {eid} | Type: '{etype}'")
-            if notes:
-                blocks.append(f"   Catatan: {notes}")
+        # Group by level: level 1 = direct children (komponen), level 2 = materials (bahan)
+        level1 = [r for r in relation_data if r.get('level') == 1]
+        level2 = [r for r in relation_data if r.get('level') >= 2]
+        
+        if level1:
+            blocks.append("\n### Komponen Utama (Lapisan 1)")
+            for i, rel in enumerate(level1, start=1):
+                name = rel.get('name', 'Unknown')
+                etype = rel.get('type') or rel.get('entity_type', 'komponen')
+                eid = rel.get('id')
+                notes = rel.get('notes', '')
+                
+                blocks.append(f"{i}. {name}")
+                if eid:
+                    blocks.append(f"   ID: {eid} | Type: '{etype}'")
+                if notes:
+                    blocks.append(f"   Catatan: {notes}")
+                
+                # Show its materials (level 2) indented
+                children = [r for r in level2 if r.get('parent_name') == name]
+                if children:
+                    for j, child in enumerate(children, start=1):
+                        cname = child.get('name', 'Unknown')
+                        ctype = child.get('type') or child.get('entity_type', 'bahan')
+                        ceid = child.get('id')
+                        cnotes = child.get('notes', '')
+                        blocks.append(f"   {i}.{j} {cname}")
+                        if ceid:
+                            blocks.append(f"      ID: {ceid} | Type: '{ctype}'")
+                        if cnotes:
+                            blocks.append(f"      Catatan: {cnotes}")
+        
+        # If there are level2 items without parent match (orphans), show them
+        orphans = [r for r in level2 if r.get('parent_name') and not any(p.get('name') == r.get('parent_name') for p in level1)]
+        if orphans:
+            blocks.append("\n### Bahan Tambahan")
+            for i, rel in enumerate(orphans, start=1):
+                name = rel.get('name', 'Unknown')
+                etype = rel.get('type') or rel.get('entity_type', 'bahan')
+                eid = rel.get('id')
+                notes = rel.get('notes', '')
+                
+                blocks.append(f"{i}. {name}")
+                if eid:
+                    blocks.append(f"   ID: {eid} | Type: '{etype}'")
+                if notes:
+                    blocks.append(f"   Catatan: {notes}")
 
     # ── 3. Document-based knowledge (RAG) ────────────────────────────────────
     if results:
