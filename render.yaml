@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: bantenpedia-api
+    runtime: python
+    region: singapore  # paling dekat Indonesia
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: cd app && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: EMBEDDING_MODEL
+        value: gemini-embedding-2
+      - key: EMBEDDING_DIMENSION
+        value: "768"
+      - key: DEFAULT_TOP_K
+        value: "5"
+      - key: SIMILARITY_THRESHOLD
+        value: "0.70"
+      - key: CHUNK_SIZE_TOKENS
+        value: "750"
+      - key: CHUNK_OVERLAP_TOKENS
+        value: "100"
+      - key: EMBEDDING_BATCH_SIZE
+        value: "20"
+      - key: SERPER_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.9"
