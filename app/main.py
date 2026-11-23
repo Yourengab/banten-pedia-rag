@@ -124,6 +124,12 @@ class IngestResponse(BaseModel):
 # HEALTH
 # ══════════════════════════════════════════════════════════════════════════════
 
+@app.get("/", tags=["System"])
+def root():
+    """Root endpoint for status check."""
+    return {"status": "ok", "service": "BantenPedia RAG API", "docs": "/docs"}
+
+
 @app.get("/health", tags=["System"])
 def health_check():
     """Liveness probe."""
